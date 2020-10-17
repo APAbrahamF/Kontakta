@@ -1089,11 +1089,9 @@ drawable tooltip_frame_light
 id ALT
 id CTRL
 id FUNCTION
-id FirstFragment
 id META
 id SHIFT
 id SYM
-id SecondFragment
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -1127,8 +1125,6 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
-id action_FirstFragment_to_SecondFragment
-id action_SecondFragment_to_FirstFragment
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1159,6 +1155,8 @@ id barrier
 id beginning
 id blocking
 id bottom
+id button
+id button2
 id buttonPanel
 id center
 id center_horizontal
@@ -1188,8 +1186,17 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id editTextNumber
+id editTextTextEmailAddress
 id editTextTextPassword
+id editTextTextPassword2
+id editTextTextPassword3
 id editTextTextPersonName
+id editTextTextPersonName2
+id editTextTextPersonName3
+id editTextTextPersonName4
+id editTextTextPersonName5
+id editTextTextPersonName6
 id edit_query
 id end
 id enterAlways
@@ -1213,7 +1220,9 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageButton
 id imageView
+id imageView2
 id info
 id invisible
 id italic
@@ -1225,6 +1234,7 @@ id line1
 id line3
 id listMode
 id list_item
+id mainActivity
 id masked
 id message
 id middle
@@ -1255,6 +1265,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id registroUsuario2
 id right
 id right_icon
 id right_side
@@ -1316,6 +1327,9 @@ id textSpacerNoTitle
 id textStart
 id textView
 id textView2
+id textView3
+id textView5
+id textView6
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1398,6 +1412,10 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout busqueda_recomendada
+layout cambio_prestador
+layout cambio_usuario
+layout configuracion
 layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -1414,6 +1432,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout menu_busqueda
 layout menu_principal
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1423,10 +1442,13 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout registro_prestador
+layout registro_usuario
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout vista_grupo
 menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round
