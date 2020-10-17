@@ -32,6 +32,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -43,7 +50,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ResourceManagerPrefKey.ResourceType" value="LAYOUT" />
+    <property name="ResourceManagerPrefKey.ResourceType" value="COLOR" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -121,13 +128,25 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602902436055">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602902436055" />
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1602902444080">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602902444080" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1602902506781">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602902506781" />
     <state x="105" y="69" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1602873127229">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="105" y="69" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1602873127229" />
-    <state x="369" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1602877529987">
+    <state x="369" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1602901046119">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="369" y="168" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1602877529987" />
+    <state x="369" y="168" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1602901046119" />
   </component>
 </project>

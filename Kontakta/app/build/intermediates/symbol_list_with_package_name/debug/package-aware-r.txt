@@ -1068,6 +1068,7 @@ drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable kontakta_logo
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1159,8 +1160,6 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
-id button_first
-id button_second
 id center
 id center_horizontal
 id center_vertical
@@ -1189,6 +1188,8 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id editTextTextPassword
+id editTextTextPersonName
 id edit_query
 id end
 id enterAlways
@@ -1212,6 +1213,7 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageView
 id info
 id invisible
 id italic
@@ -1312,12 +1314,12 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
+id textView2
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
-id textview_first
-id textview_second
 id time
 id title
 id titleDividerNoCustom
@@ -1412,8 +1414,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
-layout fragment_first
-layout fragment_second
+layout menu_principal
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
