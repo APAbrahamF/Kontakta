@@ -1197,6 +1197,7 @@ id editTextTextPersonName3
 id editTextTextPersonName4
 id editTextTextPersonName5
 id editTextTextPersonName6
+id editTextTextPersonName7
 id edit_query
 id end
 id enterAlways
@@ -1214,6 +1215,8 @@ id ghost_view
 id gone
 id group_divider
 id groups
+id guideline2
+id guideline4
 id home
 id homeAsUp
 id icon
@@ -1221,8 +1224,13 @@ id icon_group
 id ifRoom
 id image
 id imageButton
+id imageButton2
+id imageButton3
+id imageButton4
+id imageButton5
 id imageView
 id imageView2
+id imageView3
 id info
 id invisible
 id italic
@@ -1351,6 +1359,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id view2
 id view_offset_helper
 id visible
 id withText
