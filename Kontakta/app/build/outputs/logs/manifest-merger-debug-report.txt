@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-24:12
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-34:12
 MERGED from [androidx.core:core-ktx:1.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\7a95c299bdd5b26860bc260d9d444c85\jetified-core-ktx-1.1.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\b735c931580d184ac2d18695b9642d79\navigation-fragment-ktx-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\6f8f8edee9ab3392a36f3ee8600e4b9f\navigation-ui-ktx-2.1.0\AndroidManifest.xml:17:1-24:12
@@ -16,6 +16,7 @@ MERGED from [androidx.navigation:navigation-ui:2.1.0] C:\Users\Mi pc\.gradle\cac
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\ad0d556d4478897df290948cecd56847\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\93ea202bedc8748a02a18ead2b9aee7e\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\9e49c8dd1d3b07e827e90243128cad37\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\8a960375cc1d08c0ca8245b2d55dc194\jetified-volley-1.1.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.navigation:navigation-fragment:2.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\582c1c90d7328819bd1a4b0801459142\navigation-fragment-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\101fe5047326e1e5da5cc58ba902d464\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\dd62b146907d325aef54ab67c43d20b3\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -50,29 +51,39 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Mi pc\.gradle\caches
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\6d32f73ff7278fea3ea6f085e61aabad\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\63c4064e68c4602d6384f93bfbe1a00c\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\abdc7ec3a4c940484935c0ecfb6707ab\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:3:5-35
 		INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-24:12
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-34:12
 		INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-24:12
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-34:12
 		INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:5:5-22:19
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:8:5-32:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\ad0d556d4478897df290948cecd56847\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\ad0d556d4478897df290948cecd56847\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\9e49c8dd1d3b07e827e90243128cad37\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\9e49c8dd1d3b07e827e90243128cad37\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\8a960375cc1d08c0ca8245b2d55dc194\jetified-volley-1.1.1\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\8a960375cc1d08c0ca8245b2d55dc194\jetified-volley-1.1.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\75eb5fc96c959d198135ce65c8c5fe1b\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\75eb5fc96c959d198135ce65c8c5fe1b\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\6b370d6e188c756af8a0e40213069ba4\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
@@ -80,35 +91,47 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Mi
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\75eb5fc96c959d198135ce65c8c5fe1b\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:12:9-41
 	android:roundIcon
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:15:9-40
+	android:usesCleartextTraffic
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:9:9-44
 activity#com.example.kontakta.MainActivity
-ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:12:9-21:20
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:16:9-25:20
 	android:label
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:14:13-45
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:18:13-45
 	android:theme
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:15:13-56
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:19:13-56
 	android:name
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:13:13-41
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:17:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:16:13-20:29
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:19:27-74
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:23:27-74
+activity#com.example.kontakta.RegistroUsuario
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:26:9-31:20
+	android:name
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:26:19-50
+intent-filter#action:name:android.intent.action.DEFAULT
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:28:13-30:29
+action#android.intent.action.DEFAULT
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:17-72
+	android:name
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:25-69
 uses-sdk
 INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
@@ -137,6 +160,8 @@ MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Mi pc\.gradle\caches\t
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\93ea202bedc8748a02a18ead2b9aee7e\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\9e49c8dd1d3b07e827e90243128cad37\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\9e49c8dd1d3b07e827e90243128cad37\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\8a960375cc1d08c0ca8245b2d55dc194\jetified-volley-1.1.1\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\8a960375cc1d08c0ca8245b2d55dc194\jetified-volley-1.1.1\AndroidManifest.xml:7:5-43
 MERGED from [androidx.navigation:navigation-fragment:2.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\582c1c90d7328819bd1a4b0801459142\navigation-fragment-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment:2.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\582c1c90d7328819bd1a4b0801459142\navigation-fragment-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\101fe5047326e1e5da5cc58ba902d464\fragment-1.1.0\AndroidManifest.xml:20:5-22:41

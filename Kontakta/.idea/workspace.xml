@@ -7,6 +7,9 @@
       </config>
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c3dbef27-d310-495d-a872-2de45802f39a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +57,13 @@
   <component name="PropertiesComponent">
     <property name="ResourceManagerPrefKey.ResourceType" value="COLOR" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AndroidStudioProjects/Kontaktav2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/example/kontakta" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\java\com\example\kontakta" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -141,17 +150,45 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602902444080" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1602957665024">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603161941427">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602957665024" />
-    <state x="105" y="69" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1602873127229">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603161941427" />
+    <state width="1306" height="176" key="GridCell.Tab.0.bottom" timestamp="1603389143452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="105" y="69" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1602873127229" />
-    <state x="369" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1603131262561">
+    <state width="1306" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603389143452" />
+    <state width="1306" height="176" key="GridCell.Tab.0.center" timestamp="1603389143451">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="369" y="168" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1603131262561" />
+    <state width="1306" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1603389143451" />
+    <state width="1306" height="176" key="GridCell.Tab.0.left" timestamp="1603389143449">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1603389143449" />
+    <state width="1306" height="176" key="GridCell.Tab.0.right" timestamp="1603389143452">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603389143452" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1603383172432">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1603383172432" />
+    <state x="105" y="69" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1603338695035">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="105" y="69" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1603338695035" />
+    <state x="369" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1603388447751">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="369" y="168" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1603388447751" />
+    <state x="358" y="13" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603387716176">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="358" y="13" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1603387716176" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603138011933">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1603138011933" />
   </component>
 </project>
