@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/textCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.591" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/textPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -69,7 +69,7 @@
         app:srcCompat="@drawable/kontakta_logo" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/Button1M"
         android:layout_width="67dp"
         android:layout_height="69dp"
         android:background="#FFFFFF"
@@ -94,7 +94,7 @@
         app:layout_constraintVertical_bias="0.883" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonRegistro"
         android:layout_width="130dp"
         android:layout_height="39dp"
         android:text="Registrate!"

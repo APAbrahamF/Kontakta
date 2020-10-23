@@ -40,20 +40,20 @@
         "source": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\layout\\vista_grupo.xml"
     },
     {
-        "merged": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\layout_cambio_usuario.xml.flat",
         "source": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\layout\\cambio_usuario.xml"
     },
     {
-        "merged": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\layout_menu_principal.xml.flat",
         "source": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\layout\\menu_principal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
