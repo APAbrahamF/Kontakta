@@ -51,6 +51,7 @@ class RegistroUsuario:AppCompatActivity() {
         val correo = textCorreo1?.text.toString()
         val password = textPass1?.text.toString()
 
+        //chequen que sea su IP xd
         val url = "http://192.168.1.109/kontakta/v1/index.php"
 
 
