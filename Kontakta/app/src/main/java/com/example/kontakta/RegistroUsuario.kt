@@ -1,18 +1,17 @@
 package com.example.kontakta
 import android.content.Context
-import android.content.pm.ActivityInfo
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import android.widget.CheckBox
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.mysqlbd.VolleySingleton
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.registro_usuario.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -27,11 +26,16 @@ class RegistroUsuario:AppCompatActivity() {
         val status = conexion.activeNetworkInfo
 
         val btnRegister: Button = findViewById(R.id.buttonRegistro) as Button;
+        val ban: CheckBox = findViewById<CheckBox>(R.id.checkBox)
+        ban.post {
+            ban!!.setChecked(true)
+            ban!!.jumpDrawablesToCurrentState() // This is most important
+        }
 
         btnRegister.setOnClickListener() {
-            addUser()
+            var check = false;
             if (status != null && status.isConnected) {
-                addUser()
+                    addUser(ban)
             } else {
                 Toast.makeText(this, "Revise su conexion a internet", Toast.LENGTH_LONG).show()
             }
@@ -39,7 +43,7 @@ class RegistroUsuario:AppCompatActivity() {
         }
     }
 
-    private fun addUser() {
+    private fun addUser(ban: CheckBox) {
         //getting the record values
         val queue = Volley.newRequestQueue(this);
         val nombre = textNombre?.text.toString()
@@ -49,6 +53,7 @@ class RegistroUsuario:AppCompatActivity() {
         val municipio = textMunicipio?.text.toString()
         val estado = textEstado?.text.toString()
         val correo = textCorreo1?.text.toString()
+        val pass2 = textPass2?.text.toString()
         val password = textPass1?.text.toString()
 
         val url = "http://192.168.1.109/kontakta/v1/index.php"
@@ -61,11 +66,25 @@ class RegistroUsuario:AppCompatActivity() {
                 try {
                     val obj = JSONObject(response)
                     Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    var bandera = obj.getString("error");
+                    if(bandera == "false")
+                    {
+                        Toast.makeText(applicationContext, ban.isChecked.toString(), Toast.LENGTH_LONG).show()
+                        if(ban.isChecked) {
+                            val intent1 = Intent(this, RegistroPrestador::class.java)
+                            startActivity(intent1)
+                        }
+                        else
+                        {
+                            val intent2 = Intent(this, MenuPrincipal::class.java)
+                            startActivity(intent2)
+                        }
+                    }
                 } catch (e: JSONException) {
                     e.printStackTrace()
                 }
             },
-            Response.ErrorListener { volleyError -> Toast.makeText(applicationContext, volleyError.message, Toast.LENGTH_LONG).show() }) {
+            Response.ErrorListener {volleyError -> Toast.makeText(applicationContext, volleyError.message, Toast.LENGTH_LONG).show() }) {
             @Throws(AuthFailureError::class)
             override fun getParams(): Map<String, String> {
                 val params = HashMap<String, String>()
@@ -80,9 +99,13 @@ class RegistroUsuario:AppCompatActivity() {
                 return params
             }
         }
-
-        //adding request to queue
-        queue.add(stringRequest);
+        if(password != pass2) {
+            Toast.makeText(applicationContext, "Las contraseñas no son iguales", Toast.LENGTH_LONG).show()
+        }
+        else {
+            //adding request to queue
+            queue.add(stringRequest);
+        }
     }
 
 }

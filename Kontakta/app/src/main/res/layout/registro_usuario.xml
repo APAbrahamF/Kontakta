@@ -11,8 +11,8 @@
 
 
     <ScrollView
-        android:layout_width="426dp"
-        android:layout_height="419dp"
+        android:layout_width="396dp"
+        android:layout_height="502dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
@@ -120,27 +120,33 @@
                 android:inputType="textPassword"
                 android:translationX="50dp" />
 
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:text="¿Eres musico?"
+                android:translationX="50dp" />
+
             <Button
                 android:id="@+id/buttonRegistro"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Registrarme"
-                android:translationX="50dp"
-                android:translationY="20dp" />
+                android:translationX="50dp" />
 
         </LinearLayout>
     </ScrollView>
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="96dp"
+        android:layout_height="76dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082"
+        app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/kontakta_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
