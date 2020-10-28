@@ -14,6 +14,8 @@ import com.android.volley.toolbox.Volley
 import com.example.mysqlbd.VolleySingleton
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.registro_usuario.*
+import com.example.kontakta.EndPoints
+import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -51,12 +53,11 @@ class RegistroUsuario:AppCompatActivity() {
         val correo = textCorreo1?.text.toString()
         val password = textPass1?.text.toString()
 
-        val url = "http://192.168.1.109/kontakta/v1/index.php"
-
+        //val url = "http://192.168.100.6/v1/index.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(
-            Request.Method.POST, url,
+            Request.Method.POST, EndPoints.URL_ADD_USER,
             Response.Listener<String> { response ->
                 try {
                     val obj = JSONObject(response)
