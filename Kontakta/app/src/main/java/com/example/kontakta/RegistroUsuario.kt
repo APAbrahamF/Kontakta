@@ -72,6 +72,7 @@ class RegistroUsuario:AppCompatActivity() {
                         Toast.makeText(applicationContext, ban.isChecked.toString(), Toast.LENGTH_LONG).show()
                         if(ban.isChecked) {
                             val intent1 = Intent(this, RegistroPrestador::class.java)
+                            intent1.putExtra("correo", correo);
                             startActivity(intent1)
                         }
                         else
