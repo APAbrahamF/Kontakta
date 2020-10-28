@@ -28,18 +28,29 @@ class DbOperation
 			return false;
 		}
 	}
-	public function insertServ($nombre, $integrantes, $descripcion, $genero, $youtube, $instagram, $facebook, $twitter){
+	public function insertServ($nombre, $integrantes, $descripcion, $genero, $youtube, $instagram, $facebook, $twitter, $correo){
 		$sql = "SELECT * FROM usuario WHERE correo = '$correo'";
 		$result = mysqli_query($this->con, $sql);
 		$row = mysqli_fetch_assoc($result);
 		$id = $row['IDUsuario'];
-		$stmt = $this->con->prepare("INSERT INTO prestadorservicios(nombre, integrantes, descripcion, genero, youtube, instagram, facebook, twitter, IDUsuario_FK) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		$stmt = $this->con->prepare("INSERT INTO prestadorservicios(nombreServicio, integrantes, descripcion, genero, youtube, instagram, facebook, twitter, IDUsuario_FK) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		$stmt->bind_param("sssssssss", $nombre, $integrantes, $descripcion, $genero, $youtube, $instagram, $facebook, $twitter, $id);
 		if($stmt->execute())
 			return true; 
 		return false; 
 	}
+	public function login($correo, $password)
+	{
+		$sql = "SELECT * FROM usuario WHERE correo = '$correo'";
+		$result = mysqli_query($this->con, $sql);
+		$row = mysqli_fetch_assoc($result);
+		$passtemp = $row['password'];
+		if($password == $passtemp)
+			return true;
+		else
+			return false;
 
+	}
 	//fetching all records from the database 
 	public function getUser(){
 		$stmt = $this->con->prepare("SELECT Id, Nombres, Correo, Start FROM comment");
