@@ -38,9 +38,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="layoutResourceFile" />
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -146,30 +146,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602902436055" />
-    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1602902444080">
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1603857245209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602902444080" />
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1603857245209" />
+    <state x="541" y="177" key="AndroidCreateXmlResourceDialog" timestamp="1603771187292">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="541" y="177" key="AndroidCreateXmlResourceDialog/0.0.1366.728@0.0.1366.728" timestamp="1603771187292" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603161941427">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603161941427" />
-    <state width="1306" height="176" key="GridCell.Tab.0.bottom" timestamp="1603389143452">
+    <state width="1306" height="176" key="GridCell.Tab.0.bottom" timestamp="1603829849737">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603389143452" />
-    <state width="1306" height="176" key="GridCell.Tab.0.center" timestamp="1603389143451">
+    <state width="1306" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603829849737" />
+    <state width="1306" height="176" key="GridCell.Tab.0.center" timestamp="1603829849736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1603389143451" />
-    <state width="1306" height="176" key="GridCell.Tab.0.left" timestamp="1603389143449">
+    <state width="1306" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1603829849736" />
+    <state width="1306" height="176" key="GridCell.Tab.0.left" timestamp="1603829849736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1603389143449" />
-    <state width="1306" height="176" key="GridCell.Tab.0.right" timestamp="1603389143452">
+    <state width="1306" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1603829849736" />
+    <state width="1306" height="176" key="GridCell.Tab.0.right" timestamp="1603829849736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603389143452" />
+    <state width="1306" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603829849736" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1603383172432">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -178,14 +182,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="105" y="69" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1603338695035" />
-    <state x="369" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1603388447751">
+    <state x="369" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1603856695429">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="369" y="168" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1603388447751" />
+    <state x="369" y="168" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1603856695429" />
     <state x="358" y="13" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603387716176">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="358" y="13" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1603387716176" />
+    <state x="406" y="6" key="refactoring.ChangeSignatureDialog" timestamp="1603840930752">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="406" y="6" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1603840930752" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603138011933">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

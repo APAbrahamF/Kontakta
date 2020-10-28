@@ -25,6 +25,16 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
+        val botonMenu: Button = findViewById(R.id.buttonMenu) as Button
+        botonMenu.setOnClickListener{
+            val intent = Intent(this,MenuPrincipal::class.java)
+            startActivity(intent)
+        }
+        val botonPruebas: Button = findViewById(R.id.buttonMenu) as Button
+        botonPruebas.setOnClickListener{
+            val intent = Intent(this,Pruebas::class.java)
+            startActivity(intent)
+        }
         val BotonRegistro: Button = findViewById(R.id.buttonRegistro) as Button;
         BotonRegistro.setOnClickListener {
             val intent = Intent(this,RegistroUsuario::class.java)
