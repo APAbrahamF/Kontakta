@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Mi pc\\.gradle\\caches\\transforms-2\\files-2.1\\93ea202bedc8748a02a18ead2b9aee7e\\appcompat-1.1.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\axel_\\.gradle\\caches\\transforms-2\\files-2.1\\93ea202bedc8748a02a18ead2b9aee7e\\appcompat-1.1.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Mi pc\\.gradle\\caches\\transforms-2\\files-2.1\\f9a571e390bfe1e8f6ca4ff964ff5bcb\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\axel_\\.gradle\\caches\\transforms-2\\files-2.1\\f9a571e390bfe1e8f6ca4ff964ff5bcb\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
