@@ -136,6 +136,10 @@
         "source": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\navigation\\nav_graph.xml"
     },
     {
+        "merged": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\layout_pruebas.xml.flat",
+        "source": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\layout\\pruebas.xml"
+    },
+    {
         "merged": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     }

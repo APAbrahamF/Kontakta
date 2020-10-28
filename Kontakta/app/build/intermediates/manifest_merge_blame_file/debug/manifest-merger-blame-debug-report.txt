@@ -18,7 +18,7 @@
 12-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:6:22-64
 13
 14    <application
-14-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:8:5-44:19
+14-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:8:5-50:19
 15        android:allowBackup="true"
 15-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:10:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -32,65 +32,78 @@
 20-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:13:9-54
 21        android:supportsRtl="true"
 21-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:14:9-35
-22        android:theme="@style/AppTheme"
-22-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:15:9-40
-23        android:usesCleartextTraffic="true" >
-23-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:9:9-44
-24        <activity
-24-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:16:9-25:20
-25            android:name="com.example.kontakta.MainActivity"
-25-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:17:13-41
-26            android:label="@string/app_name"
-26-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:18:13-45
-27            android:theme="@style/AppTheme.NoActionBar" >
-27-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:19:13-56
-28            <intent-filter>
-28-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:20:13-24:29
-29                <action android:name="android.intent.action.MAIN" />
-29-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:21:17-69
-29-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:21:25-66
-30
-31                <category android:name="android.intent.category.LAUNCHER" />
-31-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:23:17-77
-31-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:23:27-74
-32            </intent-filter>
-33        </activity>
-34        <activity android:name="com.example.kontakta.RegistroUsuario" >
-34-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:26:9-31:20
-34-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:26:19-50
-35
-36            <!-- Default Intent Filter -->
-37            <intent-filter>
-37-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:28:13-30:29
-38                <action android:name="android.intent.action.DEFAULT" />
-38-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:17-72
-38-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:25-69
-39            </intent-filter>
-40        </activity>
-41        <activity android:name="com.example.kontakta.RegistroPrestador" >
-41-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:32:9-37:20
-41-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:32:19-52
-42
-43            <!-- Default Intent Filter -->
-44            <intent-filter>
-44-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:28:13-30:29
-45                <action android:name="android.intent.action.DEFAULT" />
-45-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:17-72
-45-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:25-69
-46            </intent-filter>
-47        </activity>
-48        <activity android:name="com.example.kontakta.MenuPrincipal" >
-48-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:38:9-43:20
-48-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:38:19-48
-49
-50            <!-- Default Intent Filter -->
-51            <intent-filter>
-51-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:28:13-30:29
-52                <action android:name="android.intent.action.DEFAULT" />
-52-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:17-72
-52-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:25-69
-53            </intent-filter>
-54        </activity>
-55    </application>
-56
-57</manifest>
+22        android:testOnly="true"
+23        android:theme="@style/AppTheme"
+23-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:15:9-40
+24        android:usesCleartextTraffic="true" >
+24-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:9:9-44
+25        <activity
+25-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:16:9-25:20
+26            android:name="com.example.kontakta.MainActivity"
+26-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:17:13-41
+27            android:label="@string/app_name"
+27-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:18:13-45
+28            android:theme="@style/AppTheme.NoActionBar" >
+28-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:19:13-56
+29            <intent-filter>
+29-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:20:13-24:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:21:17-69
+30-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:21:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:23:17-77
+32-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:23:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity android:name="com.example.kontakta.RegistroUsuario" >
+35-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:26:9-31:20
+35-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:26:19-50
+36
+37            <!-- Default Intent Filter -->
+38            <intent-filter>
+38-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:28:13-30:29
+39                <action android:name="android.intent.action.DEFAULT" />
+39-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:17-72
+39-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:25-69
+40            </intent-filter>
+41        </activity>
+42        <activity android:name="com.example.kontakta.RegistroPrestador" >
+42-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:32:9-37:20
+42-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:32:19-52
+43
+44            <!-- Default Intent Filter -->
+45            <intent-filter>
+45-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:28:13-30:29
+46                <action android:name="android.intent.action.DEFAULT" />
+46-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:17-72
+46-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:25-69
+47            </intent-filter>
+48        </activity>
+49        <activity android:name="com.example.kontakta.MenuPrincipal" >
+49-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:38:9-43:20
+49-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:38:19-48
+50
+51            <!-- Default Intent Filter -->
+52            <intent-filter>
+52-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:28:13-30:29
+53                <action android:name="android.intent.action.DEFAULT" />
+53-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:17-72
+53-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:25-69
+54            </intent-filter>
+55        </activity>
+56        <activity android:name="com.example.kontakta.Pruebas" >
+56-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:44:9-49:20
+56-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:44:19-42
+57
+58            <!-- Default Intent Filter -->
+59            <intent-filter>
+59-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:28:13-30:29
+60                <action android:name="android.intent.action.DEFAULT" />
+60-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:17-72
+60-->C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:29:25-69
+61            </intent-filter>
+62        </activity>
+63    </application>
+64
+65</manifest>

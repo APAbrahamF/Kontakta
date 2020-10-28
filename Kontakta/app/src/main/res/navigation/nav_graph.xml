@@ -14,4 +14,14 @@
         android:name="com.example.kontakta.RegistroUsuario"
         android:label="registro_usuario"
         tools:layout="@layout/registro_usuario" />
+    <activity
+        android:id="@+id/menuPrincipal"
+        android:name="com.example.kontakta.MenuPrincipal"
+        android:label="menu_principal"
+        tools:layout="@layout/menu_principal" />
+    <activity
+        android:id="@+id/registroPrestador"
+        android:name="com.example.kontakta.RegistroPrestador"
+        android:label="registro_prestador"
+        tools:layout="@layout/registro_prestador" />
 </navigation>

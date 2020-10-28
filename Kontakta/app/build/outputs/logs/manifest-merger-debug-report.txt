@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-46:12
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-52:12
 MERGED from [androidx.core:core-ktx:1.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\7a95c299bdd5b26860bc260d9d444c85\jetified-core-ktx-1.1.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\b735c931580d184ac2d18695b9642d79\navigation-fragment-ktx-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.1.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\6f8f8edee9ab3392a36f3ee8600e4b9f\navigation-ui-ktx-2.1.0\AndroidManifest.xml:17:1-24:12
@@ -51,20 +51,20 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Mi pc\.gradle\caches
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\6d32f73ff7278fea3ea6f085e61aabad\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\63c4064e68c4602d6384f93bfbe1a00c\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\abdc7ec3a4c940484935c0ecfb6707ab\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-52:12
 	package
 		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:3:5-35
 		INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-52:12
 		INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:1-52:12
 		INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:2:11-69
@@ -77,7 +77,7 @@ ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:8:5-44:19
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:8:5-50:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\ad0d556d4478897df290948cecd56847\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\ad0d556d4478897df290948cecd56847\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Mi pc\.gradle\caches\transforms-2\files-2.1\9e49c8dd1d3b07e827e90243128cad37\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
@@ -140,6 +140,10 @@ activity#com.example.kontakta.MenuPrincipal
 ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:38:9-43:20
 	android:name
 		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:38:19-48
+activity#com.example.kontakta.Pruebas
+ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:44:9-49:20
+	android:name
+		ADDED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:44:19-42
 uses-sdk
 INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Mi pc\Documents\GitHub\Kontakta\Kontakta\app\src\main\AndroidManifest.xml

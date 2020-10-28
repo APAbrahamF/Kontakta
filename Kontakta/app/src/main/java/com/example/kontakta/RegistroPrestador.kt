@@ -2,7 +2,6 @@ package com.example.kontakta
 
 import android.content.Context
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.widget.Button
@@ -13,10 +12,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.mysqlbd.VolleySingleton
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.registro_prestador.*
-import kotlinx.android.synthetic.main.registro_usuario.*
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -32,10 +28,12 @@ class RegistroPrestador:AppCompatActivity() {
 
         val btnRegister: Button = findViewById(R.id.buttonRegistroServ) as Button;
 
+        
+        var correo : String = intent.getStringExtra("correo").toString()
         btnRegister.setOnClickListener() {
 
             if (status != null && status.isConnected) {
-                addPres()
+                addPres(correo)
             } else {
                 Toast.makeText(this, "Revise su conexion a internet", Toast.LENGTH_LONG).show()
             }
@@ -43,7 +41,7 @@ class RegistroPrestador:AppCompatActivity() {
         }
     }
 
-    private fun addPres() {
+    private fun addPres(correo: String) {
         //getting the record values
         val queue = Volley.newRequestQueue(this);
         val nombre = textNombreServ?.text.toString()
@@ -54,7 +52,6 @@ class RegistroPrestador:AppCompatActivity() {
         val instagram = textInstagram?.text.toString()
         val facebook = textFacebook?.text.toString()
         val twitter = textTwitter?.text.toString()
-        val correo = "abraham1902@hotmail.com"
 
         val url = "http://192.168.1.109/kontakta/v1/insertM.php"
 
