@@ -1,7 +1,15 @@
 [
     {
+        "merged": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_insta_logo.png.flat",
+        "source": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\insta_logo.png"
+    },
+    {
         "merged": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_yt_logo.png.flat",
+        "source": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\yt_logo.png"
     },
     {
         "merged": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
@@ -78,6 +86,10 @@
     {
         "merged": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fb_logo.png.flat",
+        "source": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\fb_logo.png"
     },
     {
         "merged": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\layout_cambio_usuario.xml.flat",
