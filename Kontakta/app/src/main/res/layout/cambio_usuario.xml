@@ -3,26 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".CambioDatosUsuario">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/FABGuardarU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
         android:clickable="true"
         app:backgroundTint="#00BCD4"
-        app:srcCompat="@android:drawable/ic_menu_save"
-        tools:layout_editor_absoluteX="339dp"
-        tools:layout_editor_absoluteY="659dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_save" />
 
     <ImageView
         android:id="@+id/imgViewPhotoPro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBtnPhotoPro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="66dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageButton
@@ -31,10 +36,11 @@
         android:layout_height="40dp"
         android:layout_marginStart="268dp"
         android:layout_marginLeft="268dp"
+        android:layout_marginBottom="12dp"
         android:background="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/textCorreo2"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_edit"
-        tools:layout_editor_absoluteY="161dp" />
+        app:srcCompat="@android:drawable/ic_menu_edit" />
 
     <EditText
         android:id="@+id/textPassword2"
@@ -55,8 +61,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Correo"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="194dp" />
+        app:layout_constraintStart_toStartOf="@+id/textCorreo2"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewPhotoPro" />
 
     <EditText
         android:id="@+id/textCorreo2"
@@ -77,8 +83,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contraseña:"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="259dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textPassword2"
+        app:layout_constraintStart_toStartOf="@+id/textPassword2" />
 
     <EditText
         android:id="@+id/textSexo3"
@@ -112,8 +118,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nombre:"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="324dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textNombre"
+        app:layout_constraintStart_toStartOf="@+id/textNombre" />
 
     <EditText
         android:id="@+id/textEstado"
@@ -125,7 +131,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="664dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewEstadoL" />
 
     <EditText
         android:id="@+id/textMunicipio"
@@ -174,16 +180,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Edad:"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="453dp" />
+        app:layout_constraintStart_toStartOf="@+id/textSexo3"
+        app:layout_constraintTop_toBottomOf="@+id/textSexo3" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarCambioU"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/abc_vector_test"
         app:subtitle="Modificar usuario"
@@ -194,31 +202,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sexo: "
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="389dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textSexo3"
+        app:layout_constraintStart_toStartOf="@+id/textSexo3" />
 
     <TextView
         android:id="@+id/textMunicipioL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Municipio: "
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="517dp" />
+        app:layout_constraintStart_toStartOf="@+id/textEdad"
+        app:layout_constraintTop_toBottomOf="@+id/textEdad" />
 
     <TextView
         android:id="@+id/textDireccionL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dirección:"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="581dp" />
+        app:layout_constraintStart_toStartOf="@+id/textDireccion"
+        app:layout_constraintTop_toBottomOf="@+id/textMunicipio" />
 
     <TextView
         android:id="@+id/textViewEstadoL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Estado:"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="645dp" />
+        app:layout_constraintStart_toStartOf="@+id/textEstado"
+        app:layout_constraintTop_toBottomOf="@+id/textDireccion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
