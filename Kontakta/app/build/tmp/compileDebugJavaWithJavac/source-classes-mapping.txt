@@ -1,0 +1,2 @@
+com/example/kontakta/BuildConfig.java
+ com.example.kontakta.BuildConfig

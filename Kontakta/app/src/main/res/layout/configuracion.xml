@@ -115,7 +115,7 @@
         android:id="@+id/button2"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:text="Button"
+        android:text="Cambiar contraseña"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -127,7 +127,7 @@
         android:id="@+id/button3"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:text="Button"
+        android:text="Cambiar datos de prestador"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -136,10 +136,10 @@
         app:layout_constraintVertical_bias="0.323" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonCUser"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:text="Button"
+        android:text="Cambiar datos de usuario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"

@@ -1169,7 +1169,7 @@ id blocking
 id bottom
 id button2
 id button3
-id button4
+id buttonCUser
 id buttonMenu
 id buttonPanel
 id buttonPruebas
@@ -1361,11 +1361,8 @@ id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id text
 id text2
-id textContraL
 id textCorreo
 id textCorreo1
-id textCorreo2
-id textCorreoL
 id textDescripcion
 id textDescripcionP
 id textDireccion
@@ -1391,7 +1388,6 @@ id textNombreServ
 id textPass1
 id textPass2
 id textPassword
-id textPassword2
 id textRedesSociales
 id textSexo
 id textSexo3

@@ -51,6 +51,16 @@ class DbOperation
 			return false;
 
 	}
+	public function actualizeUser($nombre, $edad, $sexo, $direccion, $municipio, $estado, $correo)
+	{
+		$sql = "SELECT * FROM usuario WHERE correo = '$correo'";
+		$result = mysqli_query($this->con, $sql);
+		$row = mysqli_fetch_assoc($result);
+		$id = $row['IDUsuario'];
+		$sql = "UPDATE usuario SET nombre = '$nombre', edad = '$edad', sexo = '$sexo', direccion = '$direccion', municipio = '$municipio', estado = '$estado' WHERE correo = '$correo'";
+		$result = mysqli_query($this->con, $sql);
+		return true;
+	}
 	//fetching all records from the database 
 	public function getUser(){
 		$stmt = $this->con->prepare("SELECT Id, Nombres, Correo, Start FROM comment");
