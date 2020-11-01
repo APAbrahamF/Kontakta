@@ -1,7 +1,4 @@
-#Sat Oct 31 17:53:53 CST 2020
+#Sat Oct 31 21:07:24 CST 2020
 base.0=C\:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-path.1=classes.dex
-renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
