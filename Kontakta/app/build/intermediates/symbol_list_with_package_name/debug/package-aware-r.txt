@@ -1254,6 +1254,7 @@ id imageView4
 id imageView5
 id imageView6
 id imageView7
+id image_row
 id imgViewPhotoPro
 id imgViewPhotoPro2
 id info
@@ -1266,6 +1267,7 @@ id left
 id line1
 id line3
 id listMode
+id listView
 id list_item
 id mainActivity
 id masked
@@ -1399,7 +1401,9 @@ id textSpacerNoTitle
 id textStart
 id textTwitter
 id textView
+id textView1_row
 id textView2
+id textView2_row
 id textView3
 id textView5
 id textView6
@@ -1425,7 +1429,6 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
-id tvRes
 id unchecked
 id uniform
 id unlabeled
@@ -1536,6 +1539,7 @@ layout notification_template_part_time
 layout pruebas
 layout registro_prestador
 layout registro_usuario
+layout row
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
