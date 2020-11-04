@@ -25,10 +25,6 @@ class Pruebas : AppCompatActivity(){
         var listview = findViewById<ListView>(R.id.listView)
         var list = mutableListOf<Model>()
 
-
-        Toast.makeText(this, "cummin", Toast.LENGTH_SHORT).show()
-        //list.add(Model(2,"",null))
-        //val tvRes= findViewById<TextView>(R.id.tvRes)
         val queue = Volley.newRequestQueue(this)
         val url = "http://192.168.100.6/v1/usuariosGET.php"
         val stringRequest = StringRequest(Request.Method.GET,url, { response ->
@@ -37,14 +33,10 @@ class Pruebas : AppCompatActivity(){
                 val jsonObject = JSONObject(jsonArray.getString(i))
                 list.add(Model(jsonObject.get("IDUsuario").toString(),jsonObject.get("nombre").toString()))
             }
-            //val jsonObject = JSONObject(jsonArray.getString(i))
-            //val jsonObject=jsonArray[0]
-            //var id=jsonObject.get("IDUsuario")
-            //list.add(Model(jsonObject.get("IDUsuario").toString(),jsonObject.get("nombre").toString()))
             listview.adapter = MyAdapter(this,R.layout.row,list)
-            //tvRes.text=jsonObject.toString()
             listview.setOnItemClickListener { parent: AdapterView<*>, view:View, position:Int, id:Long ->
-                Toast.makeText(this@Pruebas, "position",Toast.LENGTH_SHORT).show()
+                println("posicion en la lista: $position")
+                println("IDUsuario: "+list[position].IDUsuario)
             }
         }, { error ->
 
