@@ -31,7 +31,7 @@ class Pruebas : AppCompatActivity(){
             val jsonArray=JSONArray(response)
             for(i in 0 until jsonArray.length()){
                 val jsonObject = JSONObject(jsonArray.getString(i))
-                list.add(Model(jsonObject.get("IDUsuario").toString(),jsonObject.get("nombre").toString()))
+                list.add(Model(jsonObject.get("IDUsuario").toString(),jsonObject.get("nombre").toString(),jsonObject.get("imagen").toString()))
             }
             listview.adapter = MyAdapter(this,R.layout.row,list)
             listview.setOnItemClickListener { parent: AdapterView<*>, view:View, position:Int, id:Long ->
