@@ -17,98 +17,35 @@
         app:backgroundTint="#00BCD4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEstado"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@android:drawable/ic_menu_save" />
 
     <ImageView
         android:id="@+id/imgViewPhotoPro"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageBtnPhotoPro"
+        android:layout_height="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageButton
         android:id="@+id/imageBtnPhotoPro"
-        android:layout_width="44dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="126dp"
-        android:layout_marginLeft="126dp"
-        android:layout_marginBottom="39dp"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
         android:background="#00FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textNombreL"
-        app:layout_constraintStart_toStartOf="@+id/imgViewPhotoPro"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarCambioU"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.168"
         app:srcCompat="@android:drawable/ic_menu_edit" />
-
-    <EditText
-        android:id="@+id/textSexo3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Modificar sexo"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textEdadL"
-        app:layout_constraintStart_toStartOf="@+id/textNombre"
-        app:layout_constraintTop_toBottomOf="@+id/textSexoL" />
-
-    <EditText
-        android:id="@+id/textNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Modificar nombre"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textSexoL"
-        app:layout_constraintStart_toStartOf="@+id/textNombreL"
-        app:layout_constraintTop_toBottomOf="@+id/textNombreL" />
-
-    <TextView
-        android:id="@+id/textNombreL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="116dp"
-        android:layout_marginRight="116dp"
-        android:text="Nombre:"
-        app:layout_constraintBottom_toTopOf="@+id/textNombre"
-        app:layout_constraintEnd_toEndOf="@+id/imgViewPhotoPro"
-        app:layout_constraintTop_toBottomOf="@+id/imageBtnPhotoPro" />
-
-    <EditText
-        android:id="@+id/textEstado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
-        android:ems="10"
-        android:hint="Modificar estado"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/FABGuardarU"
-        app:layout_constraintStart_toStartOf="@+id/textDireccion"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEstadoL" />
-
-    <EditText
-        android:id="@+id/textMunicipio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Modificar municipio"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textDireccionL"
-        app:layout_constraintStart_toStartOf="@+id/textMunicipioL"
-        app:layout_constraintTop_toBottomOf="@+id/textMunicipioL" />
-
-    <EditText
-        android:id="@+id/textDireccion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Modificar dirección"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEstadoL"
-        app:layout_constraintStart_toStartOf="@+id/textMunicipio"
-        app:layout_constraintTop_toBottomOf="@+id/textDireccionL" />
 
     <EditText
         android:id="@+id/textEdad"
@@ -117,75 +54,153 @@
         android:ems="10"
         android:hint="Modificar edad"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/textMunicipioL"
-        app:layout_constraintStart_toStartOf="@+id/textEdadL"
-        app:layout_constraintTop_toBottomOf="@+id/textEdadL" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.481" />
+
+    <EditText
+        android:id="@+id/textNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Modificar nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.294" />
 
     <TextView
         android:id="@+id/textEdadL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Edad:"
-        app:layout_constraintBottom_toTopOf="@+id/textEdad"
-        app:layout_constraintStart_toStartOf="@+id/textSexo3"
-        app:layout_constraintTop_toBottomOf="@+id/textSexo3" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarCambioU"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="105dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/imageBtnPhotoPro"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/abc_vector_test"
-        app:subtitle="Modificar usuario"
-        app:title="Kontakta" />
+        app:layout_constraintVertical_bias="0.436" />
 
     <TextView
         android:id="@+id/textSexoL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
         android:text="Sexo: "
-        app:layout_constraintBottom_toTopOf="@+id/textSexo3"
-        app:layout_constraintStart_toStartOf="@+id/textNombre"
-        app:layout_constraintTop_toBottomOf="@+id/textNombre" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.346" />
+
+    <TextView
+        android:id="@+id/textNombreL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257" />
+
+    <EditText
+        android:id="@+id/textSexo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Modificar sexo"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.387" />
+
+    <EditText
+        android:id="@+id/textMunicipio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Modificar municipio"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.628" />
+
+    <TextView
+        android:id="@+id/textViewEstadoL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758" />
+
+    <EditText
+        android:id="@+id/textEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Modificar estado"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.814" />
+
+    <TextView
+        android:id="@+id/textDireccionL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dirección:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.668" />
+
+    <EditText
+        android:id="@+id/textDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Modificar dirección"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.721" />
 
     <TextView
         android:id="@+id/textMunicipioL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Municipio: "
-        app:layout_constraintBottom_toTopOf="@+id/textMunicipio"
-        app:layout_constraintStart_toStartOf="@+id/textEdad"
-        app:layout_constraintTop_toBottomOf="@+id/textEdad" />
-
-    <TextView
-        android:id="@+id/textDireccionL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:text="Dirección:"
-        app:layout_constraintBottom_toTopOf="@+id/textDireccion"
-        app:layout_constraintStart_toStartOf="@+id/textMunicipio"
-        app:layout_constraintTop_toBottomOf="@+id/textMunicipio" />
-
-    <TextView
-        android:id="@+id/textViewEstadoL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:text="Estado:"
-        app:layout_constraintBottom_toTopOf="@+id/textEstado"
-        app:layout_constraintStart_toStartOf="@+id/textDireccion"
-        app:layout_constraintTop_toBottomOf="@+id/textDireccion" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

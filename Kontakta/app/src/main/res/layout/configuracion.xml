@@ -112,7 +112,7 @@
         app:srcCompat="@android:drawable/ic_menu_manage" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonCamContra"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:text="Cambiar contraseña"
@@ -124,7 +124,7 @@
         app:layout_constraintVertical_bias="0.427" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonCServ"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:text="Cambiar datos de prestador"

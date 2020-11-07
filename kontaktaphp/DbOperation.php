@@ -61,6 +61,18 @@ class DbOperation
 		$result = mysqli_query($this->con, $sql);
 		return true;
 	}
+	public function actualizePass($correo, $password)
+	{		
+		$sql = "UPDATE usuario SET password = '$password' WHERE correo = '$correo'";
+		$result = mysqli_query($this->con, $sql);
+		return true;
+	}
+	public function actualizeServ($IDServicio, $nombreServicio, $descripcion, $genero, $integrantes, $facebook, $youtube, $instagram)
+	{		
+		$sql = "UPDATE prestadorservicios SET nombreServicio = '$nombreServicio', descripcion = '$descripcion', genero = '$genero', integrantes = '$integrantes', facebook = '$facebook', youtube = '$youtube', instagram = '$instagram' WHERE IDServicio = '$IDServicio'";
+		$result = mysqli_query($this->con, $sql);
+		return true;
+	}
 	//fetching all records from the database 
 	public function getUser(){
 		$stmt = $this->con->prepare("SELECT Id, Nombres, Correo, Start FROM comment");

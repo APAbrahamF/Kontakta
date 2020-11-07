@@ -1628,6 +1628,7 @@ id BOTTOM_END
 id BOTTOM_START
 id Button1M
 id CTRL
+id FABGuardarContra
 id FABGuardarP
 id FABGuardarU
 id FUNCTION
@@ -1715,9 +1716,9 @@ id beginning
 id blocking
 id bottom
 id bounce
-id button2
-id button3
+id buttonCServ
 id buttonCUser
+id buttonCamContra
 id buttonMenu
 id buttonPanel
 id buttonPruebas
@@ -1784,6 +1785,10 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
+id editTextContraAct
+id editTextContraN
+id editTextContraN2
+id editTextGenero
 id editTextTextPersonName3
 id editTextTextPersonName7
 id edit_query
@@ -2026,10 +2031,10 @@ id textGenero
 id textInstagram
 id textInstagramP
 id textIntegrantes
+id textIntegrantesL
 id textIntegrantesP
 id textMunicipio
 id textMunicipioL
-id textNIntegrantes
 id textNombre
 id textNombre2
 id textNombreB
@@ -2053,12 +2058,14 @@ id textView2_row
 id textView3
 id textView5
 id textView6
+id textViewContraActL
 id textViewDescripcionL
 id textViewEstadoL
 id textYoutube
 id textYoutubeP
 id text_input_end_icon
 id text_input_start_icon
+id textgeneroL
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2070,8 +2077,6 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
-id toolbarCambioU
-id toolbarCambioU2
 id top
 id topPanel
 id touch_outside
@@ -2159,6 +2164,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_cambiar_contra
 layout activity_main
 layout busqueda_recomendada
 layout cambio_prestador

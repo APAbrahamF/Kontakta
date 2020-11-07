@@ -14,5 +14,15 @@ class MenuConfiguracion : AppCompatActivity() {
             val intent = Intent(this,CambioDatosUsuario::class.java)
             startActivity(intent)
         }
+        val buttonCamP: Button = findViewById(R.id.buttonCServ) as Button
+        buttonCamP.setOnClickListener{
+            val intent = Intent(this,CambioDatosPrestador::class.java)
+            startActivity(intent)
+        }
+        val buttonCamC: Button = findViewById(R.id.buttonCamContra) as Button
+        buttonCamC.setOnClickListener{
+            val intent = Intent(this,cambiar_contra::class.java)
+            startActivity(intent)
+        }
     }
 }

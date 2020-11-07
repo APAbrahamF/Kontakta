@@ -15,9 +15,11 @@
       $e['nombre'] = $row['nombre'];
       $e['edad'] = $row['edad'];
       $e['sexo'] = $row['sexo'];
+      $e['password'] = $row['password'];
       $e['direccion'] = $row['direccion'];
       $e['estado'] = $row['estado'];
       $e['municipio'] = $row['municipio'];
+      $e['IDServicio_FK'] = $row['IDServicio_FK'];
       $e['message'] = 'Buena';
       array_push($array,$e);
 	}

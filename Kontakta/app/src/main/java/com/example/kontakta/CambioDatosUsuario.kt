@@ -39,8 +39,7 @@ class CambioDatosUsuario : AppCompatActivity() {
             guardar("abraham1902@hotmail.com");
         }
     }
-    private fun getData(correo: String)
-    {
+    private fun getData(correo: String) {
         //Aqui jalo los editText para poder poner ahi los datos que voy a jalar desde la base
         val queue = Volley.newRequestQueue(this);
         var nombre: EditText = findViewById(R.id.textNombre) as EditText
@@ -51,7 +50,10 @@ class CambioDatosUsuario : AppCompatActivity() {
         var estado: EditText = findViewById(R.id.textEstado) as EditText
 
         //Aqui va la url de tu server, usa tu ip si vas a trabajar en tu celular
-        val url = "http://192.168.1.109/kontakta/v1/getUser.php"
+        //IP abraham
+        //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
+        //IP Axel
+        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
 
 
         //creating volley string request
@@ -98,7 +100,7 @@ class CambioDatosUsuario : AppCompatActivity() {
         val municipio = textMunicipio?.text.toString()
         val estado = textEstado?.text.toString()
 
-        val url = "http://192.168.1.109/kontakta/v1/actualizarUser.php"
+        val url = "http://192.168.1.45/kontakta/v1/actualizarUser.php"
 
 
         //creating volley string request
