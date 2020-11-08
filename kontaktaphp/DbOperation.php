@@ -12,13 +12,13 @@ class DbOperation
     }
  
 	//adding a record to database 
-	public function insertUser($nombre, $edad, $sexo, $direccion, $municipio, $estado, $correo, $password){
+	public function insertUser($nombre, $edad, $sexo, $direccion, $municipio, $estado, $correo, $password, $imagen){
 		$sql = "SELECT * FROM usuario WHERE correo = '$correo'";
 		$result = mysqli_query($this->con, $sql);
 		if($result->num_rows == 0)
 		{
-		$stmt = $this->con->prepare("INSERT INTO usuario(nombre, edad, sexo, direccion, municipio, estado, correo, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("ssssssss", $nombre, $edad, $sexo, $direccion, $municipio, $estado, $correo, $password);
+		$stmt = $this->con->prepare("INSERT INTO usuario(nombre, edad, sexo, direccion, municipio, estado, correo, password, imagen) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssssssss", $nombre, $edad, $sexo, $direccion, $municipio, $estado, $correo, $password, $imagen);
 		if($stmt->execute())
 			return true; 
 		return false; 
@@ -28,13 +28,13 @@ class DbOperation
 			return false;
 		}
 	}
-	public function insertServ($nombre, $integrantes, $descripcion, $genero, $youtube, $instagram, $facebook, $twitter, $correo){
+	public function insertServ($nombre, $imagen, $integrantes, $descripcion, $genero, $youtube, $instagram, $facebook, $twitter, $correo){
 		$sql = "SELECT * FROM usuario WHERE correo = '$correo'";
 		$result = mysqli_query($this->con, $sql);
 		$row = mysqli_fetch_assoc($result);
 		$id = $row['IDUsuario'];
-		$stmt = $this->con->prepare("INSERT INTO prestadorservicios(nombreServicio, integrantes, descripcion, genero, youtube, instagram, facebook, twitter, IDUsuario_FK) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssssssss", $nombre, $integrantes, $descripcion, $genero, $youtube, $instagram, $facebook, $twitter, $id);
+		$stmt = $this->con->prepare("INSERT INTO prestadorservicios(nombreServicio, imagen, integrantes, descripcion, genero, youtube, instagram, facebook, twitter, IDUsuario_FK) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("ssssssssss", $nombre, $imagen, $integrantes, $descripcion, $genero, $youtube, $instagram, $facebook, $twitter, $id);
 		if($stmt->execute())
 			return true; 
 		return false; 

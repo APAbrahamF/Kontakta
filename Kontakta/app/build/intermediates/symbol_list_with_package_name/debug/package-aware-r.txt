@@ -1850,8 +1850,12 @@ id imageView5
 id imageView6
 id imageView7
 id image_row
+id image_view
+id image_view2
 id imgViewPhotoPro
 id imgViewPhotoPro2
+id img_pick_btn
+id img_pick_btn2
 id info
 id invisible
 id italic

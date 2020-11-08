@@ -5,9 +5,9 @@
 	
 	//response array 
     $response = array(); 
-    if (isset($_POST['nombre']) && isset($_POST['integrantes']) && isset($_POST['descripcion']) && isset($_POST['genero']) && isset($_POST['youtube']) && isset($_POST['instagram']) && isset($_POST['facebook']) && isset($_POST['twitter'])) {
+    if (isset($_POST['nombre']) && isset($_POST['imagen']) && isset($_POST['integrantes']) && isset($_POST['descripcion']) && isset($_POST['genero']) && isset($_POST['youtube']) && isset($_POST['instagram']) && isset($_POST['facebook']) && isset($_POST['twitter'])) {
         $db = new DbOperation(); 
-        if($db->insertServ($_POST['nombre'], $_POST['integrantes'],$_POST['descripcion'],$_POST['genero'],$_POST['youtube'],$_POST['instagram'],$_POST['facebook'],$_POST['twitter'])){
+        if($db->insertServ($_POST['nombre'], $_POST['imagen'], $_POST['integrantes'],$_POST['descripcion'],$_POST['genero'],$_POST['youtube'],$_POST['instagram'],$_POST['facebook'],$_POST['twitter'])){
            $response['error'] = false;
            $response['message'] = 'Agregado correctamente';
         }else{
