@@ -18,8 +18,12 @@ import org.json.JSONObject
 import android.app.Activity
 import android.content.pm.PackageManager
 import android.Manifest
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.Build.*
+import android.util.Base64
+import java.io.ByteArrayOutputStream
 
 @Suppress("DEPRECATION")
 class RegistroUsuario:AppCompatActivity() {
@@ -103,6 +107,13 @@ class RegistroUsuario:AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE){
             image_view.setImageURI(data?.data)
+            /*val bm = (image_view.getDrawable() as BitmapDrawable).getBitmap()
+            val stream = ByteArrayOutputStream()
+            bm.compress(Bitmap.CompressFormat.PNG, 90, stream)
+            val byteArrayImage = stream.toByteArray()
+            val encodedImage = Base64.encodeToString(byteArrayImage, Base64.DEFAULT)
+            println("Base64")
+            println(encodedImage)*/
         }
     }
 
@@ -118,9 +129,19 @@ class RegistroUsuario:AppCompatActivity() {
         val correo = textCorreo1?.text.toString()
         val pass2 = textPass2?.text.toString()
         val password = textPass1?.text.toString()
-        val imagen : String = "1234";
+
+        val bm = (image_view.getDrawable() as BitmapDrawable).getBitmap()
+        val stream = ByteArrayOutputStream()
+        bm.compress(Bitmap.CompressFormat.PNG, 90, stream)
+        val byteArrayImage = stream.toByteArray()
+        val encodedImage = Base64.encodeToString(byteArrayImage, Base64.DEFAULT)
+        //println("Base64")
+        //println(encodedImage)
+
+        val imagen : String = encodedImage;
 
         val url = "http://192.168.1.109/kontakta/v1/index.php"
+        //val url = "http://192.168.100.6/v1/index.php"
 
 
         //creating volley string request

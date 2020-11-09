@@ -21,7 +21,10 @@ class MyAdapter (var mCtx:Context, var resources:Int, var items:List<Model>):Arr
 
         var mItem:Model = items[position]
         //imageView.setImageDrawable(mCtx.resources.getDrawable(mItem.img))
-        val extension = mItem.img.substringAfter(delimiter = ",", missingDelimiterValue = "Extension Not found")
+        var extension=mItem.img
+        if(mItem.img.contains(","))
+            extension = extension.substringAfter(delimiter = ",", missingDelimiterValue = "Extension Not found")
+        //val extension = mItem.img.substringAfter(delimiter = ",", missingDelimiterValue = "Extension Not found")
         val imageBytes = Base64.decode(extension, Base64.DEFAULT)
         val decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
         imageView.setImageBitmap(decodedImage)

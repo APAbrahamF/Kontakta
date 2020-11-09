@@ -10,7 +10,8 @@ if($resultset=getSQLResultSet("SELECT * FROM usuario")){
                 $e['nombre'] = $row[1];
                 $e['edad'] = $row[2];
                 $e['sexo'] = $row[3];
-                $e['direccion'] = $row[4];
+                $e['correo'] = $row[7];
+				$e['imagen'] = $row[9];
                 array_push($array,$e);
 	}
         echo json_encode($array);

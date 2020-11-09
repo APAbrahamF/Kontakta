@@ -18,8 +18,13 @@ import org.json.JSONObject
 import android.app.Activity
 import android.content.pm.PackageManager
 import android.Manifest
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.Build.*
+import android.util.Base64
+import kotlinx.android.synthetic.main.registro_usuario.*
+import java.io.ByteArrayOutputStream
 
 
 @Suppress("DEPRECATION")
@@ -108,7 +113,7 @@ class RegistroPrestador:AppCompatActivity() {
         //getting the record values
         val queue = Volley.newRequestQueue(this);
         val nombre = textNombreServ?.text.toString()
-        val imagen: String = "1234";
+        //val imagen: String = "1234";
         val integrantes = textIntegrantes?.text.toString()
         val descripcion = textDescripcion?.text.toString()
         val genero = textGenero?.text.toString()
@@ -117,7 +122,18 @@ class RegistroPrestador:AppCompatActivity() {
         val facebook = textFacebook?.text.toString()
         val twitter = textTwitter?.text.toString()
 
+        val bm = (image_view2.getDrawable() as BitmapDrawable).getBitmap()
+        val stream = ByteArrayOutputStream()
+        bm.compress(Bitmap.CompressFormat.PNG, 90, stream)
+        val byteArrayImage = stream.toByteArray()
+        val encodedImage = Base64.encodeToString(byteArrayImage, Base64.DEFAULT)
+        //println("Base64")
+        //println(encodedImage)
+
+        val imagen : String = encodedImage;
+
         val url = "http://192.168.1.109/kontakta/v1/insertM.php"
+        //val url = "http://192.168.100.6/v1/insertM.php"
 
 
         //creating volley string request
