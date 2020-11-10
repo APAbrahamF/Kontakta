@@ -22,6 +22,18 @@ import kotlinx.android.synthetic.main.registro_usuario.textNombre
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
+import android.app.Activity
+import android.content.pm.PackageManager
+import android.Manifest
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
+import android.os.Build
+import android.os.Build.*
+import android.util.Base64
+import android.widget.ImageView
+import java.io.ByteArrayOutputStream
+
 
 class CambioDatosUsuario : AppCompatActivity() {
 
@@ -31,12 +43,70 @@ class CambioDatosUsuario : AppCompatActivity() {
         //Esta es la funcion que jala los datos actuales del usuario
         //ese correo lo tengo en la base, despues jalaremos el correo del usuario actual desde el menu
         //por el momento usa un correo que tengas tu registrado para jalar los registros
-        getData("abraham1902@hotmail.com")
+        getData("1")
         //Aqui estoy jalando el boton desde la interfaz para luego crear el evento oncreate
         var BotonGuardar: FloatingActionButton = findViewById(R.id.FABGuardarU) as FloatingActionButton;
+        imageBtnPhotoPro.setOnClickListener {
+            //check runtime permission
+            if (VERSION.SDK_INT >= VERSION_CODES.M){
+                if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) ==
+                    PackageManager.PERMISSION_DENIED){
+                    //permission denied
+                    val permissions = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE);
+                    //show popup to request runtime permission
+                    requestPermissions(permissions, PERMISSION_CODE);
+                }
+                else{
+                    //permission already granted
+                    pickImageFromGallery();
+                }
+            }
+            else{
+                //system OS is < Marshmallow
+                pickImageFromGallery();
+            }
+        }
         BotonGuardar.setOnClickListener {
             //Esta es la funcion que jala datos bien chidori, igual le tienes que pasar el correo del usuario para saber donde guardar
-            guardar("abraham1902@hotmail.com");
+            guardar("1");
+        }
+    }
+    private fun pickImageFromGallery() {
+        //Intent to pick image
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        startActivityForResult(intent, IMAGE_PICK_CODE)
+    }
+
+    companion object {
+        //image pick code
+        private val IMAGE_PICK_CODE = 1000;
+        //Permission code
+        private val PERMISSION_CODE = 1001;
+    }
+
+    //handle requested permission result
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        when(requestCode){
+            PERMISSION_CODE -> {
+                if (grantResults.size >0 && grantResults[0] ==
+                    PackageManager.PERMISSION_GRANTED){
+                    //permission from popup granted
+                    pickImageFromGallery()
+                }
+                else{
+                    //permission from popup denied
+                    Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    //handle result of picked image
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE){
+            imgViewPhotoPro.setImageURI(data?.data)
         }
     }
     private fun getData(correo: String) {
@@ -48,12 +118,14 @@ class CambioDatosUsuario : AppCompatActivity() {
         var municipio: EditText = findViewById(R.id.textMunicipio) as EditText
         var direccion: EditText = findViewById(R.id.textDireccion) as EditText
         var estado: EditText = findViewById(R.id.textEstado) as EditText
+        var imageview: ImageView = findViewById(R.id.imgViewPhotoPro) as ImageView
+        var imgCadena = "";
 
         //Aqui va la url de tu server, usa tu ip si vas a trabajar en tu celular
         //IP abraham
-        //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
+        val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //IP Axel
-        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
 
 
         //creating volley string request
@@ -73,6 +145,14 @@ class CambioDatosUsuario : AppCompatActivity() {
                     municipio.setText(obj.getString("municipio"))
                     direccion.setText(obj.getString("direccion"))
                     estado.setText(obj.getString("estado"))
+                    imgCadena = obj.getString("imagen")
+                    var extension = imgCadena
+                    if(imgCadena.contains(","))
+                        extension = extension.substringAfter(delimiter = ",", missingDelimiterValue = "Extension Not found")
+                    //val extension = mItem.img.substringAfter(delimiter = ",", missingDelimiterValue = "Extension Not found")
+                    val imageBytes = Base64.decode(extension, Base64.DEFAULT)
+                    val decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+                    imageview.setImageBitmap(decodedImage)
                 } catch (e: JSONException) {
                     e.printStackTrace()
                 }
@@ -99,8 +179,17 @@ class CambioDatosUsuario : AppCompatActivity() {
         val direccion = textDireccion?.text.toString()
         val municipio = textMunicipio?.text.toString()
         val estado = textEstado?.text.toString()
+        var imageview: ImageView = findViewById(R.id.imgViewPhotoPro) as ImageView
+        val bm = (imageview.getDrawable() as BitmapDrawable).getBitmap()
+        val stream = ByteArrayOutputStream()
+        bm.compress(Bitmap.CompressFormat.PNG, 90, stream)
+        val byteArrayImage = stream.toByteArray()
+        val encodedImage = Base64.encodeToString(byteArrayImage, Base64.DEFAULT)
 
-        val url = "http://192.168.1.45/kontakta/v1/actualizarUser.php"
+        //IP abraham
+        val url = "http://192.168.1.109/kontakta/v1/actualizarUser.php"
+        //IP Axel
+        //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
 
 
         //creating volley string request
@@ -127,6 +216,7 @@ class CambioDatosUsuario : AppCompatActivity() {
                 params.put("municipio", municipio)
                 params.put("estado", estado)
                 params.put("correo", correo)
+                params.put("imagen", encodedImage)
                 return params
             }
         }
