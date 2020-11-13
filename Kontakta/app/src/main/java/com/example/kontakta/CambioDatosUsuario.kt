@@ -126,6 +126,8 @@ class CambioDatosUsuario : AppCompatActivity() {
         val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //IP Axel
         //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        //IP p8
+        //val url = "http://192.168.100.6/v1/getUser.php"
 
 
         //creating volley string request
@@ -182,7 +184,7 @@ class CambioDatosUsuario : AppCompatActivity() {
         var imageview: ImageView = findViewById(R.id.imgViewPhotoPro) as ImageView
         val bm = (imageview.getDrawable() as BitmapDrawable).getBitmap()
         val stream = ByteArrayOutputStream()
-        bm.compress(Bitmap.CompressFormat.PNG, 90, stream)
+        bm.compress(Bitmap.CompressFormat.JPEG, 50, stream)
         val byteArrayImage = stream.toByteArray()
         val encodedImage = Base64.encodeToString(byteArrayImage, Base64.DEFAULT)
 
@@ -190,7 +192,8 @@ class CambioDatosUsuario : AppCompatActivity() {
         val url = "http://192.168.1.109/kontakta/v1/actualizarUser.php"
         //IP Axel
         //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
-
+        //IP p8
+        //val url = "http://192.168.100.6/v1/actualizarUser.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(

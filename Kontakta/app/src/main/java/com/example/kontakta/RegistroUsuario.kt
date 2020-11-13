@@ -132,7 +132,7 @@ class RegistroUsuario:AppCompatActivity() {
 
         val bm = (image_view.getDrawable() as BitmapDrawable).getBitmap()
         val stream = ByteArrayOutputStream()
-        bm.compress(Bitmap.CompressFormat.PNG, 90, stream)
+        bm.compress(Bitmap.CompressFormat.JPEG, 50, stream)
         val byteArrayImage = stream.toByteArray()
         val encodedImage = Base64.encodeToString(byteArrayImage, Base64.DEFAULT)
         //println("Base64")
