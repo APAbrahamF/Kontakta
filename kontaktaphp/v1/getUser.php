@@ -19,6 +19,7 @@
       $e['direccion'] = $row['direccion'];
       $e['estado'] = $row['estado'];
       $e['municipio'] = $row['municipio'];
+      $e['imagen'] = $row['imagen'];
       $e['IDServicio_FK'] = $row['IDServicio_FK'];
       $e['message'] = 'Buena';
       array_push($array,$e);
