@@ -70,8 +70,9 @@ class MainActivity : AppCompatActivity() {
                     var bandera = obj.getString("error");
                     if(bandera == "true")
                     {
-                            val intent1 = Intent(this, MenuPrincipal::class.java)
-                            startActivity(intent1)
+                        val intent1 = Intent(this, MenuPrincipal::class.java)
+                        intent1.putExtra("correo", correo);
+                        startActivity(intent1)
                     }
                 } catch (e: JSONException) {
                     e.printStackTrace()

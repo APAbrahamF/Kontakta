@@ -9,10 +9,12 @@ class MenuPrincipal: AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu_principal)
+        var correo : String = intent.getStringExtra("correo").toString()
         var buttConf:ImageButton = findViewById(R.id.confButton) as ImageButton
         buttConf.setOnClickListener{
-            val intent = Intent(this,MenuConfiguracion::class.java)
-            startActivity(intent)
+            val intent1 = Intent(this, MenuConfiguracion::class.java)
+            intent1.putExtra("correo", correo);
+            startActivity(intent1)
         }
     }
 }

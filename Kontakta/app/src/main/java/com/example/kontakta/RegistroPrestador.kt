@@ -146,8 +146,9 @@ class RegistroPrestador:AppCompatActivity() {
                     var bandera = obj.getString("error");
                     if(bandera == "false")
                     {
-                        val intent = Intent(this,MenuPrincipal::class.java)
-                        startActivity(intent)
+                        val intent1 = Intent(this, RegistroPrestador::class.java)
+                        intent1.putExtra("correo", correo);
+                        startActivity(intent1)
                     }
                 } catch (e: JSONException) {
                     e.printStackTrace()

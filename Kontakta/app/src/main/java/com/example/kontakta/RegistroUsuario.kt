@@ -162,8 +162,9 @@ class RegistroUsuario:AppCompatActivity() {
                         }
                         else
                         {
-                            val intent2 = Intent(this, MenuPrincipal::class.java)
-                            startActivity(intent2)
+                            val intent1 = Intent(this, MenuPrincipal::class.java)
+                            intent1.putExtra("correo", correo);
+                            startActivity(intent1)
                         }
                     }
                 } catch (e: JSONException) {

@@ -43,7 +43,8 @@ class CambioDatosUsuario : AppCompatActivity() {
         //Esta es la funcion que jala los datos actuales del usuario
         //ese correo lo tengo en la base, despues jalaremos el correo del usuario actual desde el menu
         //por el momento usa un correo que tengas tu registrado para jalar los registros
-        getData("1")
+        var correo : String = intent.getStringExtra("correo").toString()
+        getData(correo)
         //Aqui estoy jalando el boton desde la interfaz para luego crear el evento oncreate
         var BotonGuardar: FloatingActionButton = findViewById(R.id.FABGuardarU) as FloatingActionButton;
         imageBtnPhotoPro.setOnClickListener {
@@ -68,7 +69,7 @@ class CambioDatosUsuario : AppCompatActivity() {
         }
         BotonGuardar.setOnClickListener {
             //Esta es la funcion que jala datos bien chidori, igual le tienes que pasar el correo del usuario para saber donde guardar
-            guardar("1");
+            guardar(correo);
         }
     }
     private fun pickImageFromGallery() {
