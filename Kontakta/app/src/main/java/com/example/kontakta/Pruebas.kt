@@ -26,7 +26,8 @@ class Pruebas : AppCompatActivity(){
         var list = mutableListOf<Model>()
 
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.100.6/v1/usuariosGET.php"
+        //val url = "http://192.168.100.6/v1/usuariosGET.php"
+        val url = "http://192.168.1.45/kontakta/v1/usuariosGET.php"
         val stringRequest = StringRequest(Request.Method.GET,url, { response ->
             val jsonArray=JSONArray(response)
             for(i in 0 until jsonArray.length()){

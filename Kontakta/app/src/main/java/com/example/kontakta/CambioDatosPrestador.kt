@@ -22,8 +22,8 @@ class CambioDatosPrestador : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cambio_prestador)
-
-        getIDServicio("abraham1902@hotmail.com")
+        var correo : String = intent.getStringExtra("correo").toString()
+        getIDServicio(correo)
         getData(idServicio)
         val BotonGuardar: FloatingActionButton = findViewById(R.id.FABGuardarP) as FloatingActionButton;
         BotonGuardar.setOnClickListener {

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".perfilUsuario">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="691dp"
+        android:gravity="clip_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:translationY="40dp">
+
+        <TextView
+            android:id="@+id/perfilTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perfil"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <ImageView
+            android:id="@+id/imgUper"
+            android:layout_width="wrap_content"
+            android:layout_height="128dp" />
+
+        <TextView
+            android:id="@+id/nombreUper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre" />
+
+        <TextView
+            android:id="@+id/edadUper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edad" />
+
+        <TextView
+            android:id="@+id/sexoUper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sexo" />
+
+        <TextView
+            android:id="@+id/ubiUper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicación" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
