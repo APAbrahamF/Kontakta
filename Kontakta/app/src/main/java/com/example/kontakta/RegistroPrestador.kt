@@ -58,7 +58,7 @@ class RegistroPrestador:AppCompatActivity() {
             }
         }
 
-        
+
         var correo : String = intent.getStringExtra("correo").toString()
         btnRegister.setOnClickListener() {
 
@@ -172,7 +172,7 @@ class RegistroPrestador:AppCompatActivity() {
                 return params
             }
         }
-            //adding request to queue
-            queue.add(stringRequest);
+        //adding request to queue
+        queue.add(stringRequest);
     }
 }

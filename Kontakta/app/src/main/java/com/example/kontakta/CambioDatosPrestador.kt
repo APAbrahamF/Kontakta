@@ -1,7 +1,17 @@
 package com.example.kontakta
 
+import android.Manifest
+import android.app.Activity
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
+import android.os.Build
 import android.os.Bundle
+import android.util.Base64
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.AuthFailureError
@@ -11,9 +21,12 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.cambio_prestador.*
+import kotlinx.android.synthetic.main.cambio_usuario.*
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
+import java.io.ByteArrayOutputStream
+
 
 var idServicio: String = ""
 
@@ -26,10 +39,70 @@ class CambioDatosPrestador : AppCompatActivity() {
         getIDServicio(correo)
         getData(idServicio)
         val BotonGuardar: FloatingActionButton = findViewById(R.id.FABGuardarP) as FloatingActionButton;
+        imageBtnPhotoPro2.setOnClickListener {
+            //check runtime permission
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+                if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) ==
+                    PackageManager.PERMISSION_DENIED){
+                    //permission denied
+                    val permissions = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE);
+                    //show popup to request runtime permission
+                    requestPermissions(permissions, CambioDatosUsuario.PERMISSION_CODE);
+                }
+                else{
+                    //permission already granted
+                    pickImageFromGallery();
+                }
+            }
+            else{
+                //system OS is < Marshmallow
+                pickImageFromGallery();
+            }
+        }
         BotonGuardar.setOnClickListener {
             guardar();
         }
     }
+
+    private fun pickImageFromGallery() {
+        //Intent to pick image
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        startActivityForResult(intent, IMAGE_PICK_CODE)
+    }
+
+    companion object {
+        //image pick code
+        val IMAGE_PICK_CODE = 1000;
+        //Permission code
+        val PERMISSION_CODE = 1001;
+    }
+
+    //handle requested permission result
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        when(requestCode){
+            PERMISSION_CODE -> {
+                if (grantResults.size >0 && grantResults[0] ==
+                    PackageManager.PERMISSION_GRANTED){
+                    //permission from popup granted
+                    pickImageFromGallery()
+                }
+                else{
+                    //permission from popup denied
+                    Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    //handle result of picked image
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE){
+            imgViewPhotoPro2.setImageURI(data?.data)
+        }
+    }
+
     private fun getIDServicio(correo: String) {
         val queue = Volley.newRequestQueue(this);
 
@@ -71,7 +144,10 @@ class CambioDatosPrestador : AppCompatActivity() {
         var facebook: EditText = findViewById(R.id.textFacebookP) as EditText
         var instagram: EditText = findViewById(R.id.textInstagramP) as EditText
         var youtube: EditText = findViewById(R.id.textYoutubeP) as EditText
+        var twitter: EditText = findViewById(R.id.textTwitter) as EditText
         var genero: EditText = findViewById(R.id.editTextGenero) as EditText
+        var imageview: ImageView = findViewById(R.id.imgViewPhotoPro2) as ImageView
+        var imgCadena = "";
 
         val url = "http://192.168.1.45/kontakta/v1/getServ.php"
 
@@ -93,6 +169,15 @@ class CambioDatosPrestador : AppCompatActivity() {
                     facebook.setText(obj.getString("facebook"))
                     instagram.setText(obj.getString("instagram"))
                     youtube.setText(obj.getString("youtube"))
+                    twitter.setText(obj.getString("twitter"))
+                    imgCadena = obj.getString("imagen")
+                    var extension = imgCadena
+                    if(imgCadena.contains(","))
+                        extension = extension.substringAfter(delimiter = ",", missingDelimiterValue = "Extension Not found")
+                    //val extension = mItem.img.substringAfter(delimiter = ",", missingDelimiterValue = "Extension Not found")
+                    val imageBytes = Base64.decode(extension, Base64.DEFAULT)
+                    val decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+                    imageview.setImageBitmap(decodedImage)
                 } catch (e: JSONException) {
                     e.printStackTrace()
                 }
@@ -119,8 +204,16 @@ class CambioDatosPrestador : AppCompatActivity() {
         val facebook = textFacebookP?.text.toString()
         val youtube = textYoutubeP?.text.toString()
         val instagram = textInstagramP?.text.toString()
+        val twitter = textTwitter?.text.toString()
+        var imageview: ImageView = findViewById(R.id.imgViewPhotoPro2) as ImageView
+        val bm = (imageview.getDrawable() as BitmapDrawable).getBitmap()
+        val stream = ByteArrayOutputStream()
+        bm.compress(Bitmap.CompressFormat.JPEG, 50, stream)
+        val byteArrayImage = stream.toByteArray()
+        val encodedImage = Base64.encodeToString(byteArrayImage, Base64.DEFAULT)
 
         val url = "http://192.168.1.45/kontakta/v1/actualizarServ.php"
+
 
 
         //creating volley string request
@@ -148,6 +241,8 @@ class CambioDatosPrestador : AppCompatActivity() {
                 params.put("facebook", facebook)
                 params.put("youtube", youtube)
                 params.put("instagram", instagram)
+                params.put("twitter", twitter)
+                params.put("imagen", encodedImage)
                 return params
             }
         }

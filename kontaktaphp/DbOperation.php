@@ -67,9 +67,9 @@ class DbOperation
 		$result = mysqli_query($this->con, $sql);
 		return true;
 	}
-	public function actualizeServ($IDServicio, $nombreServicio, $descripcion, $genero, $integrantes, $facebook, $youtube, $instagram)
+	public function actualizeServ($IDServicio, $nombreServicio, $imagen, $descripcion, $genero, $integrantes, $facebook, $youtube, $instagram, $twitter)
 	{		
-		$sql = "UPDATE prestadorservicios SET nombreServicio = '$nombreServicio', descripcion = '$descripcion', genero = '$genero', integrantes = '$integrantes', facebook = '$facebook', youtube = '$youtube', instagram = '$instagram' WHERE IDServicio = '$IDServicio'";
+		$sql = "UPDATE prestadorservicios SET nombreServicio = '$nombreServicio', imagen = '$imagen',descripcion = '$descripcion', genero = '$genero', integrantes = '$integrantes', facebook = '$facebook', youtube = '$youtube', instagram = '$instagram', twitter = '$twitter' WHERE IDServicio = '$IDServicio'";
 		$result = mysqli_query($this->con, $sql);
 		return true;
 	}

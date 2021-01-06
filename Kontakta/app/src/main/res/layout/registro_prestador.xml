@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,7 +12,7 @@
         android:layout_height="76dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024"
@@ -24,7 +23,7 @@
         android:layout_height="502dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.901">
@@ -45,16 +44,16 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:text="Selecciona tu imagen"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textNombreServ"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:ems="10"
+                android:hint="Nombre del grupo o artista"
                 android:inputType="textPersonName"
-                android:text="Nombre del grupo o artista"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textIntegrantes"
@@ -63,70 +62,70 @@
                 android:layout_marginEnd="72dp"
                 android:layout_marginRight="72dp"
                 android:ems="10"
+                android:hint="Integrantes"
                 android:inputType="number"
-                android:text="integrantes"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textDescripcion"
                 android:layout_width="320dp"
                 android:layout_height="100dp"
                 android:ems="10"
+                android:hint="Descripcion"
                 android:inputType="textEmailAddress"
-                android:text="Descripcion"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textGenero"
                 android:layout_width="320dp"
                 android:layout_height="60dp"
                 android:ems="10"
+                android:hint="Género"
                 android:inputType="textPersonName"
-                android:text="Genero"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textYoutube"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:ems="10"
+                android:hint="Youtube"
                 android:inputType="textPersonName"
-                android:text="Youtube"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textInstagram"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:ems="10"
+                android:hint="Instagram"
                 android:inputType="textPersonName"
-                android:text="instagram"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textFacebook"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:ems="10"
+                android:hint="Facebook"
                 android:inputType="textPersonName"
-                android:text="Facebook"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textTwitter"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:ems="10"
+                android:hint="Twitter"
                 android:inputType="textPersonName"
-                android:text="Twitter"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <Button
                 android:id="@+id/buttonRegistroServ"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Registrarme"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
         </LinearLayout>
     </ScrollView>

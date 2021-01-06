@@ -13,14 +13,14 @@
 	while ($row = mysqli_fetch_assoc($resultset)){
 		$e = array();
 		$e['nombreServicio'] = $row['nombreServicio'];
-		//$e['imagen'] = $row['imagen'];
+		$e['imagen'] = $row['imagen'];
 		$e['integrantes'] = $row['integrantes'];
 		$e['descripcion'] = $row['descripcion'];
 		$e['genero'] = $row['genero'];
 		$e['youtube'] = $row['youtube'];
 		$e['instagram'] = $row['instagram'];
 		$e['facebook'] = $row['facebook'];
-		$e['twitter'] = $row['twitter']; 
+		$e['twitter'] = $row['twitter']; 		
       	$e['message'] = 'Buena';
       array_push($array,$e);
 	}

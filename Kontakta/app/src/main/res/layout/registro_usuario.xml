@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistroUsuario"
-    >
+    tools:context=".RegistroUsuario">
 
 
     <ScrollView
@@ -15,7 +13,7 @@
         android:layout_height="502dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.901">
@@ -36,16 +34,16 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:text="Selecciona tu imagen"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textNombre"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:ems="10"
+                android:hint="Nombre"
                 android:inputType="textPersonName"
-                android:text="Nombre"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textEdad"
@@ -54,61 +52,61 @@
                 android:layout_marginEnd="72dp"
                 android:layout_marginRight="72dp"
                 android:ems="10"
+                android:hint="Edad"
                 android:inputType="number"
-                android:text="Edad"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textCorreo1"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:ems="10"
+                android:hint="Correo"
                 android:inputType="textEmailAddress"
-                android:text="Correo"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textEstado"
                 android:layout_width="320dp"
                 android:layout_height="60dp"
                 android:ems="10"
+                android:hint="Estado"
                 android:inputType="textPersonName"
-                android:text="Estado"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textMunicipio"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:ems="10"
+                android:hint="Municipio"
                 android:inputType="textPersonName"
-                android:text="Municipio"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textDireccion"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:ems="10"
+                android:hint="Dirección"
                 android:inputType="textPersonName"
-                android:text="Dirección"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textSexo"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:ems="10"
+                android:hint="Sexo"
                 android:inputType="textPersonName"
-                android:text="Sexo"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ingresa tu nueva contraseña"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textPass1"
@@ -116,14 +114,14 @@
                 android:layout_height="50dp"
                 android:ems="10"
                 android:inputType="textPassword"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Confirma tu contraseña"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textPass2"
@@ -131,21 +129,21 @@
                 android:layout_height="50dp"
                 android:ems="10"
                 android:inputType="textPassword"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <CheckBox
                 android:id="@+id/checkBox"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:text="¿Eres musico?"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
             <Button
                 android:id="@+id/buttonRegistro"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Registrarme"
-                android:translationX="50dp" />
+                android:translationX="37dp" />
 
         </LinearLayout>
     </ScrollView>

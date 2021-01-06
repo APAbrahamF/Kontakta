@@ -1850,9 +1850,6 @@ id imageView10
 id imageView2
 id imageView3
 id imageView4
-id imageView5
-id imageView6
-id imageView7
 id image_row
 id image_view
 id image_view2

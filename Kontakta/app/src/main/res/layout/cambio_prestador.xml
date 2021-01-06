@@ -36,13 +36,12 @@
     <ImageView
         android:id="@+id/imgViewPhotoPro2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="128dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.067"
+        app:layout_constraintVertical_bias="0.050000012"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -123,7 +122,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.911" />
+        app:layout_constraintVertical_bias="0.867" />
 
     <EditText
         android:id="@+id/textFacebookP"
@@ -139,45 +138,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.736" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="37dp"
-        android:layout_height="39dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.903"
-        app:srcCompat="@drawable/insta_logo" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="37dp"
-        android:layout_height="37dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.727"
-        app:srcCompat="@drawable/fb_logo" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="37dp"
-        android:layout_height="39dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816"
-        app:srcCompat="@drawable/yt_logo" />
-
     <EditText
         android:id="@+id/textInstagramP"
         android:layout_width="wrap_content"
@@ -190,7 +150,21 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.823" />
+        app:layout_constraintVertical_bias="0.801" />
+
+    <EditText
+        android:id="@+id/textTwitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Modificar link de Twitter"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.932" />
 
     <TextView
         android:id="@+id/textRedesSociales"
