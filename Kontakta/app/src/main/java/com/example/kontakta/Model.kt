@@ -1,5 +1,5 @@
 package com.example.kontakta
 
-class Model (val IDUsuario:String,val nombre:String,val img:String){
+class Model (val IDUsuario:String,val correo:String,val img:String){
 
 }

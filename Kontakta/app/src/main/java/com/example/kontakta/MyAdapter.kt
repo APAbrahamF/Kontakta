@@ -29,7 +29,7 @@ class MyAdapter (var mCtx:Context, var resources:Int, var items:List<Model>):Arr
         val decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
         imageView.setImageBitmap(decodedImage)
         titleTextView.text = mItem.IDUsuario
-        descriptionTextView.text = mItem.nombre
+        descriptionTextView.text = mItem.correo
 
 
         return view
