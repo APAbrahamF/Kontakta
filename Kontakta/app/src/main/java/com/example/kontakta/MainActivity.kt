@@ -56,8 +56,8 @@ class MainActivity : AppCompatActivity() {
         val correo = textCorreo?.text.toString()
         val password = textPassword?.text.toString()
         //val url = "http://192.168.1.45/kontakta/v1/login.php"
-        //val url = "http://192.168.1.109/kontakta/v1/login.php"
-        val url = "http://192.168.100.6/v1/login.php"
+        val url = "http://192.168.1.109/kontakta/v1/login.php"
+        //val url = "http://192.168.100.6/v1/login.php"
 
 
         //creating volley string request
