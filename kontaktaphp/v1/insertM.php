@@ -1,9 +1,9 @@
 <?php 
-	
-	//adding dboperation file 
-	require_once '../DbOperation.php';
-	
-	//response array 
+  
+  //adding dboperation file 
+  require_once '../DbOperation.php';
+  
+  //response array 
     $response = array(); 
     if (isset($_POST['nombre']) && isset($_POST['imagen']) && isset($_POST['integrantes']) && isset($_POST['descripcion']) && isset($_POST['genero']) && isset($_POST['youtube']) && isset($_POST['instagram']) && isset($_POST['facebook']) && isset($_POST['twitter']) && isset($_POST['correo'])) {
         $db = new DbOperation(); 
@@ -15,13 +15,13 @@
            $response['message'] = 'Revise que su correo no este registrado o que los datos esten correctos';
         }
         // }else{
-        // 	$response['error'] = true; 
-        // 	$response['message'] = 'Required Parameters are missing';
-        // }	
+        //  $response['error'] = true; 
+        //  $response['message'] = 'Required Parameters are missing';
+        // }  
      }else{
         $response['error'] = false; 
         $response['message'] = 'Invalid Request';
      }
-	//displaying the data in json 
+  //displaying the data in json 
    echo json_encode($response);
 ?>
