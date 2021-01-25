@@ -30,7 +30,9 @@ class perfilPrestador : AppCompatActivity() {
     private fun getIDServicio(correo: String) {
         val queue = Volley.newRequestQueue(this);
 
-        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
+        //val url = "http://192.168.100.6/v1/getUser.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(
@@ -73,7 +75,9 @@ class perfilPrestador : AppCompatActivity() {
         var imageview: ImageView = findViewById(R.id.imgPper) as ImageView
         var imgCadena = "";
 
-        val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
+        //val url = "http://192.168.100.6/v1/getServ.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(
@@ -117,51 +121,6 @@ class perfilPrestador : AppCompatActivity() {
                 val params = HashMap<String, String>()
                 //Esta funcion es la que pone los parametros en el php, aqui le pasas lo que va a ocupar el php
                 params.put("IDServ", IDServ)
-                return params
-            }
-        }
-        //adding request to queue
-        queue.add(stringRequest);
-    }
-    private fun guardar() {
-        //getting the record values
-        val queue = Volley.newRequestQueue(this);
-        val nombreServicio = textNombre2?.text.toString()
-        val descripcion = textDescripcionP?.text.toString()
-        val integrantes = textIntegrantesP?.text.toString()
-        val genero = editTextGenero?.text.toString()
-        val facebook = textFacebookP?.text.toString()
-        val youtube = textYoutubeP?.text.toString()
-        val instagram = textInstagramP?.text.toString()
-
-        val url = "http://192.168.1.45/kontakta/v1/actualizarServ.php"
-
-
-        //creating volley string request
-        val stringRequest = object : StringRequest(
-            Request.Method.POST, url,
-            Response.Listener<String> { response ->
-                try {
-                    //El php de aqui actualiza los datos de la base por lo que solo le solicito el mensaje
-                    val obj = JSONObject(response)
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
-                } catch (e: JSONException) {
-                    e.printStackTrace()
-                }
-            },
-            Response.ErrorListener { volleyError -> Toast.makeText(applicationContext, volleyError.message, Toast.LENGTH_LONG).show() }) {
-            @Throws(AuthFailureError::class)
-            override fun getParams(): Map<String, String> {
-                val params = HashMap<String, String>()
-                //Aqui le paso los datos de los edittext para que los actualize
-                params.put("IDServicio", idServicio2)
-                params.put("nombreServicio", nombreServicio)
-                params.put("descripcion", descripcion)
-                params.put("genero", genero)
-                params.put("integrantes", integrantes)
-                params.put("facebook", facebook)
-                params.put("youtube", youtube)
-                params.put("instagram", instagram)
                 return params
             }
         }

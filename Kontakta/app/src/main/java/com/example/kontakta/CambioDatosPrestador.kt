@@ -106,7 +106,9 @@ class CambioDatosPrestador : AppCompatActivity() {
     private fun getIDServicio(correo: String) {
         val queue = Volley.newRequestQueue(this);
 
-        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
+        //val url = "http://192.168.100.6/v1/getUser.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(
@@ -149,7 +151,10 @@ class CambioDatosPrestador : AppCompatActivity() {
         var imageview: ImageView = findViewById(R.id.imgViewPhotoPro2) as ImageView
         var imgCadena = "";
 
-        val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
+        //val url = "http://192.168.100.6/v1/getServ.php"
+
 
         //creating volley string request
         val stringRequest = object : StringRequest(
@@ -212,7 +217,9 @@ class CambioDatosPrestador : AppCompatActivity() {
         val byteArrayImage = stream.toByteArray()
         val encodedImage = Base64.encodeToString(byteArrayImage, Base64.DEFAULT)
 
-        val url = "http://192.168.1.45/kontakta/v1/actualizarServ.php"
+        //val url = "http://192.168.1.45/kontakta/v1/actualizarServ.php"
+        //val url = "http://192.168.1.109/kontakta/v1/actualizarServ.php"
+        //val url = "http://192.168.100.6/v1/actualizarServ.php"
 
 
 
