@@ -124,9 +124,9 @@ class CambioDatosUsuario : AppCompatActivity() {
 
         //Aqui va la url de tu server, usa tu ip si vas a trabajar en tu celular
         //IP abraham
-        //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
+        val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //IP Axel
-        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
         //IP p8
         //val url = "http://192.168.100.6/v1/getUser.php"
 

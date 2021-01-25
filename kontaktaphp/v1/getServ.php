@@ -8,7 +8,7 @@
    $array = array();	
    if(isset($_POST['IDServ'])){
       	$IDServ = $_POST['IDServ'];   		
-     	$sql = "SELECT * FROM prestadorservicios WHERE IDServicio = '$IDServ'";
+     	$sql = "SELECT * FROM prestadorservicios WHERE 	IDUsuario_FK = '$IDServ'";
    if($resultset = mysqli_query($con, $sql)){
 	while ($row = mysqli_fetch_assoc($resultset)){
 		$e = array();
@@ -21,7 +21,7 @@
 		$e['instagram'] = $row['instagram'];
 		$e['facebook'] = $row['facebook'];
 		$e['twitter'] = $row['twitter']; 		
-      	$e['message'] = 'Buena';
+      	$e['message'] = 'Sirve y muestra';
       array_push($array,$e);
 	}
    }

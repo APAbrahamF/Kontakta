@@ -11,7 +11,8 @@
       $sql = "SELECT * FROM usuario WHERE correo = '$correo'";
    if($resultset = mysqli_query($con, $sql)){
 	while ($row = mysqli_fetch_assoc($resultset)){
-		$e = array();
+      $e = array();
+      $e['IDUsuario'] = $row['IDUsuario'];
       $e['nombre'] = $row['nombre'];
       $e['edad'] = $row['edad'];
       $e['sexo'] = $row['sexo'];

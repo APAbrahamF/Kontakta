@@ -107,7 +107,7 @@ class CambioDatosPrestador : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
 
         //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
-        //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
+        val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //val url = "http://192.168.100.6/v1/getUser.php"
 
         //creating volley string request
@@ -121,7 +121,7 @@ class CambioDatosPrestador : AppCompatActivity() {
                     val obj = JSONObject(jsonArray.getString(0))
                     //A partir de aqui solo pongo los datos que jale en los espacios del edit text
                     Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
-                    idServicio = obj.getString("IDServicio_FK")
+                    idServicio = obj.getString("IDUsuario")
                 } catch (e: JSONException) {
                     e.printStackTrace()
                 }
@@ -152,7 +152,7 @@ class CambioDatosPrestador : AppCompatActivity() {
         var imgCadena = "";
 
         //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
-        //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
+        val url = "http://192.168.1.109/kontakta/v1/getServ.php"
         //val url = "http://192.168.100.6/v1/getServ.php"
 
 
@@ -218,7 +218,7 @@ class CambioDatosPrestador : AppCompatActivity() {
         val encodedImage = Base64.encodeToString(byteArrayImage, Base64.DEFAULT)
 
         //val url = "http://192.168.1.45/kontakta/v1/actualizarServ.php"
-        //val url = "http://192.168.1.109/kontakta/v1/actualizarServ.php"
+        val url = "http://192.168.1.109/kontakta/v1/actualizarServ.php"
         //val url = "http://192.168.100.6/v1/actualizarServ.php"
 
 
