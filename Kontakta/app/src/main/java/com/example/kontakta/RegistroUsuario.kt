@@ -107,6 +107,11 @@ class RegistroUsuario:AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE){
             image_view.setImageURI(data?.data)
+            val bm = (image_view.getDrawable() as BitmapDrawable).getBitmap()
+            val resizedBitmap = resizeBitmap(bm,300,300)
+            //val resizedBitmap = bm.resizeByWidth(400)
+            image_view.setImageBitmap(resizedBitmap)
+            println("Base64")
             /*val bm = (image_view.getDrawable() as BitmapDrawable).getBitmap()
             val stream = ByteArrayOutputStream()
             bm.compress(Bitmap.CompressFormat.PNG, 90, stream)
@@ -131,18 +136,21 @@ class RegistroUsuario:AppCompatActivity() {
         val password = textPass1?.text.toString()
 
         val bm = (image_view.getDrawable() as BitmapDrawable).getBitmap()
+        //val resizedBitmap = bm.resizeByWidth(400)
+        val resizedBitmap = resizeBitmap(bm,300,300)
+        image_view.setImageBitmap(resizedBitmap)
         val stream = ByteArrayOutputStream()
         bm.compress(Bitmap.CompressFormat.JPEG, 50, stream)
         val byteArrayImage = stream.toByteArray()
         val encodedImage = Base64.encodeToString(byteArrayImage, Base64.DEFAULT)
-        //println("Base64")
+        println("Base64")
         //println(encodedImage)
 
         val imagen : String = encodedImage;
 
         //val url = "http://192.168.1.45/kontakta/v1/index.php"
-        val url = "http://192.168.1.109/kontakta/v1/index.php"
-        //val url = "http://192.168.100.6/v1/index.php"
+        //val url = "http://192.168.1.109/kontakta/v1/index.php"
+        val url = "http://192.168.100.6/v1/index.php"
 
 
         //creating volley string request
@@ -195,6 +203,26 @@ class RegistroUsuario:AppCompatActivity() {
             //adding request to queue
             queue.add(stringRequest);
         }
+    }
+
+    private fun resizeBitmap(bitmap:Bitmap, width:Int, height:Int):Bitmap{
+        return Bitmap.createScaledBitmap(
+            bitmap,
+            width,
+            height,
+            false
+        )
+    }
+    fun Bitmap.resizeByWidth(width:Int):Bitmap{
+        val ratio:Float = this.width.toFloat() / this.height.toFloat()
+        val height:Int = Math.round(width / ratio)
+
+        return Bitmap.createScaledBitmap(
+            this,
+            width,
+            height,
+            false
+        )
     }
 
 }
