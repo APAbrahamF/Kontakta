@@ -1,4 +1,4 @@
-#Tue Jan 26 21:32:41 CST 2021
+#Thu Jan 28 19:11:39 CST 2021
 base.0=C\:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

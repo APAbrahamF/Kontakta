@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="generos">
+        <item>Alternativa</item>
+        <item>Banda</item>
+        <item>Blues</item>
+        <item>Country</item>
+        <item>Electronica</item>
+        <item>Folk</item>
+        <item>Hip Hop</item>
+        <item>Jazz</item>
+        <item>Mariachi</item>
+        <item>Metal</item>
+        <item>Pop</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

@@ -23,12 +23,18 @@ import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.Build.*
 import android.util.Base64
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.registro_usuario.*
 import java.io.ByteArrayOutputStream
 
 
 @Suppress("DEPRECATION")
 class RegistroPrestador:AppCompatActivity() {
+    object GlobalVariablePres {
+        var generoStr = "Alternativa"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registro_prestador)
@@ -58,6 +64,30 @@ class RegistroPrestador:AppCompatActivity() {
             }
         }
 
+        // Create an ArrayAdapter
+        val adapter = ArrayAdapter.createFromResource(this,
+            R.array.generos, android.R.layout.simple_spinner_item)
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        // Apply the adapter to the spinner
+        textGenero.adapter = adapter
+        textGenero.onItemSelectedListener = object :
+            AdapterView.OnItemSelectedListener {
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val text: String = parent?.getItemAtPosition(position).toString()
+                //textView.text = text
+                println(text)
+                GlobalVariablePres.generoStr=text
+            }
+        }
 
         var correo : String = intent.getStringExtra("correo").toString()
         btnRegister.setOnClickListener() {
@@ -119,7 +149,8 @@ class RegistroPrestador:AppCompatActivity() {
         //val imagen: String = "1234";
         val integrantes = textIntegrantes?.text.toString()
         val descripcion = textDescripcion?.text.toString()
-        val genero = textGenero?.text.toString()
+        //val genero = textGenero?.text.toString()
+        val genero = GlobalVariablePres.generoStr
         val youtube = textYoutube?.text.toString()
         val instagram = textInstagram?.text.toString()
         val facebook = textFacebook?.text.toString()

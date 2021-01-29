@@ -3,9 +3,6 @@ import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.os.Bundle
-import android.widget.Button
-import android.widget.Toast
-import android.widget.CheckBox
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
@@ -23,10 +20,15 @@ import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.Build.*
 import android.util.Base64
+import android.view.View
+import android.widget.*
 import java.io.ByteArrayOutputStream
 
 @Suppress("DEPRECATION")
 class RegistroUsuario:AppCompatActivity() {
+    object GlobalVariable {
+        var sexoStr = "H"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registro_usuario)
@@ -55,6 +57,32 @@ class RegistroUsuario:AppCompatActivity() {
                 pickImageFromGallery();
             }
         }
+
+        // Create an ArrayAdapter
+        val adapter = ArrayAdapter.createFromResource(this,
+            R.array.sexos, android.R.layout.simple_spinner_item)
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        // Apply the adapter to the spinner
+        textSexo.adapter = adapter
+        textSexo.onItemSelectedListener = object :
+        AdapterView.OnItemSelectedListener {
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val text: String = parent?.getItemAtPosition(position).toString()
+                //textView.text = text
+                println(text)
+                GlobalVariable.sexoStr=text
+            }
+        }
+
         val ban: CheckBox = findViewById<CheckBox>(R.id.checkBox)
         ban.post {
             ban!!.setChecked(true)
@@ -70,6 +98,7 @@ class RegistroUsuario:AppCompatActivity() {
             }
 
         }
+
     }
     private fun pickImageFromGallery() {
         //Intent to pick image
@@ -127,7 +156,8 @@ class RegistroUsuario:AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         val nombre = textNombre?.text.toString()
         val edad = textEdad?.text.toString()
-        val sexo = textSexo?.text.toString()
+        //val sexo = textSexo?.text.toString()
+        val sexo = GlobalVariable.sexoStr
         val direccion = textDireccion?.text.toString()
         val municipio = textMunicipio?.text.toString()
         val estado = textEstado?.text.toString()
@@ -224,5 +254,4 @@ class RegistroUsuario:AppCompatActivity() {
             false
         )
     }
-
 }

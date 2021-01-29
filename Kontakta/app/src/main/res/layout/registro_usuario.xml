@@ -93,14 +93,14 @@
                 android:inputType="textPersonName"
                 android:translationX="37dp" />
 
-            <EditText
+            <Spinner
                 android:id="@+id/textSexo"
-                android:layout_width="320dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Sexo"
-                android:inputType="textPersonName"
-                android:translationX="37dp" />
+                android:translationX="37dp"
+                android:entries="@array/sexos" />
 
             <TextView
                 android:id="@+id/textView5"
