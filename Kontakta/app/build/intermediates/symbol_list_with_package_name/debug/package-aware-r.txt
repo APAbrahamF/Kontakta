@@ -1724,6 +1724,7 @@ id buttonCamContra
 id buttonMenu
 id buttonPanel
 id buttonPruebas
+id buttonPruebas2
 id buttonRegistro
 id buttonRegistroServ
 id cache_measures
@@ -1878,6 +1879,7 @@ id line3
 id linear
 id listMode
 id listView
+id listView2
 id list_item
 id mainActivity
 id masked
@@ -2255,6 +2257,7 @@ layout notification_template_part_time
 layout perfil_prestador
 layout perfil_usuario
 layout pruebas
+layout pruebas2
 layout registro_prestador
 layout registro_usuario
 layout row

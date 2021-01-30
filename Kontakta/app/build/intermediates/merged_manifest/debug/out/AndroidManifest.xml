@@ -65,6 +65,13 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.kontakta.Pruebas2" >
+
+            <!-- Default Intent Filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.example.kontakta.MenuConfiguracion" >
 
             <!-- Default Intent Filter -->
