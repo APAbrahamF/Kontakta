@@ -23,21 +23,21 @@ class Pruebas2 : AppCompatActivity() {
         var list = mutableListOf<Model>()
 
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.100.6/v1/usuariosGET.php"
-        //val url = "http://192.168.1.45/kontakta/v1/usuariosGET.php"
+        val url = "http://192.168.100.6/v1/serviciosGET.php"
+        //val url = "http://192.168.1.45/kontakta/v1/serviciosGET.php"
         val stringRequest = StringRequest(Request.Method.GET,url, { response ->
             val jsonArray= JSONArray(response)
             for(i in 0 until jsonArray.length()){
                 val jsonObject = JSONObject(jsonArray.getString(i))
-                list.add(Model(jsonObject.get("IDUsuario").toString(),jsonObject.get("correo").toString(),jsonObject.get("imagen").toString()))
+                list.add(Model(jsonObject.get("IDServicio").toString(),jsonObject.get("nombreServicio").toString(),jsonObject.get("imagen").toString()))
             }
             listview.adapter = MyAdapter(this,R.layout.row,list)
             listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
                 println("posicion en la lista: $position")
-                println("IDUsuario: "+list[position].IDUsuario)
-                val intent1 = Intent(this, perfilUsuario::class.java)
-                intent1.putExtra("correo", list[position].correo);
-                startActivity(intent1)
+                println("IDServicio: "+list[position].IDUsuario)
+                //val intent1 = Intent(this, perfilPrestador::class.java)
+                //intent1.putExtra("IDServicio", list[position].IDUsuario);
+                //startActivity(intent1)
             }
         }, { error ->
 

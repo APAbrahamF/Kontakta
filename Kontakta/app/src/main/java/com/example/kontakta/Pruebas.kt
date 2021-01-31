@@ -22,6 +22,8 @@ class Pruebas : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pruebas)
+        val actionBar = supportActionBar
+        actionBar!!.title = "Usuarios"
 
         var listview = findViewById<ListView>(R.id.listView)
         var list = mutableListOf<Model>()
