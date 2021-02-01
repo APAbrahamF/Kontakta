@@ -35,9 +35,9 @@ class Pruebas2 : AppCompatActivity() {
             listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
                 println("posicion en la lista: $position")
                 println("IDServicio: "+list[position].IDUsuario)
-                //val intent1 = Intent(this, perfilPrestador::class.java)
-                //intent1.putExtra("IDServicio", list[position].IDUsuario);
-                //startActivity(intent1)
+                val intent1 = Intent(this, perfilServ::class.java)
+                intent1.putExtra("IDServicio", list[position].IDUsuario);
+                startActivity(intent1)
             }
         }, { error ->
 
