@@ -17,17 +17,5 @@ class MenuPrincipal: AppCompatActivity(){
             intent1.putExtra("correo", correo);
             startActivity(intent1)
         }
-        var buttUPerfil: Button = findViewById(R.id.testVerU) as Button
-        buttUPerfil.setOnClickListener{
-            val intent1 = Intent(this, perfilUsuario::class.java)
-            intent1.putExtra("correo", correo);
-            startActivity(intent1)
-        }
-        var buttPPerfil: Button = findViewById(R.id.testVerP) as Button
-        buttPPerfil.setOnClickListener{
-            val intent1 = Intent(this, perfilPrestador::class.java)
-            intent1.putExtra("correo", correo);
-            startActivity(intent1)
-        }
     }
 }
