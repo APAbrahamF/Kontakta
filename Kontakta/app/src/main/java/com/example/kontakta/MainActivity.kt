@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         val botonPruebas2: Button = findViewById(R.id.buttonPruebas2) as Button
         botonPruebas2.setOnClickListener{
             val intent = Intent(this,Pruebas2::class.java)
+            intent.putExtra("genero","Prestadores")
             startActivity(intent)
         }
         val botonPruebas: Button = findViewById(R.id.buttonMenu) as Button

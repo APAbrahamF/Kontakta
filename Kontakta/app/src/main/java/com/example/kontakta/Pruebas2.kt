@@ -16,8 +16,9 @@ class Pruebas2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pruebas2)
+        var genero : String = intent.getStringExtra("genero").toString()
         val actionBar = supportActionBar
-        actionBar!!.title = "Prestadores"
+        actionBar!!.title = genero
 
         var listview = findViewById<ListView>(R.id.listView2)
         var list = mutableListOf<Model>()

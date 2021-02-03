@@ -1863,6 +1863,7 @@ id imgViewPhotoPro2
 id img_pick_btn
 id img_pick_btn2
 id info
+id info_text
 id instaPper
 id intePper
 id invisible
@@ -1954,6 +1955,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerView
 id registroPrestador
 id registroUsuario2
 id reverseSawtooth
@@ -2191,6 +2193,7 @@ layout activity_main
 layout busqueda_recomendada
 layout cambio_prestador
 layout cambio_usuario
+layout card_view
 layout configuracion
 layout content_main
 layout custom_dialog
