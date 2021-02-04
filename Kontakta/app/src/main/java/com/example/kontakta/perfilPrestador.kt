@@ -1,9 +1,11 @@
 package com.example.kontakta
 
+import android.content.Intent
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Base64
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -26,6 +28,12 @@ class perfilPrestador : AppCompatActivity() {
         var correo : String = intent.getStringExtra("correo").toString()
         getIDServicio(correo)
         getData(idServicio2)
+        var buttRev: Button = findViewById(R.id.buttonReview) as Button
+        buttRev.setOnClickListener{
+            val intent1 = Intent(this, Pruebas::class.java)
+            intent1.putExtra("review", idServicio2);
+            startActivity(intent1)
+        }
     }
     private fun getIDServicio(correo: String) {
         val queue = Volley.newRequestQueue(this);

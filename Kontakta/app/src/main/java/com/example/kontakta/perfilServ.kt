@@ -1,12 +1,11 @@
 package com.example.kontakta
 
+import android.content.Intent
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Base64
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.Response
@@ -25,6 +24,12 @@ class perfilServ : AppCompatActivity() {
         var IDServ : String = intent.getStringExtra("IDServicio").toString()
         println("IDServicio en perfilServ = $IDServ")
         getData(IDServ)
+        var buttRev: Button = findViewById(R.id.buttonReview) as Button
+        buttRev.setOnClickListener{
+            val intent1 = Intent(this, Pruebas::class.java)
+            intent1.putExtra("review", IDServ);
+            startActivity(intent1)
+        }
     }
 
     private fun getData(IDServ: String) {

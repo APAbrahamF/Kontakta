@@ -97,6 +97,12 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#000000" />
 
+        <Button
+            android:id="@+id/buttonReview"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="VER RESEÑAS" />
+
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
