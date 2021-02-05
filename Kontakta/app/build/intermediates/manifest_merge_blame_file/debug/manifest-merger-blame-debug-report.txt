@@ -21,7 +21,7 @@
 13-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:7:22-77
 14
 15    <application
-15-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:9:5-94:19
+15-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:9:5-101:19
 16        android:name="androidx.multidex.MultiDexApplication"
 17        android:allowBackup="true"
 17-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:10:9-35
@@ -141,9 +141,9 @@
 79-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:34:25-69
 80            </intent-filter>
 81        </activity>
-82        <activity android:name="com.example.kontakta.MenuConfiguracion" >
+82        <activity android:name="com.example.kontakta.vistaGenero" >
 82-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:72:9-78:20
-82-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:72:19-52
+82-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:72:19-46
 83
 84            <!-- Default Intent Filter -->
 85            <intent-filter>
@@ -153,9 +153,9 @@
 86-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:34:25-69
 87            </intent-filter>
 88        </activity>
-89        <activity android:name="com.example.kontakta.CambioDatosUsuario" >
+89        <activity android:name="com.example.kontakta.MenuConfiguracion" >
 89-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:79:9-85:20
-89-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:79:19-53
+89-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:79:19-52
 90
 91            <!-- Default Intent Filter -->
 92            <intent-filter>
@@ -165,9 +165,9 @@
 93-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:34:25-69
 94            </intent-filter>
 95        </activity>
-96        <activity android:name="com.example.kontakta.CambioDatosPrestador" >
+96        <activity android:name="com.example.kontakta.CambioDatosUsuario" >
 96-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:86:9-92:20
-96-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:86:19-55
+96-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:86:19-53
 97
 98            <!-- Default Intent Filter -->
 99            <intent-filter>
@@ -177,6 +177,18 @@
 100-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:34:25-69
 101            </intent-filter>
 102        </activity>
-103    </application>
+103        <activity android:name="com.example.kontakta.CambioDatosPrestador" >
+103-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:93:9-99:20
+103-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:93:19-55
 104
-105</manifest>
+105            <!-- Default Intent Filter -->
+106            <intent-filter>
+106-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:33:13-35:29
+107                <action android:name="android.intent.action.DEFAULT" />
+107-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:34:17-72
+107-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:34:25-69
+108            </intent-filter>
+109        </activity>
+110    </application>
+111
+112</manifest>

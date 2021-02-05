@@ -27,7 +27,7 @@ class MenuPrincipal: AppCompatActivity(){
             startActivity(intent1)
         }*/
         val arrayList = ArrayList<ModelCard>()
-        arrayList.add(ModelCard("Alaternativa"))
+        arrayList.add(ModelCard("Alternativa"))
         arrayList.add(ModelCard("Banda"))
         arrayList.add(ModelCard("Blues"))
         arrayList.add(ModelCard("Country"))

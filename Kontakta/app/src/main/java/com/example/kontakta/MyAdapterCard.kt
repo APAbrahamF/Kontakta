@@ -26,7 +26,7 @@ class MyAdapterCard(val arrayList: ArrayList<ModelCard>,val context: Context) :
         holder.itemView.setOnClickListener{
             val model =arrayList.get(position)
             var tempGenero:String = model.genero
-            val intent=Intent(context, Pruebas2::class.java)
+            val intent=Intent(context, vistaGenero::class.java)
             intent.putExtra("genero",tempGenero)
             println("El genero seleccionado es: $tempGenero")
             context.startActivity(intent)
