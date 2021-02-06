@@ -9,17 +9,6 @@
     android:orientation="vertical"
     tools:context=".Pruebas2">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="287dp"
-        android:layout_height="264dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.184"
-        app:srcCompat="@drawable/kontakta_logo" />
-
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
