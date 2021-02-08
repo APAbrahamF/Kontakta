@@ -67,6 +67,12 @@ class DbOperation
 		$result = mysqli_query($this->con, $sql);
 		return true;
 	}
+	public function actualizeLlave($IDUsuario, $IDServicio_FK)
+	{		
+		$sql = "UPDATE usuario SET IDServicio_FK = '$IDServicio_FK' WHERE IDUsuario = '$IDUsuario'";
+		$result = mysqli_query($this->con, $sql);
+		return true;
+	}
 	public function actualizeServ($IDServicio, $nombreServicio, $imagen, $descripcion, $genero, $integrantes, $facebook, $youtube, $instagram, $twitter)
 	{		
 		$sql = "UPDATE prestadorservicios SET nombreServicio = '$nombreServicio', imagen = '$imagen',descripcion = '$descripcion', genero = '$genero', integrantes = '$integrantes', facebook = '$facebook', youtube = '$youtube', instagram = '$instagram', twitter = '$twitter' WHERE IDServicio = '$IDServicio'";
