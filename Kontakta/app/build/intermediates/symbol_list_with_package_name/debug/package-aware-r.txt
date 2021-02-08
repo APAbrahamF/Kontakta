@@ -1721,6 +1721,7 @@ id bounce
 id buttonCServ
 id buttonCUser
 id buttonCamContra
+id buttonConfirm
 id buttonMenu
 id buttonPanel
 id buttonPruebas
@@ -1854,6 +1855,7 @@ id imageView10
 id imageView2
 id imageView3
 id imageView4
+id imageView6
 id image_row
 id image_view
 id image_view2
@@ -2196,6 +2198,8 @@ layout cambio_prestador
 layout cambio_usuario
 layout card_view
 layout configuracion
+layout confirmacion
+layout confirmacion2
 layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item

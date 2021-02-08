@@ -183,7 +183,7 @@ class RegistroPrestador:AppCompatActivity() {
                     var bandera = obj.getString("error");
                     if(bandera == "false")
                     {
-                        val intent1 = Intent(this, MenuPrincipal::class.java)
+                        val intent1 = Intent(this, Confirmacion::class.java)
                         intent1.putExtra("correo", correo);
                         startActivity(intent1)
                     }
