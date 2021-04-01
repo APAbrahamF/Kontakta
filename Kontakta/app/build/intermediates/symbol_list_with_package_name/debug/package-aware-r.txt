@@ -1852,6 +1852,7 @@ id imageButton17
 id imageButton2
 id imageButton3
 id imageButton4
+id imageReview
 id imageView
 id imageView10
 id imageView2
@@ -1959,6 +1960,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id rating
+id ratingReview
 id ratio
 id rectangles
 id recyclerView
@@ -2089,6 +2091,7 @@ id textView6
 id textViewContraActL
 id textViewDescripcionL
 id textViewEstadoL
+id textViewReview
 id textYoutube
 id textYoutubeP
 id text_input_end_icon
@@ -2293,6 +2296,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout vista_grupo
+layout vista_review
 menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round
