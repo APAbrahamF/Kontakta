@@ -1721,11 +1721,13 @@ id bounce
 id buttonCServ
 id buttonCUser
 id buttonCamContra
+id buttonComponer
 id buttonConfirm
 id buttonMenu
 id buttonPanel
 id buttonPruebas
 id buttonPruebas2
+id buttonPublicar
 id buttonRegistro
 id buttonRegistroServ
 id buttonReview
@@ -1956,6 +1958,7 @@ id postLayout
 id progress_circular
 id progress_horizontal
 id radio
+id rating
 id ratio
 id rectangles
 id recyclerView
@@ -2068,6 +2071,7 @@ id textPass1
 id textPass2
 id textPassword
 id textRedesSociales
+id textReview
 id textSexo
 id textSexo3
 id textSexoL
@@ -2197,6 +2201,7 @@ layout busqueda_recomendada
 layout cambio_prestador
 layout cambio_usuario
 layout card_view
+layout componer_review
 layout configuracion
 layout confirmacion
 layout confirmacion2
