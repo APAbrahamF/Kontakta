@@ -39,6 +39,13 @@ class DbOperation
 			return true; 
 		return false; 
 	}
+	public function insertReview($comentario){
+		$stmt = $this->con->prepare("INSERT INTO review(comentario) VALUES (?)");
+		$stmt->bind_param("s", $comentario);
+		if($stmt->execute())
+			return true; 
+		return false; 
+	}
 	public function login($correo, $password)
 	{
 		$sql = "SELECT * FROM usuario WHERE correo = '$correo'";
