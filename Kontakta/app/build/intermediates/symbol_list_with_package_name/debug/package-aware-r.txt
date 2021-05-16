@@ -1718,6 +1718,8 @@ id beginning
 id blocking
 id bottom
 id bounce
+id buttRecomended
+id buttonAccionar
 id buttonCServ
 id buttonCUser
 id buttonCamContra
@@ -1850,7 +1852,6 @@ id imageButton15
 id imageButton16
 id imageButton17
 id imageButton2
-id imageButton3
 id imageButton4
 id imageReview
 id imageView

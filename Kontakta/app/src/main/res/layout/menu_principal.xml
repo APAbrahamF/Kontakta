@@ -82,7 +82,7 @@
         app:layout_constraintGuide_begin="362dp" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/buttRecomended"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:background="#6AA7D9"

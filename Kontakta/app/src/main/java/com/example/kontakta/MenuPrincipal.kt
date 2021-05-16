@@ -37,6 +37,12 @@ class MenuPrincipal: AppCompatActivity(){
             intent1.putExtra("correo", correo);
             startActivity(intent1)
         }
+        var buttRecom:ImageButton = findViewById(R.id.buttRecomended) as ImageButton
+        buttRecom.setOnClickListener{
+            val intent1 = Intent(this, MBusquedaRecomendada::class.java)
+            //intent1.putExtra("correo", correo);
+            startActivity(intent1)
+        }
         /*var cv=findViewById(R.id.card_view) as CardView
         cv.setOnClickListener{
             val intent1 = Intent(this, Pruebas2::class.java)
