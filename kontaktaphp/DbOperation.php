@@ -39,9 +39,9 @@ class DbOperation
 			return true; 
 		return false; 
 	}
-	public function insertReview($comentario){
-		$stmt = $this->con->prepare("INSERT INTO review(comentario) VALUES (?)");
-		$stmt->bind_param("s", $comentario);
+	public function insertReview($comentario, $valoracion){
+		$stmt = $this->con->prepare("INSERT INTO review(comentario, valoracion) VALUES (?, ?)");
+		$stmt->bind_param("ss", $comentario, $valoracion);
 		if($stmt->execute())
 			return true; 
 		return false; 
