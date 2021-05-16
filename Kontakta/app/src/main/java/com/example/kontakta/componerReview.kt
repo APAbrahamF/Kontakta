@@ -46,6 +46,7 @@ class componerReview : AppCompatActivity() {
         //getting the record values
         val queue = Volley.newRequestQueue(this);
         val comentario = textReview?.text.toString()
+        val valoracion = rating?.rating.toString()
 
         //val url = "http://192.168.1.45/kontakta/v1/index.php"
         //val url = "http://192.168.1.109/kontakta/v1/index.php"
@@ -74,6 +75,7 @@ class componerReview : AppCompatActivity() {
             override fun getParams(): Map<String, String> {
                 val params = HashMap<String, String>()
                 params.put("comentario", comentario)
+                params.put("valoracion", valoracion)
                 return params
             }
         }
