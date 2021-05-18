@@ -26,7 +26,8 @@ class componerReview : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.componer_review)
-
+        var IDServ : String = intent.getStringExtra("review").toString()
+        Toast.makeText(this, IDServ, Toast.LENGTH_LONG).show()
         val conexion = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val status = conexion.activeNetworkInfo
 
@@ -34,7 +35,7 @@ class componerReview : AppCompatActivity() {
         btnRegister.setOnClickListener() {
 
             if (status != null && status.isConnected) {
-                addReview()
+                addReview(IDServ)
             } else {
                 Toast.makeText(this, "Revise su conexion a internet", Toast.LENGTH_LONG).show()
             }
@@ -42,7 +43,7 @@ class componerReview : AppCompatActivity() {
         }
     }
 
-    private fun addReview() {
+    private fun addReview(IDServ: String) {
         //getting the record values
         val queue = Volley.newRequestQueue(this);
         val comentario = textReview?.text.toString()
@@ -76,6 +77,7 @@ class componerReview : AppCompatActivity() {
                 val params = HashMap<String, String>()
                 params.put("comentario", comentario)
                 params.put("valoracion", valoracion)
+                params.put("IDServicio_FK", IDServ)
                 return params
             }
         }
