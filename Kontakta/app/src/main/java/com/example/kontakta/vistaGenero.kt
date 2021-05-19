@@ -27,10 +27,10 @@ class vistaGenero : AppCompatActivity() {
         println("INTENT en vistaGenero ====================================================IDUser: $IDUser")
         val actionBar = supportActionBar
         actionBar!!.title = genero
-        getData(genero)
+        getData(genero,IDUser)
     }
 
-    private fun getData(genero: String) {
+    private fun getData(genero: String,IDUser: String) {
         val queue = Volley.newRequestQueue(this);
         var listview = findViewById<ListView>(R.id.listView2)
         var list = mutableListOf<Model>()
@@ -56,6 +56,7 @@ class vistaGenero : AppCompatActivity() {
                         println("IDServicio: "+list[position].IDUsuario)
                         val intent1 = Intent(this, perfilServ::class.java)
                         intent1.putExtra("IDServicio", list[position].IDUsuario);
+                        intent1.putExtra("IDUsuario", IDUser);
                         startActivity(intent1)
                     }
 

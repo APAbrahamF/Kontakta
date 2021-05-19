@@ -22,6 +22,7 @@ class perfilServ : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.perfil_prestador)
         var IDServ : String = intent.getStringExtra("IDServicio").toString()
+        var IDUser : String = intent.getStringExtra("IDUsuario").toString()
         println("IDServicio en perfilServ = $IDServ")
         getData(IDServ)
         var buttRev: Button = findViewById(R.id.buttonReview) as Button
@@ -33,7 +34,8 @@ class perfilServ : AppCompatActivity() {
         var buttRevCom: Button = findViewById(R.id.buttonComponer) as Button
         buttRevCom.setOnClickListener{
             val intent1 = Intent(this, componerReview::class.java)
-            intent1.putExtra("review", IDServ);
+            intent1.putExtra("IDServicio", IDServ);
+            intent1.putExtra("IDUsuario", IDUser);
             startActivity(intent1)
         }
     }
