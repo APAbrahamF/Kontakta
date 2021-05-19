@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.card_view.view.*
 
-class MyAdapterCard(val arrayList: ArrayList<ModelCard>,val context: Context) :
+class MyAdapterCard(val arrayList: ArrayList<ModelCard>,val context: Context, var IDUsuario: String) :
     RecyclerView.Adapter<MyAdapterCard.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bindItems(modelCard: ModelCard){
@@ -28,7 +28,9 @@ class MyAdapterCard(val arrayList: ArrayList<ModelCard>,val context: Context) :
             var tempGenero:String = model.genero
             val intent=Intent(context, vistaGenero::class.java)
             intent.putExtra("genero",tempGenero)
+            intent.putExtra("IDUsuario",IDUsuario)
             println("El genero seleccionado es: $tempGenero")
+            println("El ID de usuario es: $IDUsuario")
             context.startActivity(intent)
         }
     }

@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity() {
                     {
                         val intent1 = Intent(this, MenuPrincipal::class.java)
                         intent1.putExtra("correo", correo);
+                        intent1.putExtra("login", "si");
                         startActivity(intent1)
                     }
                 } catch (e: JSONException) {

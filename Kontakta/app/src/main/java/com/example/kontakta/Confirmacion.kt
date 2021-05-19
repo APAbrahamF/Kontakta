@@ -34,13 +34,17 @@ class Confirmacion : AppCompatActivity() {
     object GlobalVariableConf {
         var idUsuarioActual: String = ""
         var idServicioActual: String = ""
+        var tipo: String=""
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.confirmacion)
         var correo : String = intent.getStringExtra("correo").toString()
+        var tipotemp : String = intent.getStringExtra("tipo").toString()
+        GlobalVariableConf.tipo=tipotemp
         getIDUsuario(correo)
 
+        println("==============TIPO: ${GlobalVariableConf.tipo}")
         println("==============Correo: $correo")
         println("====================================================================IDServicio: ${GlobalVariableConf.idServicioActual}")
         println("====================================================================IDUsuario: ${GlobalVariableConf.idUsuarioActual}")
@@ -65,10 +69,19 @@ class Confirmacion : AppCompatActivity() {
                     Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     GlobalVariableConf.idUsuarioActual = obj.getString("IDUsuario")
                     println("FUNCION====================================================================IDUsuario: ${GlobalVariableConf.idUsuarioActual}")
-                    val intent1 = Intent(this, Confirmacion2::class.java)
-                    intent1.putExtra("correo", correo);
-                    intent1.putExtra("IDUsuario", GlobalVariableConf.idUsuarioActual);
-                    startActivity(intent1)
+                    if (GlobalVariableConf.tipo=="prestador")
+                    {
+                        val intent1 = Intent(this, Confirmacion2::class.java)
+                        intent1.putExtra("correo", correo);
+                        intent1.putExtra("IDUsuario", GlobalVariableConf.idUsuarioActual);
+                        startActivity(intent1)
+                    }
+                    else{
+                        val intent1 = Intent(this, MenuPrincipal::class.java)
+                        intent1.putExtra("correo", correo);
+                        intent1.putExtra("IDUsuario", GlobalVariableConf.idUsuarioActual);
+                        startActivity(intent1)
+                    }
                 } catch (e: JSONException) {
                     e.printStackTrace()
                 }

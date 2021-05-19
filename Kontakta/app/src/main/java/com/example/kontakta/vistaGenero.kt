@@ -23,6 +23,8 @@ class vistaGenero : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pruebas2)
         var genero : String = intent.getStringExtra("genero").toString()
+        var IDUser : String = intent.getStringExtra("IDUsuario").toString()
+        println("INTENT en vistaGenero ====================================================IDUser: $IDUser")
         val actionBar = supportActionBar
         actionBar!!.title = genero
         getData(genero)
