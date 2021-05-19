@@ -5,9 +5,9 @@
   
   //response array 
     $response = array(); 
-    if (isset($_POST['comentario']) && isset($_POST['valoracion']) && isset($_POST['IDServicio_FK'])) {
+    if (isset($_POST['comentario']) && isset($_POST['valoracion']) && isset($_POST['IDUsuario_FK']) && isset($_POST['IDServicio_FK'])) {
         $db = new DbOperation(); 
-        if($db->insertReview($_POST['comentario'], $_POST['valoracion'], $_POST['IDServicio_FK'])){
+        if($db->insertReview($_POST['comentario'], $_POST['valoracion'], $_POST['IDUsuario_FK'], $_POST['IDServicio_FK'])){
            $response['error'] = false;
            $response['message'] = 'Agregado correctamente';
         }else{
