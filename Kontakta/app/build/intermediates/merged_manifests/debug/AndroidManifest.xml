@@ -64,9 +64,7 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.kontakta.Pruebas"
-            android:theme="@style/AppTheme.NoActionBar" >
+        <activity android:name="com.example.kontakta.Pruebas" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
@@ -89,9 +87,7 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.kontakta.vistaGenero"
-            android:theme="@style/AppTheme.NoActionBar" >
+        <activity android:name="com.example.kontakta.vistaGenero" >
 
             <!-- Default Intent Filter -->
             <intent-filter>

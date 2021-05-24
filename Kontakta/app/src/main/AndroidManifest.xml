@@ -52,8 +52,7 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Pruebas"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".Pruebas">
 
             <!-- Default Intent Filter -->
             <intent-filter>
@@ -75,8 +74,7 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".vistaGenero"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".vistaGenero">
 
             <!-- Default Intent Filter -->
             <intent-filter>
