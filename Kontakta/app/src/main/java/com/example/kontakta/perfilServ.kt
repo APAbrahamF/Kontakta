@@ -27,7 +27,7 @@ class perfilServ : AppCompatActivity() {
         getData(IDServ)
         var buttRev: Button = findViewById(R.id.buttonReview) as Button
         buttRev.setOnClickListener{
-            val intent1 = Intent(this, Pruebas::class.java)
+            val intent1 = Intent(this, listaReview::class.java)
             intent1.putExtra("review", IDServ);
             startActivity(intent1)
         }
