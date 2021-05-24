@@ -76,14 +76,21 @@
                 android:inputType="textEmailAddress"
                 android:translationX="37dp" />
 
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="Genero"
+                android:translationX="37dp" />
+
             <Spinner
                 android:id="@+id/textGenero"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
                 android:ems="10"
+                android:entries="@array/generos"
                 android:hint="Genero"
-                android:translationX="37dp"
-                android:entries="@array/generos" />
+                android:translationX="37dp" />
 
             <EditText
                 android:id="@+id/textYoutube"

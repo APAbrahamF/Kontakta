@@ -27,28 +27,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistroUsuario">
+        <activity
+            android:name=".RegistroUsuario"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistroPrestador">
+        <activity android:name=".RegistroPrestador"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuPrincipal">
+        <activity android:name=".MenuPrincipal"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Pruebas">
+        <activity android:name=".Pruebas"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
@@ -62,70 +67,80 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".perfilServ">
+        <activity android:name=".perfilServ"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".vistaGenero">
+        <activity android:name=".vistaGenero"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Confirmacion">
+        <activity android:name=".Confirmacion"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Confirmacion2">
+        <activity android:name=".Confirmacion2"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".componerReview">
+        <activity android:name=".componerReview"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".vistaReview">
+        <activity android:name=".vistaReview"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuConfiguracion">
+        <activity android:name=".MenuConfiguracion"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".CambioDatosUsuario">
+        <activity android:name=".CambioDatosUsuario"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".CambioDatosPrestador">
+        <activity android:name=".CambioDatosPrestador"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".MBusquedaRecomendada">
+        <activity android:name=".MBusquedaRecomendada"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Default Intent Filter -->
             <intent-filter>

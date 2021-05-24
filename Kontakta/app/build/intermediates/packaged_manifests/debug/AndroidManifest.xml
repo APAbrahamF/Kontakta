@@ -37,28 +37,36 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.RegistroUsuario" >
+        <activity
+            android:name="com.example.kontakta.RegistroUsuario"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.RegistroPrestador" >
+        <activity
+            android:name="com.example.kontakta.RegistroPrestador"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.MenuPrincipal" >
+        <activity
+            android:name="com.example.kontakta.MenuPrincipal"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.Pruebas" >
+        <activity
+            android:name="com.example.kontakta.Pruebas"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
@@ -72,70 +80,90 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.perfilServ" >
+        <activity
+            android:name="com.example.kontakta.perfilServ"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.vistaGenero" >
+        <activity
+            android:name="com.example.kontakta.vistaGenero"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.Confirmacion" >
+        <activity
+            android:name="com.example.kontakta.Confirmacion"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.Confirmacion2" >
+        <activity
+            android:name="com.example.kontakta.Confirmacion2"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.componerReview" >
+        <activity
+            android:name="com.example.kontakta.componerReview"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.vistaReview" >
+        <activity
+            android:name="com.example.kontakta.vistaReview"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.MenuConfiguracion" >
+        <activity
+            android:name="com.example.kontakta.MenuConfiguracion"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.CambioDatosUsuario" >
+        <activity
+            android:name="com.example.kontakta.CambioDatosUsuario"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.CambioDatosPrestador" >
+        <activity
+            android:name="com.example.kontakta.CambioDatosPrestador"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.kontakta.MBusquedaRecomendada" >
+        <activity
+            android:name="com.example.kontakta.MBusquedaRecomendada"
+            android:theme="@style/AppTheme.NoActionBar" >
 
             <!-- Default Intent Filter -->
             <intent-filter>
