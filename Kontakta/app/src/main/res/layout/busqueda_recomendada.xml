@@ -38,7 +38,7 @@
         card_view:srcCompat="@android:drawable/ic_menu_compass" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/recMenuInButt"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:background="#6AA7D9"
@@ -51,7 +51,7 @@
         card_view:srcCompat="@android:drawable/ic_media_play" />
 
     <ImageButton
-        android:id="@+id/confButton3"
+        android:id="@+id/recConfButt"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:background="#6AA7D9"

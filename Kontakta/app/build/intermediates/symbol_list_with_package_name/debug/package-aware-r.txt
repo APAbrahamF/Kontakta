@@ -11,6 +11,10 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim anim_der
+anim anim_der_sal
+anim anim_izq
+anim anim_izq_sal
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -1756,7 +1760,8 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id confButton
-id confButton3
+id confInicioButt
+id confRecomButt
 id confirm_button
 id container
 id content
@@ -1852,13 +1857,10 @@ id image
 id imageBtnPhotoPro
 id imageBtnPhotoPro2
 id imageButton14
-id imageButton15
-id imageButton16
 id imageButton17
 id imageButton2
 id imageButton4
 id imageButton5
-id imageButton6
 id imageReview
 id imageView
 id imageView10
@@ -1973,6 +1975,8 @@ id rating
 id ratingReview
 id rating_row_review
 id ratio
+id recConfButt
+id recMenuInButt
 id rectangles
 id recyclerView
 id registroPrestador

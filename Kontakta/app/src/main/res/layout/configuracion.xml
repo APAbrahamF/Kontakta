@@ -74,7 +74,7 @@
         app:layout_constraintGuide_begin="362dp" />
 
     <ImageButton
-        android:id="@+id/imageButton15"
+        android:id="@+id/confRecomButt"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:background="#6AA7D9"
@@ -86,7 +86,7 @@
         app:srcCompat="@android:drawable/ic_menu_compass" />
 
     <ImageButton
-        android:id="@+id/imageButton16"
+        android:id="@+id/confInicioButt"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:background="#6AA7D9"

@@ -1,8 +1,10 @@
 package com.example.kontakta
 
 import android.content.Intent
+import android.media.Image
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
 class MenuConfiguracion : AppCompatActivity() {
@@ -11,6 +13,18 @@ class MenuConfiguracion : AppCompatActivity() {
         setContentView(R.layout.configuracion)
         val buttonCam: Button = findViewById(R.id.buttonCUser) as Button
         var correo : String = intent.getStringExtra("correo").toString()
+        val buttonInicio: ImageButton = findViewById(R.id.confInicioButt) as ImageButton
+        buttonInicio.setOnClickListener{
+            val intent = Intent(this,MenuPrincipal::class.java)
+            intent.putExtra("correo", correo);
+            startActivity(intent)
+        }
+        val buttonRecomend: ImageButton = findViewById(R.id.confRecomButt) as ImageButton
+        buttonRecomend.setOnClickListener{
+            val intent = Intent(this, MBusquedaRecomendada::class.java)
+            intent.putExtra("correo", correo);
+            startActivity(intent)
+        }
         buttonCam.setOnClickListener{
             val intent = Intent(this,CambioDatosUsuario::class.java)
             intent.putExtra("correo", correo);
