@@ -13,6 +13,7 @@
         android:orientation="vertical"
         android:translationY="40dp">
         <TextView
+            android:id="@+id/nombreReview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nombre de usuario"

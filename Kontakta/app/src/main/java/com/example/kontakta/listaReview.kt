@@ -34,8 +34,10 @@ class listaReview : AppCompatActivity(){
             listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
                 println("posicion en la lista: $position")
                 println("IDUsuario_FK: "+list[position].IDUsuario_FK)
-                val intent1 = Intent(this, Pruebas2::class.java)
-                intent1.putExtra("IDUsuario", list[position].IDUsuario_FK);
+                val intent1 = Intent(this, vistaReview::class.java)
+                intent1.putExtra("IDUsuario_FK", list[position].IDUsuario_FK);
+                intent1.putExtra("comentario", list[position].comentario);
+                intent1.putExtra("valoracion", list[position].valoracion);
                 startActivity(intent1)
             }
         }, { error ->
