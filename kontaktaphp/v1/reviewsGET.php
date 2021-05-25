@@ -9,6 +9,7 @@ if($resultset=getSQLResultSet("SELECT * FROM review")){
                 $e['IDReview'] = $row[0];
                 $e['comentario'] = $row[1];
                 $e['valoracion'] = $row[2];
+				$e['IDUsuario_FK'] = $row[3];
                 array_push($array,$e);
 	}
         echo json_encode($array);
