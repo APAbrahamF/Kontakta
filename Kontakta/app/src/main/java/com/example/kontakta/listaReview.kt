@@ -28,14 +28,14 @@ class listaReview : AppCompatActivity(){
             val jsonArray= JSONArray(response)
             for(i in 0 until jsonArray.length()){
                 val jsonObject = JSONObject(jsonArray.getString(i))
-                list.add(ModelReview(jsonObject.get("IDReview").toString(),jsonObject.get("comentario").toString(),jsonObject.get("valoracion").toString()))
+                list.add(ModelReview(jsonObject.get("IDReview").toString(),jsonObject.get("comentario").toString(),jsonObject.get("valoracion").toString(),jsonObject.get("IDUsuario_FK").toString()))
             }
             listview.adapter = MyAdapterReview(this,R.layout.row_review,list)
             listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
                 println("posicion en la lista: $position")
-                println("IDReview: "+list[position].IDReview)
+                println("IDUsuario_FK: "+list[position].IDUsuario_FK)
                 val intent1 = Intent(this, Pruebas2::class.java)
-                intent1.putExtra("IDReview", list[position].IDReview);
+                intent1.putExtra("IDUsuario", list[position].IDUsuario_FK);
                 startActivity(intent1)
             }
         }, { error ->
