@@ -28,6 +28,7 @@ class MenuPrincipal: AppCompatActivity() {
         var IDServ: String = intent.getStringExtra("IDServicio").toString()
         var correo: String = intent.getStringExtra("correo").toString()
         var checkLogin: String = intent.getStringExtra("login").toString()
+        //val entrada=editTextTextPersonName7?.text.toString()
 
         if (checkLogin == "si") {
             getIDUsuario(correo)
@@ -38,6 +39,14 @@ class MenuPrincipal: AppCompatActivity() {
         println("INTENT==============Correo: $correo")
         println("INTENT====================================================================IDServicio: $IDServ")
         println("INTENT====================================================================IDUsuario: $IDUser")
+
+        var buttBuscar: ImageButton = findViewById(R.id.imageButton2) as ImageButton
+        buttBuscar.setOnClickListener {
+            val entrada=editTextTextPersonName7?.text.toString()
+            val intent1 = Intent(this, MenuBusqueda::class.java)
+            intent1.putExtra("entrada", entrada);
+            startActivity(intent1)
+        }
 
         var buttConf: ImageButton = findViewById(R.id.confButton) as ImageButton
         buttConf.setOnClickListener {
