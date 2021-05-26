@@ -66,7 +66,8 @@ class componerReview : AppCompatActivity() {
                     var bandera = obj.getString("error");
                     if(bandera == "false")
                     {
-                        val intent1 = Intent(this, Pruebas2::class.java)
+                        val intent1 = Intent(this, listaReview::class.java)
+                        intent1.putExtra("review", IDServ);
                         startActivity(intent1)
                     }
                 } catch (e: JSONException) {
