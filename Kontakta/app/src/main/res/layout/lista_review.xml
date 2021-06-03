@@ -8,7 +8,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".listaReview">
-
+    <Button
+        android:id="@+id/buttonComponer"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:text="ESCRIBIR RESEÑA" />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

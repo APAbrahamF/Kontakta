@@ -29,12 +29,6 @@ class perfilServ : AppCompatActivity() {
         buttRev.setOnClickListener{
             val intent1 = Intent(this, listaReview::class.java)
             intent1.putExtra("review", IDServ);
-            startActivity(intent1)
-        }
-        var buttRevCom: Button = findViewById(R.id.buttonComponer) as Button
-        buttRevCom.setOnClickListener{
-            val intent1 = Intent(this, componerReview::class.java)
-            intent1.putExtra("IDServicio", IDServ);
             intent1.putExtra("IDUsuario", IDUser);
             startActivity(intent1)
         }

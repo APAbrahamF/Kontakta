@@ -103,11 +103,6 @@
             android:layout_height="46dp"
             android:text="VER RESEÑAS" />
 
-        <Button
-            android:id="@+id/buttonComponer"
-            android:layout_width="match_parent"
-            android:layout_height="46dp"
-            android:text="ESCRIBIR RESEÑA" />
 
     </LinearLayout>
 

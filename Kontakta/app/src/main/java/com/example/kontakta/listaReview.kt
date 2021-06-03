@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import android.widget.Button
 import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +22,15 @@ class listaReview : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.lista_review)
         var servicio : String = intent.getStringExtra("review").toString()
+        var IDUser : String = intent.getStringExtra("IDUsuario").toString()
+
+        var buttRevCom: Button = findViewById(R.id.buttonComponer) as Button
+        buttRevCom.setOnClickListener{
+            val intent1 = Intent(this, componerReview::class.java)
+            intent1.putExtra("IDServicio", servicio);
+            intent1.putExtra("IDUsuario", IDUser);
+            startActivity(intent1)
+        }
 
         var listview = findViewById<ListView>(R.id.listView_review)
         var list = mutableListOf<ModelReview>()
