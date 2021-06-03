@@ -24,11 +24,15 @@ class vistaReview : AppCompatActivity() {
         var IDUserFK : String = intent.getStringExtra("IDUsuario_FK").toString()
         var comentario : String = intent.getStringExtra("comentario").toString()
         var valoracion : String = intent.getStringExtra("valoracion").toString()
+        var cantidad : String = intent.getStringExtra("cantidad").toString()
+        var sumatoria : String = intent.getStringExtra("sumatoria").toString()
 
         println("=================================================================IDUsuario en vistaReview = $IDUserFK")
-        getData(IDUserFK,comentario,valoracion)
+        println("=================================================================CANTIDAD en vistaReview = $cantidad")
+        println("=================================================================SUMATORIA en vistaReview = $sumatoria")
+        getData(IDUserFK,comentario,valoracion,cantidad,sumatoria)
     }
-    private fun getData(IDUserFK: String,comentario: String,valoracion: String) {
+    private fun getData(IDUserFK: String,comentario: String,valoracion: String,cantidad: String,sumatoria: String) {
         val queue = Volley.newRequestQueue(this);
         var nombre: TextView = findViewById(R.id.nombreReview) as TextView
         var valoracionSet: RatingBar = findViewById(R.id.ratingReview) as RatingBar
@@ -37,6 +41,9 @@ class vistaReview : AppCompatActivity() {
         var imgCadena = "";
         comentarioSet.text=comentario
         valoracionSet.rating=valoracion.toFloat()
+        var promedio=sumatoria.toFloat()/cantidad.toFloat()
+        println("=================================================================PROMEDIO en vistaReview = $promedio")
+
         //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
         val url = "http://192.168.100.6/v1/getUserReview.php"

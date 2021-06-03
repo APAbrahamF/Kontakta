@@ -25,6 +25,8 @@ class listaReview : AppCompatActivity(){
         var listview = findViewById<ListView>(R.id.listView_review)
         var list = mutableListOf<ModelReview>()
 
+        var sumatoria=0.0
+
         val queue = Volley.newRequestQueue(this)
         val url = "http://192.168.100.6/v1/getServReviews.php"
         //val url = "http://192.168.1.45/kontakta/v1/usuariosGET.php"
@@ -36,6 +38,7 @@ class listaReview : AppCompatActivity(){
             for(i in 0 until jsonArray.length()){
                 val jsonObject = JSONObject(jsonArray.getString(i))
                 list.add(ModelReview(jsonObject.get("IDReview").toString(),jsonObject.get("comentario").toString(),jsonObject.get("valoracion").toString(),jsonObject.get("IDUsuario_FK").toString()))
+                sumatoria += jsonObject.get("valoracion").toString().toFloat()
             }
             listview.adapter = MyAdapterReview(this,R.layout.row_review,list)
             listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
@@ -45,6 +48,8 @@ class listaReview : AppCompatActivity(){
                 intent1.putExtra("IDUsuario_FK", list[position].IDUsuario_FK);
                 intent1.putExtra("comentario", list[position].comentario);
                 intent1.putExtra("valoracion", list[position].valoracion);
+                intent1.putExtra("cantidad",list.count().toString())
+                intent1.putExtra("sumatoria",sumatoria.toString())
                 startActivity(intent1)
             }
         } catch (e: JSONException) {
