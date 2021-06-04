@@ -24,14 +24,6 @@ class listaReview : AppCompatActivity(){
         var servicio : String = intent.getStringExtra("review").toString()
         var IDUser : String = intent.getStringExtra("IDUsuario").toString()
 
-        var buttRevCom: Button = findViewById(R.id.buttonComponer) as Button
-        buttRevCom.setOnClickListener{
-            val intent1 = Intent(this, componerReview::class.java)
-            intent1.putExtra("IDServicio", servicio);
-            intent1.putExtra("IDUsuario", IDUser);
-            startActivity(intent1)
-        }
-
         var listview = findViewById<ListView>(R.id.listView_review)
         var list = mutableListOf<ModelReview>()
 
@@ -77,5 +69,15 @@ class listaReview : AppCompatActivity(){
     }
     //adding request to queue
     queue.add(stringRequest);
+
+        var buttRevCom: Button = findViewById(R.id.buttonComponer) as Button
+        buttRevCom.setOnClickListener{
+            val intent1 = Intent(this, componerReview::class.java)
+            intent1.putExtra("IDServicio", servicio);
+            intent1.putExtra("IDUsuario", IDUser);
+            intent1.putExtra("cantidad",list.count().toString())
+            intent1.putExtra("sumatoria",sumatoria.toString())
+            startActivity(intent1)
+        }
     }
 }

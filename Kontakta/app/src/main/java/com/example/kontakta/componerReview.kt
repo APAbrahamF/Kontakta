@@ -21,6 +21,7 @@ import kotlinx.android.synthetic.main.registro_usuario.*
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.ByteArrayOutputStream
+import kotlin.math.roundToInt
 
 class componerReview : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +29,12 @@ class componerReview : AppCompatActivity() {
         setContentView(R.layout.componer_review)
         var IDServ : String = intent.getStringExtra("IDServicio").toString()
         var IDUser : String = intent.getStringExtra("IDUsuario").toString()
+        var cantidad : String = intent.getStringExtra("cantidad").toString()
+        var sumatoria : String = intent.getStringExtra("sumatoria").toString()
         Toast.makeText(this, IDServ, Toast.LENGTH_LONG).show()
         println("COMPONER========================================================IDUser: $IDUser")
+        println("=================================================================CANTIDAD en componerReview = $cantidad")
+        println("=================================================================SUMATORIA en componerReview = $sumatoria")
         val conexion = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val status = conexion.activeNetworkInfo
 
@@ -37,7 +42,7 @@ class componerReview : AppCompatActivity() {
         btnRegister.setOnClickListener() {
 
             if (status != null && status.isConnected) {
-                addReview(IDUser,IDServ)
+                addReview(IDUser,IDServ,cantidad,sumatoria)
             } else {
                 Toast.makeText(this, "Revise su conexion a internet", Toast.LENGTH_LONG).show()
             }
@@ -45,12 +50,18 @@ class componerReview : AppCompatActivity() {
         }
     }
 
-    private fun addReview(IDUser: String, IDServ: String) {
+    private fun addReview(IDUser: String, IDServ: String, cantidad: String, sumatoria: String) {
         //getting the record values
         val queue = Volley.newRequestQueue(this);
         val comentario = textReview?.text.toString()
         val valoracion = rating?.rating.toString()
 
+        var newCantidad=cantidad.toFloat()+1
+        var newSumatoria=sumatoria.toFloat()+valoracion.toFloat()
+        var newPromedio=newSumatoria/newCantidad
+        println("=================================================================NEW-SUMATORIA en componerReview = $newSumatoria")
+        println("=================================================================NEW-CANTIDAD en componerReview = $newCantidad")
+        println("=================================================================NEW-PROMEDIO en componerReview = $newPromedio")
         //val url = "http://192.168.1.45/kontakta/v1/index.php"
         //val url = "http://192.168.1.109/kontakta/v1/index.php"
         val url = "http://192.168.100.6/v1/insertReview.php"
