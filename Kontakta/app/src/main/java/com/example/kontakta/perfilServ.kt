@@ -25,6 +25,9 @@ class perfilServ : AppCompatActivity() {
         var IDUser : String = intent.getStringExtra("IDUsuario").toString()
         println("IDServicio en perfilServ = $IDServ")
         getData(IDServ)
+        var rating:RatingBar=findViewById(R.id.ratingServ) as RatingBar
+        val cadenita="1.6"
+        rating.rating=cadenita.toFloat()
         var buttRev: Button = findViewById(R.id.buttonReview) as Button
         buttRev.setOnClickListener{
             val intent1 = Intent(this, listaReview::class.java)

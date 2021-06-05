@@ -1973,6 +1973,7 @@ id progress_horizontal
 id radio
 id rating
 id ratingReview
+id ratingServ
 id rating_row_review
 id ratio
 id recConfButt
