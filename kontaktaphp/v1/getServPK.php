@@ -20,7 +20,8 @@
 		$e['youtube'] = $row['youtube'];
 		$e['instagram'] = $row['instagram'];
 		$e['facebook'] = $row['facebook'];
-		$e['twitter'] = $row['twitter']; 		
+		$e['twitter'] = $row['twitter'];
+		$e['promedio'] = $row['promedio']; 		
       	$e['message'] = 'Sirve y muestra';
       array_push($array,$e);
 	}
