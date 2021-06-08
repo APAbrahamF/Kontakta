@@ -1970,6 +1970,7 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
+id promedioServ
 id radio
 id rating
 id ratingReview
@@ -2677,6 +2678,7 @@ style Platform_V21_AppCompat_Light
 style Platform_V25_AppCompat
 style Platform_V25_AppCompat_Light
 style Platform_Widget_AppCompat_Spinner
+style RatingBar
 style RtlOverlay_DialogWindowTitle_AppCompat
 style RtlOverlay_Widget_AppCompat_ActionBar_TitleItem
 style RtlOverlay_Widget_AppCompat_DialogTitle_Icon

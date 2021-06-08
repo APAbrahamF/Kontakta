@@ -46,6 +46,7 @@ class perfilServ : AppCompatActivity() {
         var genero: TextView = findViewById(R.id.generoPper) as TextView
         var imageview: ImageView = findViewById(R.id.imgPper) as ImageView
         var rating:RatingBar=findViewById(R.id.ratingServ) as RatingBar
+        var promedio: TextView = findViewById(R.id.promedioServ) as TextView
         var imgCadena = "";
         //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
@@ -75,6 +76,8 @@ class perfilServ : AppCompatActivity() {
                     youtube.setText(obj.getString("youtube"))
                     twitter.setText(obj.getString("twitter"))
                     rating.rating=obj.getString("promedio").toFloat()
+                    val promAux="Calificacion promedio: " + obj.getString("promedio")
+                    promedio.setText(promAux)
                     imgCadena = obj.getString("imagen")
                     var extension = imgCadena
                     if(imgCadena.contains(","))
