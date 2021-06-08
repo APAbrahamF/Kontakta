@@ -1,7 +1,9 @@
 package com.example.kontakta
 
 import android.content.Intent
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Base64
@@ -12,9 +14,12 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.cambio_prestador.*
+import kotlinx.android.synthetic.main.cambio_prestador.textTwitter
+import kotlinx.android.synthetic.main.registro_prestador.*
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
+import java.io.ByteArrayOutputStream
 
 
 class perfilServ : AppCompatActivity() {
@@ -24,7 +29,7 @@ class perfilServ : AppCompatActivity() {
         var IDServ : String = intent.getStringExtra("IDServicio").toString()
         var IDUser : String = intent.getStringExtra("IDUsuario").toString()
         println("IDServicio en perfilServ = $IDServ")
-        getData(IDServ)
+        getData(IDServ,IDUser)
         var buttRev: Button = findViewById(R.id.buttonReview) as Button
         buttRev.setOnClickListener{
             val intent1 = Intent(this, listaReview::class.java)
@@ -34,7 +39,7 @@ class perfilServ : AppCompatActivity() {
         }
     }
 
-    private fun getData(IDServ: String) {
+    private fun getData(IDServ: String,IDUser: String) {
         val queue = Volley.newRequestQueue(this);
         var nombre: TextView = findViewById(R.id.nombrePper) as TextView
         var descripcion: TextView = findViewById(R.id.descPper) as TextView
@@ -92,6 +97,7 @@ class perfilServ : AppCompatActivity() {
                     val imageBytes = Base64.decode(extension, Base64.DEFAULT)
                     val decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
                     imageview.setImageBitmap(decodedImage)
+                    addHistorial(obj.getString("nombreServicio"),obj.getString("imagen"),IDServ,IDUser)
 
                 } catch (e: JSONException) {
                     e.printStackTrace()
@@ -108,5 +114,48 @@ class perfilServ : AppCompatActivity() {
         }
         //adding request to queue
         queue.add(stringRequest);
+    }
+
+    private fun addHistorial(nombrePrestador: String,imagenPrestador:String,IDServ: String,IDUser:String) {
+        //getting the record values
+        val queue = Volley.newRequestQueue(this);
+
+        //val url = "http://192.168.1.45/kontakta/v1/insertM.php"
+        //val url = "http://192.168.1.109/kontakta/v1/insertM.php"
+        val url = "http://192.168.100.6/v1/insertHistorial.php"
+
+
+        //creating volley string request
+        val stringRequest = object : StringRequest(
+            Request.Method.POST, url,
+            Response.Listener<String> { response ->
+                try {
+                    val obj = JSONObject(response)
+                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                }
+            },
+            Response.ErrorListener {volleyError -> Toast.makeText(applicationContext, volleyError.message, Toast.LENGTH_LONG).show() }) {
+            @Throws(AuthFailureError::class)
+            override fun getParams(): Map<String, String> {
+                val params = HashMap<String, String>()
+                params.put("nombrePrestador", nombrePrestador)
+                params.put("imagenPrestador", imagenPrestador)
+                params.put("IDServicio_FK", IDServ)
+                params.put("IDUsuario_FK", IDUser)
+                return params
+            }
+        }
+        //adding request to queue
+        queue.add(stringRequest);
+    }
+    private fun resizeBitmap(bitmap:Bitmap, width:Int, height:Int):Bitmap{
+        return Bitmap.createScaledBitmap(
+            bitmap,
+            width,
+            height,
+            false
+        )
     }
 }
