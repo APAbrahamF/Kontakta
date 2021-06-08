@@ -76,8 +76,14 @@ class perfilServ : AppCompatActivity() {
                     youtube.setText(obj.getString("youtube"))
                     twitter.setText(obj.getString("twitter"))
                     rating.rating=obj.getString("promedio").toFloat()
-                    val promAux="Calificacion promedio: " + obj.getString("promedio")
-                    promedio.setText(promAux)
+                    if(obj.getString("promedio").count()>2){
+                        val promAux="Calificacion promedio: " + obj.getString("promedio").take(3)
+                        promedio.setText(promAux)
+                    }
+                    else{
+                        val promAux="Calificacion promedio: " + obj.getString("promedio")
+                        promedio.setText(promAux)
+                    }
                     imgCadena = obj.getString("imagen")
                     var extension = imgCadena
                     if(imgCadena.contains(","))
