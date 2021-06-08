@@ -77,8 +77,9 @@ class componerReview : AppCompatActivity() {
                     var bandera = obj.getString("error");
                     if(bandera == "false")
                     {
-                        val intent1 = Intent(this, listaReview::class.java)
-                        intent1.putExtra("review", IDServ);
+                        val intent1 = Intent(this, ActualizarPromedio::class.java)
+                        intent1.putExtra("IDServicio", IDServ);
+                        intent1.putExtra("Promedio", newPromedio.toString());
                         startActivity(intent1)
                     }
                 } catch (e: JSONException) {
@@ -98,4 +99,5 @@ class componerReview : AppCompatActivity() {
         }
             queue.add(stringRequest);
     }
+
 }

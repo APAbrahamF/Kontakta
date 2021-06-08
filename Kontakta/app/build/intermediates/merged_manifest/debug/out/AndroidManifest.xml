@@ -129,6 +129,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.kontakta.ActualizarPromedio"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+            <!-- Default Intent Filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.example.kontakta.vistaReview"
             android:theme="@style/AppTheme.NoActionBar" >
 

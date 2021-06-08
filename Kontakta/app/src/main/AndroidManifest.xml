@@ -112,6 +112,14 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".ActualizarPromedio"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- Default Intent Filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".vistaReview"
             android:theme="@style/AppTheme.NoActionBar">
 
