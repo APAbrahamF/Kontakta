@@ -25,9 +25,6 @@ class perfilServ : AppCompatActivity() {
         var IDUser : String = intent.getStringExtra("IDUsuario").toString()
         println("IDServicio en perfilServ = $IDServ")
         getData(IDServ)
-        var rating:RatingBar=findViewById(R.id.ratingServ) as RatingBar
-        val cadenita="1.6"
-        rating.rating=cadenita.toFloat()
         var buttRev: Button = findViewById(R.id.buttonReview) as Button
         buttRev.setOnClickListener{
             val intent1 = Intent(this, listaReview::class.java)
@@ -48,8 +45,8 @@ class perfilServ : AppCompatActivity() {
         var twitter: TextView = findViewById(R.id.twitPper) as TextView
         var genero: TextView = findViewById(R.id.generoPper) as TextView
         var imageview: ImageView = findViewById(R.id.imgPper) as ImageView
+        var rating:RatingBar=findViewById(R.id.ratingServ) as RatingBar
         var imgCadena = "";
-
         //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
         val url = "http://192.168.100.6/v1/getServPK.php"
@@ -77,6 +74,7 @@ class perfilServ : AppCompatActivity() {
                     instagram.setText(obj.getString("instagram"))
                     youtube.setText(obj.getString("youtube"))
                     twitter.setText(obj.getString("twitter"))
+                    rating.rating=obj.getString("promedio").toFloat()
                     imgCadena = obj.getString("imagen")
                     var extension = imgCadena
                     if(imgCadena.contains(","))
