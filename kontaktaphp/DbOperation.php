@@ -46,6 +46,13 @@ class DbOperation
 			return true; 
 		return false; 
 	}
+	public function insertHistorial($nombrePrestador, $imagenPrestador, $IDServicio_FK, $IDUsuario_FK){
+		$stmt = $this->con->prepare("INSERT INTO historialcontacto(nombrePrestador, imagenPrestador, IDServicio_FK, IDUsuario_FK) VALUES (?, ?, ?, ?)");
+		$stmt->bind_param("ssss", $nombrePrestador, $imagenPrestador, $IDServicio_FK, $IDUsuario_FK);
+		if($stmt->execute())
+			return true; 
+		return false; 
+	}
 	public function login($correo, $password)
 	{
 		$sql = "SELECT * FROM usuario WHERE correo = '$correo'";
