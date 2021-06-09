@@ -184,6 +184,10 @@ class perfilServ : AppCompatActivity() {
                 val params = HashMap<String, String>()
                 params.put("nombrePrestador", nombrePrestador)
                 params.put("imagenPrestador", imagenPrestador)
+                params.put("estadoUser", estadoUser)
+                params.put("municipioUser", municipioUser)
+                params.put("sexoUser", sexoUser)
+                params.put("edadUser", edadUser)
                 params.put("IDServicio_FK", IDServ)
                 params.put("IDUsuario_FK", IDUser)
                 return params
