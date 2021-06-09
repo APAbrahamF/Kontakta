@@ -46,9 +46,9 @@ class DbOperation
 			return true; 
 		return false; 
 	}
-	public function insertHistorial($nombrePrestador, $imagenPrestador, $IDServicio_FK, $IDUsuario_FK){
-		$stmt = $this->con->prepare("INSERT INTO historialcontacto(nombrePrestador, imagenPrestador, IDServicio_FK, IDUsuario_FK) VALUES (?, ?, ?, ?)");
-		$stmt->bind_param("ssss", $nombrePrestador, $imagenPrestador, $IDServicio_FK, $IDUsuario_FK);
+	public function insertHistorial($nombrePrestador, $imagenPrestador, $estadoUser, $municipioUser, $sexoUser, $edadUser, $IDServicio_FK, $IDUsuario_FK){
+		$stmt = $this->con->prepare("INSERT INTO historialcontacto(nombrePrestador, imagenPrestador, estadoUser, municipioUser, sexoUser, edadUser, IDServicio_FK, IDUsuario_FK) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("ssssssss", $nombrePrestador, $imagenPrestador, $estadoUser, $municipioUser, $sexoUser, $edadUser, $IDServicio_FK, $IDUsuario_FK);
 		if($stmt->execute())
 			return true; 
 		return false; 
