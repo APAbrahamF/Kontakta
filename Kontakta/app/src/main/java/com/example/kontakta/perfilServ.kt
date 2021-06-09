@@ -97,7 +97,8 @@ class perfilServ : AppCompatActivity() {
                     val imageBytes = Base64.decode(extension, Base64.DEFAULT)
                     val decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
                     imageview.setImageBitmap(decodedImage)
-                    addHistorial(obj.getString("nombreServicio"),obj.getString("imagen"),IDServ,IDUser)
+                    //addHistorial(obj.getString("nombreServicio"),obj.getString("imagen"),IDServ,IDUser)
+                    getDatosUsuario(obj.getString("nombreServicio"),obj.getString("imagen"),IDServ,IDUser)
 
                 } catch (e: JSONException) {
                     e.printStackTrace()
@@ -116,7 +117,44 @@ class perfilServ : AppCompatActivity() {
         queue.add(stringRequest);
     }
 
-    private fun addHistorial(nombrePrestador: String,imagenPrestador:String,IDServ: String,IDUser:String) {
+    private fun getDatosUsuario(nombrePrestador: String,imagenPrestador:String,IDServ: String,IDUser: String) {
+        val queue = Volley.newRequestQueue(this);
+
+        //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
+        val url = "http://192.168.100.6/v1/getUserPK.php"
+
+        //creating volley string request
+        val stringRequest = object : StringRequest(
+            Request.Method.POST, url,
+            Response.Listener<String> { response ->
+                try {
+                    //Aqui es donde se jalan los datos desde la base en un jsonArray, puedes ver en el php como los traigo
+                    val jsonArray= JSONArray(response)
+                    //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
+                    val obj = JSONObject(jsonArray.getString(0))
+                    //A partir de aqui solo pongo los datos que jale en los espacios del edit text
+                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    addHistorial(nombrePrestador,imagenPrestador,obj.getString("estado"),obj.getString("municipio"),obj.getString("sexo"), obj.getString("edad"),IDServ,IDUser)
+
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                }
+            },
+            Response.ErrorListener { volleyError -> Toast.makeText(applicationContext, volleyError.message, Toast.LENGTH_LONG).show() }) {
+            @Throws(AuthFailureError::class)
+            override fun getParams(): Map<String, String> {
+                val params = HashMap<String, String>()
+                //Esta funcion es la que pone los parametros en el php, aqui le pasas lo que va a ocupar el php
+                params.put("IDUsuario", IDUser)
+                return params
+            }
+        }
+        //adding request to queue
+        queue.add(stringRequest);
+    }
+
+    private fun addHistorial(nombrePrestador: String, imagenPrestador:String, estadoUser: String, municipioUser: String, sexoUser: String, edadUser: String, IDServ: String, IDUser:String) {
         //getting the record values
         val queue = Volley.newRequestQueue(this);
 
@@ -132,6 +170,10 @@ class perfilServ : AppCompatActivity() {
                 try {
                     val obj = JSONObject(response)
                     Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    println("=================================================================estadoUser = $estadoUser")
+                    println("=================================================================municipioUser = $municipioUser")
+                    println("=================================================================sexoUser = $sexoUser")
+                    println("=================================================================edadUser = $edadUser")
                 } catch (e: JSONException) {
                     e.printStackTrace()
                 }
