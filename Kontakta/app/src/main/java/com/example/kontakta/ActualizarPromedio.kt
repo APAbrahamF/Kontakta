@@ -22,6 +22,7 @@ class ActualizarPromedio : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.confirmacion2)
         var IDServ : String = intent.getStringExtra("IDServicio").toString()
+        var IDUser : String = intent.getStringExtra("IDUsuario").toString()
         var Promedio : String = intent.getStringExtra("Promedio").toString()
         Toast.makeText(this, IDServ, Toast.LENGTH_LONG).show()
         setPromedio(IDServ,Promedio)
@@ -30,6 +31,7 @@ class ActualizarPromedio : AppCompatActivity() {
         btonConfirmacion.setOnClickListener() {
             val intent1 = Intent(this, perfilServ::class.java)
             intent1.putExtra("IDServicio", IDServ );
+            intent1.putExtra("IDUsuario", IDUser );
             startActivity(intent1)
         }
     }

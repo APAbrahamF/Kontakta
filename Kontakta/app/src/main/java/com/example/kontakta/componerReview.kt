@@ -79,6 +79,7 @@ class componerReview : AppCompatActivity() {
                     {
                         val intent1 = Intent(this, ActualizarPromedio::class.java)
                         intent1.putExtra("IDServicio", IDServ);
+                        intent1.putExtra("IDUsuario", IDUser);
                         intent1.putExtra("Promedio", newPromedio.toString());
                         startActivity(intent1)
                     }

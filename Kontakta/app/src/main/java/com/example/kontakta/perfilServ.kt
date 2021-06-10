@@ -196,12 +196,4 @@ class perfilServ : AppCompatActivity() {
         //adding request to queue
         queue.add(stringRequest);
     }
-    private fun resizeBitmap(bitmap:Bitmap, width:Int, height:Int):Bitmap{
-        return Bitmap.createScaledBitmap(
-            bitmap,
-            width,
-            height,
-            false
-        )
-    }
 }
