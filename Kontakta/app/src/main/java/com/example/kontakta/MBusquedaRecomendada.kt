@@ -134,10 +134,13 @@ class MBusquedaRecomendada: AppCompatActivity() {
         println("=======================TERMINADO")
         var listview = findViewById<ListView>(R.id.listViewBR)
         var list = mutableListOf<Model>()
+        var listID= mutableListOf<String>()
         for(cont in 0 until list1.size)
         {
-            list.add(Model(list1[cont].IDServicio_FK,list1[cont].nombrePrestador,list1[cont].estadoUser))
+            if(!listID.contains(list1[cont].IDServicio_FK)){
+            list.add(Model(list1[cont].IDServicio_FK,list1[cont].nombrePrestador,list1[cont].estadoUser))}
             //println(list1[cont].estadoUser + "\n")
+            listID.add(list1[cont].IDServicio_FK)
         }
         listview.adapter = MyAdapterTest(this,R.layout.row,list)
         return list1
