@@ -46,8 +46,9 @@ class MBusquedaRecomendada: AppCompatActivity() {
         var list = mutableListOf<Model2>()
         val queue = Volley.newRequestQueue(this)
         //Acuerdense de camnbiar el IP
-        val url = "http://192.168.1.109/kontakta/v1/historialGET.php"
+        //val url = "http://192.168.1.109/kontakta/v1/historialGET.php"
         //val url = "http://192.168.1.45/kontakta/v1/historialGET.php"
+        val url = "http://192.168.100.6/v1/historialGET.php"
         val stringRequest = StringRequest(Request.Method.GET, url, { response ->
             val jsonArray = JSONArray(response)
             for (i in 0 until jsonArray.length()) {
@@ -130,6 +131,15 @@ class MBusquedaRecomendada: AppCompatActivity() {
         val silouette = silouette(list1, instancia, list2, instancia2)
         Toast.makeText(applicationContext, "Silouette " + silouette, Toast.LENGTH_LONG).show()
         //revisa el model2, tiene todo lo necesario para poder mostrar la lista de prestadores desde esta lista
+        println("=======================TERMINADO")
+        var listview = findViewById<ListView>(R.id.listViewBR)
+        var list = mutableListOf<Model>()
+        for(cont in 0 until list1.size)
+        {
+            list.add(Model(list1[cont].IDServicio_FK,list1[cont].nombrePrestador,list1[cont].estadoUser))
+            //println(list1[cont].estadoUser + "\n")
+        }
+        listview.adapter = MyAdapterTest(this,R.layout.row,list)
         return list1
     }
 
@@ -333,11 +343,11 @@ class MBusquedaRecomendada: AppCompatActivity() {
         var instanceT = Model3("", "", "", 0);
         //Aqui va la url de tu server, usa tu ip si vas a trabajar en tu celular
         //IP abraham
-        val url = "http://192.168.1.109/kontakta/v1/getUser.php"
+        //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //IP Axel
         //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
         //IP p8
-        //val url = "http://192.168.100.6/v1/getUser.php"
+        val url = "http://192.168.100.6/v1/getUser.php"
         //creating volley string request
         val stringRequest = @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
         object : StringRequest(
