@@ -16,7 +16,6 @@ import kotlinx.android.synthetic.main.registro_prestador.*
 import kotlinx.android.synthetic.main.registro_usuario.*
 import kotlinx.android.synthetic.main.registro_usuario.textDireccion
 import kotlinx.android.synthetic.main.registro_usuario.textEdad
-import kotlinx.android.synthetic.main.registro_usuario.textEstado
 import kotlinx.android.synthetic.main.registro_usuario.textMunicipio
 import kotlinx.android.synthetic.main.registro_usuario.textNombre
 import org.json.JSONArray
@@ -118,17 +117,17 @@ class CambioDatosUsuario : AppCompatActivity() {
         var edad: EditText = findViewById(R.id.textEdad) as EditText
         var municipio: EditText = findViewById(R.id.textMunicipio) as EditText
         var direccion: EditText = findViewById(R.id.textDireccion) as EditText
-        var estado: EditText = findViewById(R.id.textEstado) as EditText
+        var estado: EditText = findViewById(R.id.textEstadoCambio) as EditText
         var imageview: ImageView = findViewById(R.id.imgViewPhotoPro) as ImageView
         var imgCadena = "";
 
         //Aqui va la url de tu server, usa tu ip si vas a trabajar en tu celular
         //IP abraham
-        val url = "http://192.168.1.109/kontakta/v1/getUser.php"
+        //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //IP Axel
         //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
         //IP p8
-        //val url = "http://192.168.100.6/v1/getUser.php"
+        val url = "http://192.168.100.6/v1/getUser.php"
 
 
         //creating volley string request
@@ -181,7 +180,7 @@ class CambioDatosUsuario : AppCompatActivity() {
         val sexo = textSexo3?.text.toString()
         val direccion = textDireccion?.text.toString()
         val municipio = textMunicipio?.text.toString()
-        val estado = textEstado?.text.toString()
+        val estado = textEstadoCambio?.text.toString()
         var imageview: ImageView = findViewById(R.id.imgViewPhotoPro) as ImageView
         val bm = (imageview.getDrawable() as BitmapDrawable).getBitmap()
         val stream = ByteArrayOutputStream()
@@ -192,9 +191,9 @@ class CambioDatosUsuario : AppCompatActivity() {
         //IP abraham
         //val url = "http://192.168.1.109/kontakta/v1/actualizarUser.php"
         //IP Axel
-        val url = "http://192.168.1.45/kontakta/v1/actualizarUser.php"
+        //val url = "http://192.168.1.45/kontakta/v1/actualizarUser.php"
         //IP p8
-        //val url = "http://192.168.100.6/v1/actualizarUser.php"
+        val url = "http://192.168.100.6/v1/actualizarUser.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(

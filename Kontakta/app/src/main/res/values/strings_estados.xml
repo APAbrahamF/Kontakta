@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="estados">
+        <item>Aguascalientes</item>
+        <item>Baja California</item>
+        <item>Baja California Sur</item>
+        <item>Campeche</item>
+        <item>Chiapas</item>
+        <item>Chihuahua</item>
+        <item>Coahuila</item>
+        <item>Colima</item>
+        <item>Durango</item>
+        <item>Estado de Mexico</item>
+        <item>Guanajuato</item>
+        <item>Guerrero</item>
+        <item>Hidalgo</item>
+        <item>Jalisco</item>
+        <item>Michoacan</item>
+        <item>Morelos</item>
+        <item>Nayarit</item>
+        <item>Nuevo Leon</item>
+        <item>Oaxaca</item>
+        <item>Puebla</item>
+        <item>Queretaro</item>
+        <item>Quintana Roo</item>
+        <item>San Luis Potosi</item>
+        <item>Sinaloa</item>
+        <item>Sonora</item>
+        <item>Tabasco</item>
+        <item>Tamaulipas</item>
+        <item>Tlaxcala</item>
+        <item>Veracruz</item>
+        <item>Yucatan</item>
+        <item>Zacatecas</item>
+    </string-array>
+</resources>

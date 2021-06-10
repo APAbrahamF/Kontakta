@@ -66,14 +66,20 @@
                 android:inputType="textEmailAddress"
                 android:translationX="37dp" />
 
-            <EditText
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estado:"
+                android:translationX="37dp" />
+
+            <Spinner
                 android:id="@+id/textEstado"
                 android:layout_width="320dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:ems="10"
+                android:entries="@array/estados"
                 android:hint="Estado"
-                android:inputType="textPersonName"
-                android:translationX="37dp" />
+                android:translationX="37dp"/>
 
             <EditText
                 android:id="@+id/textMunicipio"

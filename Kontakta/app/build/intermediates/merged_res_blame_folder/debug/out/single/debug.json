@@ -20,12 +20,12 @@
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\layout\\lista_review.xml"
     },
     {
-        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_yt_logo.png.flat",
-        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\yt_logo.png"
-    },
-    {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_yt_logo.png.flat",
+        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\yt_logo.png"
     },
     {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\layout_confirmacion2.xml.flat",

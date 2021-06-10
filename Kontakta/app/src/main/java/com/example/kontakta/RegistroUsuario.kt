@@ -28,6 +28,7 @@ import java.io.ByteArrayOutputStream
 class RegistroUsuario:AppCompatActivity() {
     object GlobalVariable {
         var sexoStr = "H"
+        var estadoStr = "Aguascalientes"
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +56,31 @@ class RegistroUsuario:AppCompatActivity() {
             else{
                 //system OS is < Marshmallow
                 pickImageFromGallery();
+            }
+        }
+
+        // Create an ArrayAdapter
+        val adapterEstado = ArrayAdapter.createFromResource(this,
+            R.array.estados, android.R.layout.simple_spinner_item)
+        // Specify the layout to use when the list of choices appears
+        adapterEstado.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        // Apply the adapter to the spinner
+        textEstado.adapter = adapterEstado
+        textEstado.onItemSelectedListener = object :
+            AdapterView.OnItemSelectedListener {
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val text: String = parent?.getItemAtPosition(position).toString()
+                //textView.text = text
+                println(text)
+                GlobalVariable.estadoStr=text
             }
         }
 
@@ -160,7 +186,7 @@ class RegistroUsuario:AppCompatActivity() {
         val sexo = GlobalVariable.sexoStr
         val direccion = textDireccion?.text.toString()
         val municipio = textMunicipio?.text.toString()
-        val estado = textEstado?.text.toString()
+        val estado = GlobalVariable.estadoStr
         val correo = textCorreo1?.text.toString()
         val pass2 = textPass2?.text.toString()
         val password = textPass1?.text.toString()

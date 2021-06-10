@@ -5952,7 +5952,39 @@
     </style><style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/><style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/><style name="RatingBar" parent="AppTheme">
         <item name="colorControlActivated">@android:color/holo_orange_dark</item>
         <item name="colorControlNormal">@android:color/holo_orange_light</item>
-    </style></file></source><source path="C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\build\generated\res\rs\debug"/><source path="C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
+    </style></file><file path="C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\res\values\strings_estados.xml" qualifiers=""><string-array name="estados">
+        <item>Aguascalientes</item>
+        <item>Baja California</item>
+        <item>Baja California Sur</item>
+        <item>Campeche</item>
+        <item>Chiapas</item>
+        <item>Chihuahua</item>
+        <item>Coahuila</item>
+        <item>Colima</item>
+        <item>Durango</item>
+        <item>Estado de Mexico</item>
+        <item>Guanajuato</item>
+        <item>Guerrero</item>
+        <item>Hidalgo</item>
+        <item>Jalisco</item>
+        <item>Michoacan</item>
+        <item>Morelos</item>
+        <item>Nayarit</item>
+        <item>Nuevo Leon</item>
+        <item>Oaxaca</item>
+        <item>Puebla</item>
+        <item>Queretaro</item>
+        <item>Quintana Roo</item>
+        <item>San Luis Potosi</item>
+        <item>Sinaloa</item>
+        <item>Sonora</item>
+        <item>Tabasco</item>
+        <item>Tamaulipas</item>
+        <item>Tlaxcala</item>
+        <item>Veracruz</item>
+        <item>Yucatan</item>
+        <item>Zacatecas</item>
+    </string-array></file></source><source path="C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\build\generated\res\rs\debug"/><source path="C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
         <attr name="android:layout"/>
         <attr format="reference" name="buttonPanelSideLayout"/>
         <attr format="reference" name="listLayout"/>

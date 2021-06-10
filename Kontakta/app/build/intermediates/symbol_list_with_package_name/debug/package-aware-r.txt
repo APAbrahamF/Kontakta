@@ -64,6 +64,7 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
+array estados
 array generos
 array sexos
 attr action
@@ -2071,6 +2072,7 @@ id textEdad
 id textEdadL
 id textEnd
 id textEstado
+id textEstadoCambio
 id textFacebook
 id textFacebookP
 id textGenero
