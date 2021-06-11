@@ -3,6 +3,7 @@ package com.example.kontakta
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -144,6 +145,12 @@ class MBusquedaRecomendada: AppCompatActivity() {
             listID.add(list1[cont].IDServicio_FK)
         }
         listview.adapter = MyAdapterTest(this,R.layout.row,list)
+        listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
+            val intent1 = Intent(this, perfilServ::class.java)
+            intent1.putExtra("IDServicio", list[position].correo);
+            intent1.putExtra("IDUsuario", "115");
+            startActivity(intent1)
+        }
         return list1
     }
 
