@@ -60,6 +60,7 @@ class MBusquedaRecomendada: AppCompatActivity() {
                         jsonObject.get("municipioUser").toString(),
                         jsonObject.getInt("edadUser"),
                         jsonObject.get("nombrePrestador").toString(),
+                        jsonObject.get("imagenPrestador").toString(),
                         jsonObject.get("IDServicio_FK").toString()
                     )
                 )
@@ -138,7 +139,7 @@ class MBusquedaRecomendada: AppCompatActivity() {
         for(cont in 0 until list1.size)
         {
             if(!listID.contains(list1[cont].IDServicio_FK)){
-            list.add(Model(list1[cont].IDServicio_FK,list1[cont].nombrePrestador,list1[cont].estadoUser))}
+            list.add(Model(list1[cont].nombrePrestador,list1[cont].IDServicio_FK,list1[cont].imagenPrestador))}
             //println(list1[cont].estadoUser + "\n")
             listID.add(list1[cont].IDServicio_FK)
         }

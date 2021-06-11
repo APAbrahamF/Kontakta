@@ -6,7 +6,7 @@ class Model2(
     var municipioUser: String,
     var edadUser: Int,
     var nombrePrestador: String,
-    //val imagenPrestador: String,
+    val imagenPrestador: String,
     var IDServicio_FK: String
 ) {
 }

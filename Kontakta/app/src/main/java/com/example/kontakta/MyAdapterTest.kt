@@ -15,13 +15,21 @@ class MyAdapterTest (var mCtx:Context, var resources:Int, var items:List<Model>)
         val layoutInflater:LayoutInflater= LayoutInflater.from(mCtx)
         val view:View = layoutInflater.inflate(resources,null)
 
-        //val imageView:ImageView = view.findViewById(R.id.image_row)
+        val imageView:ImageView = view.findViewById(R.id.image_row)
         val titleTextView:TextView = view.findViewById(R.id.textView1_row)
         val descriptionTextView:TextView = view.findViewById(R.id.textView2_row)
 
         var mItem:Model = items[position]
-        titleTextView.text = mItem.correo
-        descriptionTextView.text = mItem.img
+        //imageView.setImageDrawable(mCtx.resources.getDrawable(mItem.img))
+        var extension=mItem.img
+        if(mItem.img.contains(","))
+            extension = extension.substringAfter(delimiter = ",", missingDelimiterValue = "Extension Not found")
+        //val extension = mItem.img.substringAfter(delimiter = ",", missingDelimiterValue = "Extension Not found")
+        val imageBytes = Base64.decode(extension, Base64.DEFAULT)
+        val decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+        imageView.setImageBitmap(decodedImage)
+        titleTextView.text = mItem.IDUsuario
+        descriptionTextView.text = mItem.correo
 
 
         return view
