@@ -14,7 +14,7 @@
 		$e = array();
 		$e['IDHistCont'] = $row['IDHistCont'];
 		$e['nombrePrestador'] = $row['nombrePrestador'];
-		//$e['imagenPrestador'] = $row['imagenPrestador'];
+		$e['imagenPrestador'] = $row['imagenPrestador'];
 		$e['estadoUser'] = $row['estadoUser'];
 		$e['municipioUser'] = $row['municipioUser'];
 		$e['sexoUser'] = $row['sexoUser'];
