@@ -27,7 +27,7 @@ class MBusquedaRecomendada: AppCompatActivity() {
             //El correo con el que se trabaja esta hardcodeado y se pone aqui
             getData("hu")
         }
-        val botMenu: ImageButton = findViewById(R.id.recMenuInButt) as ImageButton
+        /*val botMenu: ImageButton = findViewById(R.id.recMenuInButt) as ImageButton
         botMenu.setOnClickListener{
             val intent = Intent(this,MenuPrincipal::class.java)
             startActivity(intent)
@@ -36,7 +36,7 @@ class MBusquedaRecomendada: AppCompatActivity() {
         botConf.setOnClickListener{
             val intent = Intent(this, MenuConfiguracion::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 
 

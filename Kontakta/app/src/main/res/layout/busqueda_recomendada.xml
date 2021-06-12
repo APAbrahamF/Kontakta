@@ -1,127 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinatorLayout"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MBusquedaRecomendada">
-
-    <View
-        android:id="@+id/view7"
-        android:layout_width="412dp"
-        android:layout_height="64dp"
-        android:layout_weight="1"
-        android:background="#6AA7D9"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintHorizontal_bias="0.0"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toTopOf="parent"
-        card_view:layout_constraintVertical_bias="1.0" />
-
-    <ImageButton
-        android:id="@+id/buttRecomended5"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="172dp"
-        android:layout_marginRight="172dp"
-        android:background="#6AA7D9"
-        android:tint="#FF6E40"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintHorizontal_bias="0.498"
-        card_view:layout_constraintStart_toStartOf="@+id/view2"
-        card_view:layout_constraintTop_toTopOf="parent"
-        card_view:layout_constraintVertical_bias="1.0"
-        card_view:srcCompat="@android:drawable/ic_menu_compass" />
-
-    <ImageButton
-        android:id="@+id/recMenuInButt"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:background="#6AA7D9"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintHorizontal_bias="0.04"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toTopOf="parent"
-        card_view:layout_constraintVertical_bias="1.0"
-        card_view:srcCompat="@android:drawable/ic_media_play" />
-
-    <ImageButton
-        android:id="@+id/recConfButt"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:background="#6AA7D9"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintHorizontal_bias="0.962"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toTopOf="parent"
-        card_view:layout_constraintVertical_bias="1.0"
-        card_view:srcCompat="@android:drawable/ic_menu_manage" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="227dp"
-        android:layout_height="77dp"
-        android:ems="10"
-        android:hint="¿Que estas buscando?"
-        android:inputType="textPersonName"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toTopOf="parent"
-        card_view:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="77dp"
-        android:layout_height="77dp"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintHorizontal_bias="0.0"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toTopOf="parent"
-        card_view:layout_constraintVertical_bias="0.0"
-        card_view:srcCompat="@drawable/kontakta_logo" />
-
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="77dp"
-        android:layout_height="77dp"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintHorizontal_bias="1.0"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toTopOf="parent"
-        card_view:layout_constraintVertical_bias="0.0"
-        card_view:srcCompat="@android:drawable/ic_menu_search" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        card_view:layout_constraintGuide_begin="205dp" />
-
-    <View
-        android:id="@+id/view6"
-        android:layout_width="407dp"
-        android:layout_height="76dp"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonAccionar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginLeft="112dp"
-        android:layout_marginTop="124dp"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
         android:text="Button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -129,4 +19,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/listViewBR"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

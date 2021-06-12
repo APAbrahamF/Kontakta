@@ -1724,7 +1724,6 @@ id blocking
 id bottom
 id bounce
 id buttRecomended
-id buttRecomended5
 id buttonAccionar
 id buttonCServ
 id buttonCUser
@@ -1808,7 +1807,6 @@ id editTextContraAct
 id editTextContraN
 id editTextContraN2
 id editTextGenero
-id editTextTextPersonName2
 id editTextTextPersonName3
 id editTextTextPersonName7
 id edit_query
@@ -1842,7 +1840,6 @@ id grouping
 id groups
 id guideline2
 id guideline4
-id guideline5
 id guideline7
 id guideline8
 id hideable
@@ -1861,14 +1858,12 @@ id imageButton14
 id imageButton17
 id imageButton2
 id imageButton4
-id imageButton5
 id imageReview
 id imageView
 id imageView10
 id imageView3
 id imageView4
 id imageView6
-id imageView7
 id image_row
 id image_view
 id image_view2
@@ -1978,8 +1973,6 @@ id ratingReview
 id ratingServ
 id rating_row_review
 id ratio
-id recConfButt
-id recMenuInButt
 id rectangles
 id recyclerView
 id registroPrestador
@@ -2151,8 +2144,6 @@ id useLogo
 id view
 id view2
 id view4
-id view6
-id view7
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
