@@ -199,27 +199,29 @@ class MBusquedaRecomendada: AppCompatActivity() {
     private fun estados(): ArrayList<String> {
         //Esto solo mete los estados en un arraylist para poder hacer comparaciones
         val arrayList = ArrayList<String>()
-        arrayList.add("Aguas calientes");
-        arrayList.add("Baja california norte");
-        arrayList.add("Baja california sur");
+        arrayList.add("Aguascalientes");
+        arrayList.add("Baja California");
+        arrayList.add("Baja California Sur");
         arrayList.add("Campeche");
+        arrayList.add("CDMX");
         arrayList.add("Chiapas");
-        arrayList.add("Chihuhua");
+        arrayList.add("Chihuahua");
         arrayList.add("Coahuila");
         arrayList.add("Colima");
-        arrayList.add("CDMX");
         arrayList.add("Durango");
         arrayList.add("Estado de Mexico");
         arrayList.add("Guanajuato");
         arrayList.add("Guerrero");
         arrayList.add("Hidalgo");
+        arrayList.add("Jalisco");
+        arrayList.add("Michoacan");
         arrayList.add("Morelos");
         arrayList.add("Nayarit");
-        arrayList.add("Nuevo leon");
+        arrayList.add("Nuevo Leon");
         arrayList.add("Oaxaca");
         arrayList.add("Puebla");
         arrayList.add("Queretaro");
-        arrayList.add("Quintana roo");
+        arrayList.add("Quintana Roo");
         arrayList.add("San Luis Potosi");
         arrayList.add("Sinaloa");
         arrayList.add("Sonora");
