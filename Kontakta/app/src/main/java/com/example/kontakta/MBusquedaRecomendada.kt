@@ -17,15 +17,17 @@ import org.json.JSONException
 import org.json.JSONObject
 import java.util.concurrent.ThreadLocalRandom
 
+var idUsuarioRecomendadaGlobal: String = ""
 class MBusquedaRecomendada: AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.busqueda_recomendada)
+        var correo: String = intent.getStringExtra("correo").toString()
         val boton: Button = findViewById(R.id.buttonAccionar) as Button;
         boton.setOnClickListener {
             //El correo con el que se trabaja esta hardcodeado y se pone aqui
-            getData("hu")
+            getData(correo)
         }
         /*val botMenu: ImageButton = findViewById(R.id.recMenuInButt) as ImageButton
         botMenu.setOnClickListener{
@@ -148,7 +150,7 @@ class MBusquedaRecomendada: AppCompatActivity() {
         listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
             val intent1 = Intent(this, perfilServ::class.java)
             intent1.putExtra("IDServicio", list[position].correo);
-            intent1.putExtra("IDUsuario", "115");
+            intent1.putExtra("IDUsuario", idUsuarioRecomendadaGlobal);
             startActivity(intent1)
         }
         return list1
@@ -374,6 +376,7 @@ class MBusquedaRecomendada: AppCompatActivity() {
                     //A partir de aqui solo pongo los datos que jale en los espacios del edit text
                     Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG)
                         .show()
+                    idUsuarioRecomendadaGlobal=obj.getString("IDUsuario")
                     obj.getString("nombre")
                     instanceT = Model3(
                         obj.getString("estado"),
