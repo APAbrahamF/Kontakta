@@ -21,7 +21,7 @@
 13-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:7:22-77
 14
 15    <application
-15-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:9:5-180:19
+15-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:9:5-188:19
 16        android:name="androidx.multidex.MultiDexApplication"
 17        android:allowBackup="true"
 17-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:10:9-35
@@ -342,6 +342,21 @@
 200-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:36:25-69
 201            </intent-filter>
 202        </activity>
-203    </application>
-204
-205</manifest>
+203        <activity
+203-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:179:9-186:20
+204            android:name="com.example.kontakta.borrarHistorial"
+204-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:179:19-50
+205            android:theme="@style/AppTheme.NoActionBar" >
+205-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:180:13-56
+206
+207            <!-- Default Intent Filter -->
+208            <intent-filter>
+208-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:35:13-37:29
+209                <action android:name="android.intent.action.DEFAULT" />
+209-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:36:17-72
+209-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:36:25-69
+210            </intent-filter>
+211        </activity>
+212    </application>
+213
+214</manifest>

@@ -1,11 +1,12 @@
 package com.example.kontakta
 
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.util.Base64
 import android.view.View
-import android.widget.*
+import android.widget.AdapterView
+import android.widget.Button
+import android.widget.ListView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
@@ -16,7 +17,7 @@ import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 
-class vistaHistorial : AppCompatActivity() {
+class borrarHistorial : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.vista_historial)
@@ -28,7 +29,7 @@ class vistaHistorial : AppCompatActivity() {
 
         var buttBorrar: Button = findViewById(R.id.buttonBorrar) as Button
         buttBorrar.setOnClickListener {
-            val intent1 = Intent(this, borrarHistorial::class.java)
+            val intent1 = Intent(this, MenuConfiguracion::class.java)
             intent1.putExtra("IDUsuario", IDUser);
             startActivity(intent1)
         }
@@ -52,17 +53,17 @@ class vistaHistorial : AppCompatActivity() {
                     //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
                     for(i in 0 until jsonArray.length()){
                         val jsonObject = JSONObject(jsonArray.getString(i))
-                        list.add(Model(jsonObject.get("IDServicio_FK").toString(),jsonObject.get("nombrePrestador").toString(),jsonObject.get("imagenPrestador").toString()))
+                        list.add(Model(jsonObject.get("IDHistCont").toString(),jsonObject.get("nombrePrestador").toString(),jsonObject.get("imagenPrestador").toString()))
                     }
                     listview.adapter = MyAdapter(this,R.layout.row,list)
                     listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
-                        println("posicion en la lista: $position")
+                        /*println("posicion en la lista: $position")
                         println("IDServicio: "+list[position].IDUsuario)
                         val intent1 = Intent(this, perfilServ::class.java)
                         intent1.putExtra("IDServicio", list[position].IDUsuario);
                         intent1.putExtra("IDUsuario", IDUser);
-                        startActivity(intent1)
-                        //deleteHistorial(list[position].IDUsuario,IDUser)
+                        startActivity(intent1)*/
+                        deleteHistorial(list[position].IDUsuario,IDUser)
                     }
 
                 } catch (e: JSONException) {
@@ -96,9 +97,9 @@ class vistaHistorial : AppCompatActivity() {
             Response.Listener<String> { response ->
                 try {
 
-                        val intent1 = Intent(this, vistaHistorial::class.java)
-                        intent1.putExtra("IDUsuario", IDUser);
-                        startActivity(intent1)
+                    val intent1 = Intent(this, borrarHistorial::class.java)
+                    intent1.putExtra("IDUsuario", IDUser);
+                    startActivity(intent1)
 
 
                 } catch (e: JSONException) {

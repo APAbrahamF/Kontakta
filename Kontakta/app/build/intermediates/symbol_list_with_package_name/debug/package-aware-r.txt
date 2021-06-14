@@ -1725,6 +1725,7 @@ id bottom
 id bounce
 id buttRecomended
 id buttonAccionar
+id buttonBorrar
 id buttonCServ
 id buttonCUser
 id buttonCamContra
