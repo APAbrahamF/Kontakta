@@ -1730,6 +1730,7 @@ id buttonCUser
 id buttonCamContra
 id buttonComponer
 id buttonConfirm
+id buttonHistorial
 id buttonMenu
 id buttonPanel
 id buttonPruebas
@@ -1892,6 +1893,7 @@ id listMode
 id listView
 id listView2
 id listViewBR
+id listViewHistorial
 id listView_review
 id list_item
 id mainActivity
@@ -2313,6 +2315,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout vista_grupo
+layout vista_historial
 layout vista_review
 menu menu_main
 mipmap ic_launcher

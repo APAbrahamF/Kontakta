@@ -13,6 +13,7 @@ class MenuConfiguracion : AppCompatActivity() {
         setContentView(R.layout.configuracion)
         val buttonCam: Button = findViewById(R.id.buttonCUser) as Button
         var correo : String = intent.getStringExtra("correo").toString()
+        var IDUser : String = intent.getStringExtra("IDUsuario").toString()
         val buttonInicio: ImageButton = findViewById(R.id.confInicioButt) as ImageButton
         buttonInicio.setOnClickListener{
             val intent = Intent(this,MenuPrincipal::class.java)
@@ -40,6 +41,12 @@ class MenuConfiguracion : AppCompatActivity() {
         buttonCamC.setOnClickListener{
             val intent = Intent(this,cambiar_contra::class.java)
             intent.putExtra("correo", correo);
+            startActivity(intent)
+        }
+        val buttonHistorial: Button = findViewById(R.id.buttonHistorial) as Button
+        buttonHistorial.setOnClickListener{
+            val intent = Intent(this,vistaHistorial::class.java)
+            intent.putExtra("IDUsuario", IDUser);
             startActivity(intent)
         }
         var buttUPerfil: Button = findViewById(R.id.testVerU) as Button

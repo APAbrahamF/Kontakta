@@ -52,6 +52,7 @@ class MenuPrincipal: AppCompatActivity() {
         buttConf.setOnClickListener {
             val intent1 = Intent(this, MenuConfiguracion::class.java)
             intent1.putExtra("correo", correo);
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
             startActivity(intent1)
         }
         var buttRecom: ImageButton = findViewById(R.id.buttRecomended) as ImageButton
