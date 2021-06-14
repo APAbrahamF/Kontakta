@@ -52,11 +52,12 @@ class vistaHistorial : AppCompatActivity() {
                     }
                     listview.adapter = MyAdapter(this,R.layout.row,list)
                     listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
-                        println("posicion en la lista: $position")
+                        /*println("posicion en la lista: $position")
                         println("IDServicio: "+list[position].IDUsuario)
                         val intent1 = Intent(this, perfilServ::class.java)
                         intent1.putExtra("IDUsuario", IDUser);
-                        startActivity(intent1)
+                        startActivity(intent1)*/
+                        deleteHistorial(list[position].IDUsuario,IDUser)
                     }
 
                 } catch (e: JSONException) {
@@ -69,6 +70,42 @@ class vistaHistorial : AppCompatActivity() {
                 val params = HashMap<String, String>()
                 //Esta funcion es la que pone los parametros en el php, aqui le pasas lo que va a ocupar el php
                 params.put("IDUsuario_FK", IDUser)
+                return params
+            }
+        }
+        //adding request to queue
+        queue.add(stringRequest);
+    }
+
+    private fun deleteHistorial(IDHist: String, IDUser: String) {
+        val queue = Volley.newRequestQueue(this);
+        var listview = findViewById<ListView>(R.id.listViewHistorial)
+        var list = mutableListOf<Model>()
+        //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
+        val url = "http://192.168.100.6/v1/borrarHistorial.php"
+
+        //creating volley string request
+        val stringRequest = object : StringRequest(
+            Request.Method.POST, url,
+            Response.Listener<String> { response ->
+                try {
+
+                        val intent1 = Intent(this, vistaHistorial::class.java)
+                        intent1.putExtra("IDUsuario", IDUser);
+                        startActivity(intent1)
+
+
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                }
+            },
+            Response.ErrorListener { volleyError -> Toast.makeText(applicationContext, volleyError.message, Toast.LENGTH_LONG).show() }) {
+            @Throws(AuthFailureError::class)
+            override fun getParams(): Map<String, String> {
+                val params = HashMap<String, String>()
+                //Esta funcion es la que pone los parametros en el php, aqui le pasas lo que va a ocupar el php
+                params.put("IDHistCont", IDHist)
                 return params
             }
         }
