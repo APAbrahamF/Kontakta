@@ -105,6 +105,12 @@ class DbOperation
 		$result = mysqli_query($this->con, $sql);
 		return true;
 	}
+	public function limpiarHistorial($IDUsuario_FK)
+	{		
+		$sql = "DELETE FROM historialcontacto WHERE IDUsuario_FK = '$IDUsuario_FK'";
+		$result = mysqli_query($this->con, $sql);
+		return true;
+	}
 	//fetching all records from the database 
 	public function getUser(){
 		$stmt = $this->con->prepare("SELECT Id, Nombres, Correo, Start FROM comment");
