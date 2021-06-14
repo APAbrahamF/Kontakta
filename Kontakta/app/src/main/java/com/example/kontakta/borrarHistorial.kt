@@ -29,9 +29,7 @@ class borrarHistorial : AppCompatActivity() {
 
         var buttBorrar: Button = findViewById(R.id.buttonBorrar) as Button
         buttBorrar.setOnClickListener {
-            val intent1 = Intent(this, MenuConfiguracion::class.java)
-            intent1.putExtra("IDUsuario", IDUser);
-            startActivity(intent1)
+            limpiarHistorial(IDUser)
         }
     }
 
@@ -112,6 +110,42 @@ class borrarHistorial : AppCompatActivity() {
                 val params = HashMap<String, String>()
                 //Esta funcion es la que pone los parametros en el php, aqui le pasas lo que va a ocupar el php
                 params.put("IDHistCont", IDHist)
+                return params
+            }
+        }
+        //adding request to queue
+        queue.add(stringRequest);
+    }
+
+    private fun limpiarHistorial(IDUser: String) {
+        val queue = Volley.newRequestQueue(this);
+        var listview = findViewById<ListView>(R.id.listViewHistorial)
+        var list = mutableListOf<Model>()
+        //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
+        val url = "http://192.168.100.6/v1/limpiarHistorial.php"
+
+        //creating volley string request
+        val stringRequest = object : StringRequest(
+            Request.Method.POST, url,
+            Response.Listener<String> { response ->
+                try {
+
+                    val intent1 = Intent(this, borrarHistorial::class.java)
+                    intent1.putExtra("IDUsuario", IDUser);
+                    startActivity(intent1)
+
+
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                }
+            },
+            Response.ErrorListener { volleyError -> Toast.makeText(applicationContext, volleyError.message, Toast.LENGTH_LONG).show() }) {
+            @Throws(AuthFailureError::class)
+            override fun getParams(): Map<String, String> {
+                val params = HashMap<String, String>()
+                //Esta funcion es la que pone los parametros en el php, aqui le pasas lo que va a ocupar el php
+                params.put("IDUsuario_FK", IDUser)
                 return params
             }
         }
