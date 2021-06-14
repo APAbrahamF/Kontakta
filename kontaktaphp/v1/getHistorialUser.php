@@ -7,7 +7,7 @@
    $array = array();	
    if(isset($_POST['IDUsuario_FK'])){
       	$IDUsuario_FK = $_POST['IDUsuario_FK'];   		
-     	$sql = "SELECT * FROM historialcontacto WHERE	IDUsuario_FK= '$IDUsuario_FK'";
+     	$sql = "SELECT * FROM historialcontacto WHERE	IDUsuario_FK= '$IDUsuario_FK' ORDER BY IDHistCont DESC";
    if($resultset = mysqli_query($con, $sql)){
 	while ($row = mysqli_fetch_assoc($resultset)){
 		$e = array();
