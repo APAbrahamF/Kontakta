@@ -55,7 +55,7 @@ class borrarHistorial : AppCompatActivity() {
                         val jsonObject = JSONObject(jsonArray.getString(i))
                         list.add(Model(jsonObject.get("IDHistCont").toString(),jsonObject.get("nombrePrestador").toString(),jsonObject.get("imagenPrestador").toString()))
                     }
-                    listview.adapter = MyAdapter(this,R.layout.row,list)
+                    listview.adapter = MyAdapter(this,R.layout.row_borrarhistorial,list)
                     listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
                         /*println("posicion en la lista: $position")
                         println("IDServicio: "+list[position].IDUsuario)
