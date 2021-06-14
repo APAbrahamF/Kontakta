@@ -14,6 +14,7 @@
 		$e['IDHistCont'] = $row['IDHistCont'];
 		$e['nombrePrestador'] = $row['nombrePrestador'];
 		$e['imagenPrestador'] = $row['imagenPrestador'];	
+		$e['IDServicio_FK'] = $row['IDServicio_FK'];
       array_push($array,$e);
 	}
    }
