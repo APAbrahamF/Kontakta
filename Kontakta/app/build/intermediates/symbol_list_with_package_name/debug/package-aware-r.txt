@@ -1729,6 +1729,7 @@ id buttRecomended
 id buttonAccionar
 id buttonBorrar
 id buttonBorrarServ
+id buttonBorrarUser
 id buttonCServ
 id buttonCUser
 id buttonCamContra
