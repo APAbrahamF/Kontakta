@@ -21,7 +21,8 @@
 		$e['instagram'] = $row['instagram'];
 		$e['facebook'] = $row['facebook'];
 		$e['twitter'] = $row['twitter'];
-		$e['promedio'] = $row['promedio']; 		
+		$e['promedio'] = $row['promedio'];
+		$e['IDUsuario_FK'] = $row['IDUsuario_FK']; 		
       	$e['message'] = 'Sirve y muestra';
       array_push($array,$e);
 	}
