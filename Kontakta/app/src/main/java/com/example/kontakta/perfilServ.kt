@@ -21,7 +21,7 @@ import org.json.JSONException
 import org.json.JSONObject
 import java.io.ByteArrayOutputStream
 
-
+var idUsuarioFK:String=""
 class perfilServ : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +30,12 @@ class perfilServ : AppCompatActivity() {
         var IDUser : String = intent.getStringExtra("IDUsuario").toString()
         println("IDServicio en perfilServ = $IDServ")
         getData(IDServ,IDUser)
+        var buttKTK: Button = findViewById(R.id.buttonKontakta) as Button
+        buttKTK.setOnClickListener{
+            val intent1 = Intent(this, perfilUsuario::class.java)
+            intent1.putExtra("IDUsuario", idUsuarioFK);
+            startActivity(intent1)
+        }
         var buttRev: Button = findViewById(R.id.buttonReview) as Button
         buttRev.setOnClickListener{
             val intent1 = Intent(this, listaReview::class.java)
@@ -81,6 +87,7 @@ class perfilServ : AppCompatActivity() {
                     youtube.setText(obj.getString("youtube"))
                     twitter.setText(obj.getString("twitter"))
                     rating.rating=obj.getString("promedio").toFloat()
+                    idUsuarioFK=obj.getString("IDUsuario_FK")
                     if(obj.getString("promedio").count()>2){
                         val promAux="Calificacion promedio: " + obj.getString("promedio").take(3)
                         promedio.setText(promAux)

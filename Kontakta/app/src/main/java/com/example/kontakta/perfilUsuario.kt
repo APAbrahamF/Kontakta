@@ -20,16 +20,17 @@ class perfilUsuario : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.perfil_usuario)
-        var correo : String = intent.getStringExtra("correo").toString()
-        getData(correo)
+        var IDUser : String = intent.getStringExtra("IDUsuario").toString()
+        getData(IDUser)
     }
-    private fun getData(correo: String) {
+    private fun getData(IDUser: String) {
         //Aqui jalo los editText para poder poner ahi los datos que voy a jalar desde la base
         val queue = Volley.newRequestQueue(this);
         var nombre: TextView = findViewById(R.id.nombreUper) as TextView
         var sexo: TextView = findViewById(R.id.sexoUper) as TextView
         var edad: TextView = findViewById(R.id.edadUper) as TextView
         var ubicacion: TextView = findViewById(R.id.ubiUper) as TextView
+        var correo: TextView = findViewById(R.id.correoUper) as TextView
         var imageview: ImageView = findViewById(R.id.imgUper) as ImageView
         var imgCadena = ""
 
@@ -39,7 +40,7 @@ class perfilUsuario : AppCompatActivity() {
         //IP Axel
         //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
         //IP p8
-        val url = "http://192.168.100.6/v1/getUser.php"
+        val url = "http://192.168.100.6/v1/getUserPK.php"
 
 
         //creating volley string request
@@ -59,6 +60,7 @@ class perfilUsuario : AppCompatActivity() {
                     val municipioAux = obj.getString("municipio")
                     val estadoAux = obj.getString("estado")
                     ubicacion.setText(municipioAux + ", " + estadoAux)
+                    correo.setText("Correo: " + obj.getString("correo"))
                     imgCadena = obj.getString("imagen")
                     var extension = imgCadena
                     if(imgCadena.contains(","))
@@ -76,7 +78,7 @@ class perfilUsuario : AppCompatActivity() {
             override fun getParams(): Map<String, String> {
                 val params = HashMap<String, String>()
                 //Esta funcion es la que pone los parametros en el php, aqui le pasas lo que va a ocupar el php
-                params.put("correo", correo)
+                params.put("IDUsuario", IDUser)
                 return params
             }
         }

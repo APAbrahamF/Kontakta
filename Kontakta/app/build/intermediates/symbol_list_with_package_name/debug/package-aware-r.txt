@@ -1736,6 +1736,7 @@ id buttonCamContra
 id buttonComponer
 id buttonConfirm
 id buttonHistorial
+id buttonKontakta
 id buttonMenu
 id buttonPanel
 id buttonPruebas
@@ -1777,6 +1778,7 @@ id contentPanel
 id coordinator
 id coordinatorLayout
 id coordinatorLayout2
+id correoUper
 id cos
 id custom
 id customPanel
