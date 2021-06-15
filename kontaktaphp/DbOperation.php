@@ -111,6 +111,12 @@ class DbOperation
 		$result = mysqli_query($this->con, $sql);
 		return true;
 	}
+		public function borrarUser($IDUsuario)
+	{		
+		$sql = "DELETE FROM usuario WHERE IDUsuario = '$IDUsuario'";
+		$result = mysqli_query($this->con, $sql);
+		return true;
+	}
 	public function nullSetUser($IDUsuario)
 	{		
 		$sql = "UPDATE usuario SET IDServicio_FK = NULL WHERE IDUsuario = '$IDUsuario'";
