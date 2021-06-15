@@ -1745,6 +1745,7 @@ id buttonRegistro
 id buttonRegistroNuevo
 id buttonRegistroServ
 id buttonReview
+id buttonVerReviews
 id cache_measures
 id cancel_action
 id cancel_button

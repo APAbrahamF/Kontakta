@@ -209,6 +209,15 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.kontakta.listaReviewUser"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+            <!-- Default Intent Filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -21,7 +21,7 @@
 13-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:7:22-77
 14
 15    <application
-15-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:9:5-188:19
+15-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:9:5-196:19
 16        android:name="androidx.multidex.MultiDexApplication"
 17        android:allowBackup="true"
 17-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:10:9-35
@@ -357,6 +357,21 @@
 209-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:36:25-69
 210            </intent-filter>
 211        </activity>
-212    </application>
-213
-214</manifest>
+212        <activity
+212-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:187:9-194:20
+213            android:name="com.example.kontakta.listaReviewUser"
+213-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:187:19-50
+214            android:theme="@style/AppTheme.NoActionBar" >
+214-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:188:13-56
+215
+216            <!-- Default Intent Filter -->
+217            <intent-filter>
+217-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:35:13-37:29
+218                <action android:name="android.intent.action.DEFAULT" />
+218-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:36:17-72
+218-->C:\Users\hp\Documents\8 - Octavo\Kontakta\Kontakta\app\src\main\AndroidManifest.xml:36:25-69
+219            </intent-filter>
+220        </activity>
+221    </application>
+222
+223</manifest>

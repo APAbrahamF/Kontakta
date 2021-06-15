@@ -81,6 +81,12 @@ class MenuConfiguracion : AppCompatActivity() {
             intent1.putExtra("correo", correo);
             startActivity(intent1)
         }
+        val buttonVerReviews: Button = findViewById(R.id.buttonVerReviews) as Button
+        buttonVerReviews.setOnClickListener{
+            val intent1 = Intent(this, listaReviewUser::class.java)
+            intent1.putExtra("IDUsuario", IDUser);
+            startActivity(intent1)
+        }
         var buttUPerfil: Button = findViewById(R.id.testVerU) as Button
         buttUPerfil.setOnClickListener{
             val intent1 = Intent(this, perfilUsuario::class.java)
