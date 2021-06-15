@@ -1742,6 +1742,7 @@ id buttonPruebas
 id buttonPruebas2
 id buttonPublicar
 id buttonRegistro
+id buttonRegistroNuevo
 id buttonRegistroServ
 id buttonReview
 id cache_measures

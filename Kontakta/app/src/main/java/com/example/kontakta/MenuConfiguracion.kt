@@ -75,6 +75,12 @@ class MenuConfiguracion : AppCompatActivity() {
             //nullSetUser(IDUser)
 
         }
+        val buttonRegistroNuevo: Button = findViewById(R.id.buttonRegistroNuevo) as Button
+        buttonRegistroNuevo.setOnClickListener{
+            val intent1 = Intent(this, RegistroPrestador::class.java)
+            intent1.putExtra("correo", correo);
+            startActivity(intent1)
+        }
         var buttUPerfil: Button = findViewById(R.id.testVerU) as Button
         buttUPerfil.setOnClickListener{
             val intent1 = Intent(this, perfilUsuario::class.java)
