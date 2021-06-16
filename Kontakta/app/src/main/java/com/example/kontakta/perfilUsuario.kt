@@ -55,12 +55,12 @@ class perfilUsuario : AppCompatActivity() {
                     //A partir de aqui solo pongo los datos que jale en los espacios del edit text
                     Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     nombre.setText(obj.getString("nombre"))
-                    sexo.setText("Sexo: " + obj.getString("sexo"))
+                    sexo.setText(obj.getString("sexo"))
                     edad.setText(obj.getString("edad") + " años")
                     val municipioAux = obj.getString("municipio")
                     val estadoAux = obj.getString("estado")
                     ubicacion.setText(municipioAux + ", " + estadoAux)
-                    correo.setText("Correo: " + obj.getString("correo"))
+                    correo.setText(obj.getString("correo"))
                     imgCadena = obj.getString("imagen")
                     var extension = imgCadena
                     if(imgCadena.contains(","))

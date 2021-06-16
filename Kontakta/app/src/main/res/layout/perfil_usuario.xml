@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".perfilUsuario">
 
     <LinearLayout
@@ -14,11 +15,14 @@
         android:translationY="40dp">
 
         <TextView
-            android:id="@+id/perfilTV"
+            android:id="@+id/nombreUper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Perfil"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:fontFamily="sans-serif-black"
+            android:text="Nombre"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#000000"
+            android:textSize="30dp" />
 
         <ImageView
             android:id="@+id/imgUper"
@@ -26,33 +30,101 @@
             android:layout_height="128dp" />
 
         <TextView
-            android:id="@+id/nombreUper"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Nombre" />
-
+            android:text="Edad"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.544"
+            android:layout_marginTop="10dp"/>
         <TextView
             android:id="@+id/edadUper"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Edad" />
-
+            android:fontFamily="sans-serif"
+            android:textSize="20dp"
+            android:text="Edad"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:background="@drawable/rounded_corner_view"
+            android:drawableLeft="@drawable/edad_icono"
+            android:drawablePadding="8dp"
+            android:textColor="#000000"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Sexo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.544"
+            android:layout_marginTop="10dp"/>
         <TextView
             android:id="@+id/sexoUper"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Sexo" />
-
+            android:fontFamily="sans-serif"
+            android:textSize="20dp"
+            android:text="Sexo"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000000"
+            android:background="@drawable/rounded_corner_view"
+            android:drawableLeft="@drawable/sexo_icono"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Ubicación"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.544"
+            android:layout_marginTop="10dp"/>
         <TextView
             android:id="@+id/ubiUper"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Ubicación" />
+            android:fontFamily="sans-serif"
+            android:textSize="20dp"
+            android:text="Ubicacion"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000000"
+            android:background="@drawable/rounded_corner_view"
+            android:drawableLeft="@drawable/ubicacion_icono"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Correo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.544"
+            android:layout_marginTop="10dp"/>
         <TextView
             android:id="@+id/correoUper"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Correo" />
+            android:fontFamily="sans-serif"
+            android:textSize="20dp"
+            android:text="Correo"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000000"
+            android:background="@drawable/rounded_corner_view"
+            android:drawableLeft="@drawable/correo_icono"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="10dp" />
 
     </LinearLayout>
 
