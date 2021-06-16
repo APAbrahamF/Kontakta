@@ -1646,12 +1646,14 @@ drawable orange_background
 drawable password_icono
 drawable review_icono
 drawable rounded_corner_view
+drawable serv_icono
 drawable sexo_icono
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable twitter_icon
 drawable ubicacion_icono
+drawable usuario_icono
 drawable youtube_icon
 drawable yt_logo
 id ALT
@@ -1840,7 +1842,6 @@ id editTextContraAct
 id editTextContraN
 id editTextContraN2
 id editTextGenero
-id editTextTextPersonName3
 id editTextTextPersonName7
 id edit_query
 id end
@@ -1887,13 +1888,11 @@ id ignoreRequest
 id image
 id imageBtnPhotoPro
 id imageBtnPhotoPro2
-id imageButton14
 id imageButton17
 id imageButton2
 id imageButton4
 id imageReview
 id imageView
-id imageView10
 id imageView3
 id imageView6
 id image_row

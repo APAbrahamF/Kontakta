@@ -95,9 +95,7 @@ class MenuConfiguracion : AppCompatActivity() {
         }
         var buttPPerfil: Button = findViewById(R.id.testVerP) as Button
         buttPPerfil.setOnClickListener{
-            val intent1 = Intent(this, perfilPrestador::class.java)
-            intent1.putExtra("correo", correo);
-            startActivity(intent1)
+            getIDServicio(correo,IDUser)
         }
     }
 
@@ -241,6 +239,46 @@ class MenuConfiguracion : AppCompatActivity() {
                     else{
                         nullSetUser(IDUser)
                     }
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                }
+            },
+            Response.ErrorListener { volleyError -> Toast.makeText(applicationContext, volleyError.message, Toast.LENGTH_LONG).show() }) {
+            @Throws(AuthFailureError::class)
+            override fun getParams(): Map<String, String> {
+                val params = HashMap<String, String>()
+                //Esta funcion es la que pone los parametros en el php, aqui le pasas lo que va a ocupar el php
+                params.put("correo", correo)
+                return params
+            }
+        }
+        //adding request to queue
+        queue.add(stringRequest);
+    }
+
+    private fun getIDServicio(correo: String,IDUser: String) {
+        val queue = Volley.newRequestQueue(this);
+
+        //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
+        val url = "http://192.168.100.6/v1/getUser.php"
+
+        //creating volley string request
+        val stringRequest = object : StringRequest(
+            Request.Method.POST, url,
+            Response.Listener<String> { response ->
+                try {
+                    //Aqui es donde se jalan los datos desde la base en un jsonArray, puedes ver en el php como los traigo
+                    val jsonArray= JSONArray(response)
+                    //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
+                    val obj = JSONObject(jsonArray.getString(0))
+                    //A partir de aqui solo pongo los datos que jale en los espacios del edit text
+                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    val IDServ = obj.getString("IDServicio_FK")
+                    val intent1 = Intent(this, perfilServ::class.java)
+                    intent1.putExtra("IDUsuario", IDUser);
+                    intent1.putExtra("IDServicio", IDServ);
+                    startActivity(intent1)
                 } catch (e: JSONException) {
                     e.printStackTrace()
                 }
