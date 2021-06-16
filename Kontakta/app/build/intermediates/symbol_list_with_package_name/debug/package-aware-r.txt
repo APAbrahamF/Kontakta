@@ -1573,9 +1573,11 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable agregar_icono
 drawable avd_hide_password
 drawable avd_show_password
 drawable basura_icono
+drawable borrar_icono
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1584,6 +1586,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable cambiouser_icono
 drawable correo_icono
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -1597,6 +1600,7 @@ drawable fb_logo
 drawable gradient_background
 drawable gradient_background2
 drawable grupo_icono
+drawable historial_icono
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_checked_circle
@@ -1639,6 +1643,8 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable orange_background
+drawable password_icono
+drawable review_icono
 drawable rounded_corner_view
 drawable sexo_icono
 drawable test_custom_background
@@ -1657,6 +1663,7 @@ id FABGuardarContra
 id FABGuardarP
 id FABGuardarU
 id FUNCTION
+id GridLayout1
 id META
 id NO_DEBUG
 id SHIFT
