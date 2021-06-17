@@ -61,13 +61,97 @@ class MenuPrincipal: AppCompatActivity() {
             intent1.putExtra("correo", correo);
             startActivity(intent1)
         }
+        var buttAlternativa: Button = findViewById(R.id.buttonAlternativa) as Button
+        buttAlternativa.setOnClickListener {
+            val intent1 = Intent(this, vistaGenero::class.java)
+            intent1.putExtra("genero", "Alternativa");
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
+        var buttBanda: Button = findViewById(R.id.buttonBanda) as Button
+        buttBanda.setOnClickListener {
+            val intent1 = Intent(this, vistaGenero::class.java)
+            intent1.putExtra("genero", "Banda");
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
+        var buttBlues: Button = findViewById(R.id.buttonBlues) as Button
+        buttBlues.setOnClickListener {
+            val intent1 = Intent(this, vistaGenero::class.java)
+            intent1.putExtra("genero", "Blues");
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
+        var buttCountry: Button = findViewById(R.id.buttonCountry) as Button
+        buttCountry.setOnClickListener {
+            val intent1 = Intent(this, vistaGenero::class.java)
+            intent1.putExtra("genero", "Country");
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
+        var buttElectronica: Button = findViewById(R.id.buttonElectronica) as Button
+        buttElectronica.setOnClickListener {
+            val intent1 = Intent(this, vistaGenero::class.java)
+            intent1.putExtra("genero", "Electronica");
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
+        var buttFolk: Button = findViewById(R.id.buttonFolk) as Button
+        buttFolk.setOnClickListener {
+            val intent1 = Intent(this, vistaGenero::class.java)
+            intent1.putExtra("genero", "Folk");
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
+        var buttHipHop: Button = findViewById(R.id.buttonHipHop) as Button
+        buttHipHop.setOnClickListener {
+            val intent1 = Intent(this, vistaGenero::class.java)
+            intent1.putExtra("genero", "Hip Hop");
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
+        var buttJazz: Button = findViewById(R.id.buttonJazz) as Button
+        buttJazz.setOnClickListener {
+            val intent1 = Intent(this, vistaGenero::class.java)
+            intent1.putExtra("genero", "Jazz");
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
+        var buttMariachi: Button = findViewById(R.id.buttonMariachi) as Button
+        buttMariachi.setOnClickListener {
+            val intent1 = Intent(this, vistaGenero::class.java)
+            intent1.putExtra("genero", "Mariachi");
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
+        var buttMetal: Button = findViewById(R.id.buttonMetal) as Button
+        buttMetal.setOnClickListener {
+            val intent1 = Intent(this, vistaGenero::class.java)
+            intent1.putExtra("genero", "Metal");
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
+        var buttPop: Button = findViewById(R.id.buttonPop) as Button
+        buttPop.setOnClickListener {
+            val intent1 = Intent(this, vistaGenero::class.java)
+            intent1.putExtra("genero", "Pop");
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
+        var buttRock: Button = findViewById(R.id.buttonRock) as Button
+        buttRock.setOnClickListener {
+            val intent1 = Intent(this, vistaGenero::class.java)
+            intent1.putExtra("genero", "Rock");
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
         /*var cv=findViewById(R.id.card_view) as CardView
         cv.setOnClickListener{
             val intent1 = Intent(this, Pruebas2::class.java)
             intent1.putExtra("correo", correo);
             startActivity(intent1)
         }*/
-        listaGeneros(IDUser)
+        //listaGeneros(IDUser)
     }
 
     private fun listaGeneros(IDUser: String){   val arrayList = ArrayList<ModelCard>()
@@ -84,10 +168,10 @@ class MenuPrincipal: AppCompatActivity() {
     arrayList.add(ModelCard("Pop"))
     arrayList.add(ModelCard("Rock"))
 
-    println("====================================================================IDUsuarioGLOBAL: $IDUser")
+   /* println("====================================================================IDUsuarioGLOBAL: $IDUser")
     val myAdapterCard = MyAdapterCard(arrayList, this, IDUser)
     recyclerView.layoutManager=LinearLayoutManager(this)
-    recyclerView.adapter=myAdapterCard
+    recyclerView.adapter=myAdapterCard*/
 }
 
     private fun setFK(IDUser: String,IDServ: String) {

@@ -45,13 +45,242 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/ic_menu_search" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <HorizontalScrollView
+        android:layout_width="408dp"
+        android:layout_height="105dp"
+        app:layout_constraintBottom_toTopOf="@+id/GridLayout1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7">
+
+        <GridLayout
+            android:id="@+id/GridLayout2"
+            android:layout_width="408dp"
+            android:layout_height="105dp"
+            android:columnCount="5"
+            android:orientation="horizontal"
+            android:rowCount="1"
+            app:layout_constraintBottom_toTopOf="@+id/GridLayout1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7">
+
+            <Button
+                android:id="@+id/buttonRecs"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/orange_background"
+                android:text="Recomendaciones"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/buttonTop"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="left|top"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/orange_background"
+                android:text="Top rated"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/buttonRecent"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_gravity="left|top"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/orange_background"
+                android:text="recien agregados"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+            <Button
+                android:id="@+id/buttonEstados"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_gravity="left|top"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/orange_background"
+                android:text="estados"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+        </GridLayout>
+    </HorizontalScrollView>
+
+    <GridLayout
+        android:id="@+id/GridLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="570dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:columnCount="2"
+        android:orientation="vertical"
+        android:rowCount="8"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/buttonAlternativa"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/orange_background"
+            android:text="Alternativa"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/buttonBanda"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="right|top"
+            android:background="@drawable/orange_background"
+            android:text="Banda"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/buttonBlues"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/orange_background"
+            android:text="Blues"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/buttonCountry"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="right|top"
+            android:background="@drawable/orange_background"
+            android:text="Country"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/buttonElectronica"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="right|top"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/orange_background"
+            android:text="Electronica"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/buttonFolk"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:background="@drawable/orange_background"
+            android:text="Folk"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/buttonHipHop"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_gravity="right|top"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/orange_background"
+            android:text="Hip Hop"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/buttonJazz"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:background="@drawable/orange_background"
+            android:text="Jazz"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/buttonMariachi"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_gravity="right|top"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/orange_background"
+            android:text="Mariachi"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/buttonPop"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:background="@drawable/orange_background"
+            android:text="Pop"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/buttonRock"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:background="@drawable/orange_background"
+            android:text="Rock"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/buttonMetal"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:background="@drawable/orange_background"
+            android:text="Metal"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+    </GridLayout>
 
     <View
         android:id="@+id/view2"
