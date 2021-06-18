@@ -196,6 +196,10 @@
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\layout\\registro_prestador.xml"
     },
     {
+        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_imagen_fondo.xml.flat",
+        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\imagen_fondo.xml"
+    },
+    {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_edad_icono.png.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\edad_icono.png"
     },
@@ -580,6 +584,10 @@
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-xhdpi\\agregar_icono.png"
     },
     {
+        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_banda.png.flat",
+        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\banda.png"
+    },
+    {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_grupo_icono.png.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-xxhdpi\\grupo_icono.png"
     },
@@ -598,6 +606,10 @@
     {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_alt.PNG.flat",
+        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\alt.PNG"
     },
     {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_cambiouser_icono.png.flat",

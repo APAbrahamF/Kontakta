@@ -156,7 +156,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
                 android:textStyle="bold"
-                android:background="@drawable/orange_background"
+                android:background="@drawable/imagen_fondo"
                 android:text="Alternativa"
                 android:textColor="#fff"
                 android:textSize="40dp" />
@@ -170,7 +170,7 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="15dp"
                 android:textStyle="bold"
-                android:background="@drawable/orange_background"
+                android:background="@drawable/banda"
                 android:text="Banda"
                 android:textColor="#fff"
                 android:textSize="40dp" />

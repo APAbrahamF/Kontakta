@@ -1009,22 +1009,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\values-watch-v21_values-watch-v21.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-2\\files-2.1\\4102c377b7a8a929cfb8c6bcf858d486\\appcompat-1.2.0\\res\\values-watch-v21\\values-watch-v21.xml",
-                    "from": {
-                        "startLines": "2,6,10",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,271,499",
-                        "endLines": "5,9,13",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "266,494,724"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\values-uk_values-uk.arsc.flat",
             "map": [
                 {
@@ -1076,6 +1060,22 @@
                         "startOffsets": "2829,2937",
                         "endColumns": "107,119",
                         "endOffsets": "2932,3052"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\values-watch-v21_values-watch-v21.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-2\\files-2.1\\4102c377b7a8a929cfb8c6bcf858d486\\appcompat-1.2.0\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
                     }
                 }
             ]
