@@ -61,6 +61,13 @@ class MenuPrincipal: AppCompatActivity() {
             intent1.putExtra("correo", correo);
             startActivity(intent1)
         }
+        var buttTop: Button = findViewById(R.id.buttonTop) as Button
+        buttTop.setOnClickListener {
+            val intent1 = Intent(this, vistaTopRated::class.java)
+            intent1.putExtra("correo", correo);
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
         var buttAlternativa: Button = findViewById(R.id.buttonAlternativa) as Button
         buttAlternativa.setOnClickListener {
             val intent1 = Intent(this, vistaGenero::class.java)
