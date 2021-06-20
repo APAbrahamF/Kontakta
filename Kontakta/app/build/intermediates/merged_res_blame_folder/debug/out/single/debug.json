@@ -52,6 +52,10 @@
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-xxhdpi\\historial_icono.png"
     },
     {
+        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_rating.xml.flat",
+        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\layout\\row_rating.xml"
+    },
+    {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_serv_icono.png.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-hdpi\\serv_icono.png"
     },
@@ -216,12 +220,12 @@
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-mdpi\\musica_icono.png"
     },
     {
-        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_insta_logo.png.flat",
-        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\insta_logo.png"
-    },
-    {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_review_icono.xml.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\review_icono.xml"
+    },
+    {
+        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_insta_logo.png.flat",
+        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\insta_logo.png"
     },
     {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_cambiouser_icono.png.flat",

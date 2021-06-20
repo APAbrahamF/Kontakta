@@ -1931,6 +1931,7 @@ id imageView
 id imageView3
 id imageView6
 id image_row
+id image_row_rating
 id image_view
 id image_view2
 id imgPper
@@ -2037,6 +2038,7 @@ id radio
 id rating
 id ratingReview
 id ratingServ
+id rating_row_rating
 id rating_row_review
 id ratio
 id rectangles
@@ -2172,6 +2174,7 @@ id textViewContraActL
 id textViewDescripcionL
 id textViewEstadoL
 id textViewReview
+id textView_row_rating
 id textView_row_review
 id textYoutube
 id textYoutubeP
@@ -2361,6 +2364,7 @@ layout registro_prestador
 layout registro_usuario
 layout row
 layout row_borrarhistorial
+layout row_rating
 layout row_review
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

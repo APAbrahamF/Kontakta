@@ -20,7 +20,7 @@ class vistaTopRated  : AppCompatActivity() {
         var IDUser : String = intent.getStringExtra("IDUsuario").toString()
 
         var listview = findViewById<ListView>(R.id.listView2)
-        var list = mutableListOf<Model>()
+        var list = mutableListOf<ModelRating>()
 
         val queue = Volley.newRequestQueue(this)
         val url = "http://192.168.100.6/v1/getTopRated.php"
@@ -29,14 +29,14 @@ class vistaTopRated  : AppCompatActivity() {
             val jsonArray= JSONArray(response)
             for(i in 0 until jsonArray.length()){
                 val jsonObject = JSONObject(jsonArray.getString(i))
-                list.add(Model(jsonObject.get("IDServicio").toString(),jsonObject.get("nombreServicio").toString(),jsonObject.get("imagen").toString()))
+                list.add(ModelRating(jsonObject.get("IDServicio").toString(),jsonObject.get("nombreServicio").toString(),jsonObject.get("promedio").toString(),jsonObject.get("imagen").toString()))
             }
-            listview.adapter = MyAdapter(this,R.layout.row,list)
+            listview.adapter = MyAdapterRating(this,R.layout.row_rating,list)
             listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
                 println("posicion en la lista: $position")
-                println("IDServicio: "+list[position].IDUsuario)
+                println("IDServicio: "+list[position].IDServicio)
                 val intent1 = Intent(this, perfilServ::class.java)
-                intent1.putExtra("IDServicio", list[position].IDUsuario);
+                intent1.putExtra("IDServicio", list[position].IDServicio);
                 intent1.putExtra("IDUsuario", IDUser)
                 startActivity(intent1)
             }
