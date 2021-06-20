@@ -29,14 +29,14 @@ class vistaRecent : AppCompatActivity() {
             val jsonArray= JSONArray(response)
             for(i in 0 until jsonArray.length()){
                 val jsonObject = JSONObject(jsonArray.getString(i))
-                list.add(Model(jsonObject.get("IDServicio").toString(),jsonObject.get("nombreServicio").toString(),jsonObject.get("imagen").toString()))
+                list.add(Model(jsonObject.get("nombreServicio").toString(),jsonObject.get("IDServicio").toString(),jsonObject.get("imagen").toString()))
             }
             listview.adapter = MyAdapter(this,R.layout.row,list)
             listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
                 println("posicion en la lista: $position")
-                println("IDServicio: "+list[position].IDUsuario)
+                println("IDServicio: "+list[position].correo)
                 val intent1 = Intent(this, perfilServ::class.java)
-                intent1.putExtra("IDServicio", list[position].IDUsuario);
+                intent1.putExtra("IDServicio", list[position].correo);
                 intent1.putExtra("IDUsuario", IDUser)
                 startActivity(intent1)
             }
