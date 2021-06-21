@@ -31,7 +31,7 @@ class MenuBusqueda: AppCompatActivity(){
     private fun getData(entrada: String,IDUser: String) {
         val queue = Volley.newRequestQueue(this);
         var listview = findViewById<ListView>(R.id.listView2)
-        var list = mutableListOf<Model>()
+        var list = mutableListOf<ModelGenero>()
         //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
         val url = "http://192.168.100.6/v1/getBusqueda.php"
@@ -46,14 +46,14 @@ class MenuBusqueda: AppCompatActivity(){
                     //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
                     for(i in 0 until jsonArray.length()){
                         val jsonObject = JSONObject(jsonArray.getString(i))
-                        list.add(Model(jsonObject.get("IDServicio").toString(),jsonObject.get("nombreServicio").toString(),jsonObject.get("imagen").toString()))
+                        list.add(ModelGenero(jsonObject.get("IDServicio").toString(),jsonObject.get("nombreServicio").toString(),jsonObject.get("imagen").toString(),jsonObject.get("genero").toString()))
                     }
-                    listview.adapter = MyAdapter(this,R.layout.row,list)
+                    listview.adapter = MyAdapterGenero(this,R.layout.row,list)
                     listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
                         println("posicion en la lista: $position")
-                        println("IDServicio: "+list[position].IDUsuario)
+                        println("IDServicio: "+list[position].IDServicio)
                         val intent1 = Intent(this, perfilServ::class.java)
-                        intent1.putExtra("IDServicio", list[position].IDUsuario);
+                        intent1.putExtra("IDServicio", list[position].IDServicio);
                         intent1.putExtra("IDUsuario", IDUser);
                         startActivity(intent1)
                     }

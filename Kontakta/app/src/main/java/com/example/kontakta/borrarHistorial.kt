@@ -51,7 +51,7 @@ class borrarHistorial : AppCompatActivity() {
                     //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
                     for(i in 0 until jsonArray.length()){
                         val jsonObject = JSONObject(jsonArray.getString(i))
-                        list.add(Model(jsonObject.get("IDHistCont").toString(),jsonObject.get("nombrePrestador").toString(),jsonObject.get("imagenPrestador").toString()))
+                        list.add(Model(jsonObject.get("nombrePrestador").toString(),jsonObject.get("IDHistCont").toString(),jsonObject.get("imagenPrestador").toString()))
                     }
                     listview.adapter = MyAdapter(this,R.layout.row_borrarhistorial,list)
                     listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
@@ -61,7 +61,7 @@ class borrarHistorial : AppCompatActivity() {
                         intent1.putExtra("IDServicio", list[position].IDUsuario);
                         intent1.putExtra("IDUsuario", IDUser);
                         startActivity(intent1)*/
-                        deleteHistorial(list[position].IDUsuario,IDUser)
+                        deleteHistorial(list[position].correo,IDUser)
                     }
 
                 } catch (e: JSONException) {

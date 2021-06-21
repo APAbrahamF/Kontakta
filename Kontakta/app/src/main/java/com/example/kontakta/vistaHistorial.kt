@@ -50,16 +50,19 @@ class vistaHistorial : AppCompatActivity() {
                     //Aqui es donde se jalan los datos desde la base en un jsonArray, puedes ver en el php como los traigo
                     val jsonArray= JSONArray(response)
                     //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
+                    var listID= mutableListOf<String>()
                     for(i in 0 until jsonArray.length()){
                         val jsonObject = JSONObject(jsonArray.getString(i))
-                        list.add(Model(jsonObject.get("IDServicio_FK").toString(),jsonObject.get("nombrePrestador").toString(),jsonObject.get("imagenPrestador").toString()))
+                        if(!listID.contains(jsonObject.get("IDServicio_FK").toString())){
+                        list.add(Model(jsonObject.get("nombrePrestador").toString(),jsonObject.get("IDServicio_FK").toString(),jsonObject.get("imagenPrestador").toString()))}
+                        listID.add(jsonObject.get("IDServicio_FK").toString())
                     }
                     listview.adapter = MyAdapter(this,R.layout.row,list)
                     listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
                         println("posicion en la lista: $position")
-                        println("IDServicio: "+list[position].IDUsuario)
+                        println("IDServicio: "+list[position].correo)
                         val intent1 = Intent(this, perfilServ::class.java)
-                        intent1.putExtra("IDServicio", list[position].IDUsuario);
+                        intent1.putExtra("IDServicio", list[position].correo);
                         intent1.putExtra("IDUsuario", IDUser);
                         startActivity(intent1)
                         //deleteHistorial(list[position].IDUsuario,IDUser)
