@@ -208,6 +208,21 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".vistaEstado"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MenuEstados"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- Default Intent Filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
 
     </application>
 

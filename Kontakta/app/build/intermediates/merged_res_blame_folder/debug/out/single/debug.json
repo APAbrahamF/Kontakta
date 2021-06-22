@@ -20,24 +20,24 @@
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-xxhdpi\\info_icono.png"
     },
     {
-        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\layout_lista_review.xml.flat",
-        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\layout\\lista_review.xml"
-    },
-    {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_background.xml.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\gradient_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\layout_lista_review.xml.flat",
+        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\layout\\lista_review.xml"
     },
     {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_grupo_icono.xml.flat",
-        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\grupo_icono.xml"
-    },
-    {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_grupo_icono.xml.flat",
+        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\grupo_icono.xml"
     },
     {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_musica_icono.png.flat",
@@ -124,12 +124,12 @@
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_grupo_icono.png.flat",
-        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-mdpi\\grupo_icono.png"
-    },
-    {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_recent.png.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\recent.png"
+    },
+    {
+        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_grupo_icono.png.flat",
+        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-mdpi\\grupo_icono.png"
     },
     {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_basura_icono.xml.flat",
@@ -228,6 +228,10 @@
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\insta_logo.png"
     },
     {
+        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\layout_menu_estados.xml.flat",
+        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\layout\\menu_estados.xml"
+    },
+    {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_cambiouser_icono.png.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\cambiouser_icono.png"
     },
@@ -264,12 +268,12 @@
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_basura_icono.png.flat",
-        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-hdpi\\basura_icono.png"
-    },
-    {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_info_icono.png.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-xhdpi\\info_icono.png"
+    },
+    {
+        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_basura_icono.png.flat",
+        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-hdpi\\basura_icono.png"
     },
     {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_correo_icono.png.flat",
@@ -300,12 +304,12 @@
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\toprated.png"
     },
     {
-        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_borrar_icono.png.flat",
-        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-xhdpi\\borrar_icono.png"
-    },
-    {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_serv_icono.png.flat",
         "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\serv_icono.png"
+    },
+    {
+        "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_borrar_icono.png.flat",
+        "source": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-xhdpi\\borrar_icono.png"
     },
     {
         "merged": "C:\\Users\\hp\\Documents\\8 - Octavo\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_estados.png.flat",

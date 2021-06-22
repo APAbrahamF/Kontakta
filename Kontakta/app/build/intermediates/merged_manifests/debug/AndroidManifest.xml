@@ -236,6 +236,22 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.kontakta.vistaEstado"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.kontakta.MenuEstados"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+            <!-- Default Intent Filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

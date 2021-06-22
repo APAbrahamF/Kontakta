@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:id="@+id/GridLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:columnCount="2"
+            android:orientation="vertical"
+            android:rowCount="16"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7"
+            app:layout_constraintVertical_bias="1.0">
+
+            <Button
+                android:id="@+id/buttonAgs"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/imagen_fondo"
+                android:text="Aguascalientes"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonBC"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/banda"
+                android:text="Baja California"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonBCS"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/blues"
+                android:text="Baja California Sur"
+                android:textColor="#fff"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonCampeche"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/country"
+                android:text="Campeche"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonCDMX"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/electronica"
+                android:text="CDMX"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonChiapas"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/folk"
+                android:text="Chiapas"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonChihuahua"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/hiphop"
+                android:text="Chihuahua"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonCoahuila"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/jazz"
+                android:text="Coahuila"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonColima"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/mariachi"
+                android:text="Colima"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonEdomex"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Estado de Mexico"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonGuanajuato"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="5"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rock"
+                android:text="Guanajuato"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonDurango"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/metal"
+                android:text="Durango"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonGuerrero"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="6"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Guerrero"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonHidalgo"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="6"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Hidalgo"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonJalisco"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="7"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Jalisco"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonMichoacan"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="7"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Michoacan"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonMorelos"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="8"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Morelos"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonNayarit"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="8"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Nayarit"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonNuevoLeon"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="9"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Nuevo Leon"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonOaxaca"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="9"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Oaxaca"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonPuebla"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="10"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Puebla"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonQueretaro"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="10"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Queretaro"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonQuintanaRoo"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="11"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Quintana Roo"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonSLP"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="11"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="San Luis Potosi"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonSinaloa"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="12"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Sinaloa"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonSonora"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="12"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Sonora"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonTabasco"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="13"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Tabasco"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonTamaulipas"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="13"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Tamaulipas"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonTlaxcala"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="14"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Tlaxcala"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonVeracruz"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="14"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Veracruz"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonYucatan"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="15"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Yucatan"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonZacatecas"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_row="15"
+                android:layout_column="1"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pop"
+                android:text="Zacatecas"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+        </GridLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
