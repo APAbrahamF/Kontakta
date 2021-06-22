@@ -323,7 +323,7 @@
         android:layout_width="412dp"
         android:layout_height="64dp"
         android:layout_weight="1"
-        android:background="#6AA7D9"
+        android:background="#6293de"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -349,41 +349,40 @@
         android:id="@+id/buttRecomended"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:background="#6AA7D9"
+        android:background="#6293de"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@android:drawable/ic_menu_compass" />
+        android:src="@drawable/home_icono_activado" />
 
     <ImageButton
         android:id="@+id/imageButton4"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:background="#6AA7D9"
-        android:tint="#FF6E40"
+        android:background="#6293de"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@android:drawable/ic_media_play" />
+        android:src="@drawable/back_icono" />
 
     <ImageButton
         android:id="@+id/confButton"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:background="#6AA7D9"
+        android:background="#6293de"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.962"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@android:drawable/ic_menu_manage" />
+        android:src="@drawable/settings_icono" />
 
     <View
         android:id="@+id/view"

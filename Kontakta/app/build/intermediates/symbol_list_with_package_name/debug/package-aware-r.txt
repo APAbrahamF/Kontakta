@@ -1578,6 +1578,8 @@ drawable ags
 drawable alt
 drawable avd_hide_password
 drawable avd_show_password
+drawable back_icono
+drawable back_icono_activado
 drawable banda
 drawable basura_icono
 drawable bc
@@ -1623,6 +1625,8 @@ drawable gue
 drawable hid
 drawable hiphop
 drawable historial_icono
+drawable home_icono
+drawable home_icono_activado
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_checked_circle
@@ -1686,6 +1690,8 @@ drawable review_icono
 drawable rock
 drawable rounded_corner_view
 drawable serv_icono
+drawable settings_icono
+drawable settings_icono_activado
 drawable sexo_icono
 drawable sin
 drawable slp
