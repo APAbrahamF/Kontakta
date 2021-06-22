@@ -35,11 +35,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/imagen_fondo"
+                android:background="@drawable/ags"
                 android:text="Aguascalientes"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonBC"
@@ -49,11 +53,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/banda"
+                android:background="@drawable/bc"
                 android:text="Baja California"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonBCS"
@@ -63,11 +71,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/blues"
+                android:background="@drawable/bcs"
                 android:text="Baja California Sur"
                 android:textColor="#fff"
-                android:textSize="35dp"
-                android:textStyle="bold" />
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonCampeche"
@@ -77,11 +89,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/country"
+                android:background="@drawable/cam"
                 android:text="Campeche"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonCDMX"
@@ -91,11 +107,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/electronica"
+                android:background="@drawable/cdmx"
                 android:text="CDMX"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonChiapas"
@@ -105,11 +125,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/folk"
+                android:background="@drawable/chia"
                 android:text="Chiapas"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonChihuahua"
@@ -119,11 +143,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/hiphop"
+                android:background="@drawable/chih"
                 android:text="Chihuahua"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonCoahuila"
@@ -133,11 +161,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/jazz"
+                android:background="@drawable/coa"
                 android:text="Coahuila"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonColima"
@@ -147,11 +179,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/mariachi"
+                android:background="@drawable/col"
                 android:text="Colima"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonEdomex"
@@ -161,11 +197,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/edo"
                 android:text="Estado de Mexico"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonGuanajuato"
@@ -175,11 +215,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/rock"
+                android:background="@drawable/gua"
                 android:text="Guanajuato"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="27dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonDurango"
@@ -189,11 +233,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/metal"
+                android:background="@drawable/dur"
                 android:text="Durango"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonGuerrero"
@@ -203,11 +251,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/gue"
                 android:text="Guerrero"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonHidalgo"
@@ -217,11 +269,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/hid"
                 android:text="Hidalgo"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonJalisco"
@@ -231,11 +287,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/jal"
                 android:text="Jalisco"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonMichoacan"
@@ -245,11 +305,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/mic"
                 android:text="Michoacan"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonMorelos"
@@ -259,11 +323,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/mor"
                 android:text="Morelos"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonNayarit"
@@ -273,11 +341,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/nay"
                 android:text="Nayarit"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonNuevoLeon"
@@ -287,11 +359,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/nl"
                 android:text="Nuevo Leon"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonOaxaca"
@@ -301,11 +377,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/oax"
                 android:text="Oaxaca"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonPuebla"
@@ -315,11 +395,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/pue"
                 android:text="Puebla"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonQueretaro"
@@ -329,11 +413,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/que"
                 android:text="Queretaro"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonQuintanaRoo"
@@ -343,11 +431,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/qui"
                 android:text="Quintana Roo"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonSLP"
@@ -357,11 +449,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/slp"
                 android:text="San Luis Potosi"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonSinaloa"
@@ -371,11 +467,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/sin"
                 android:text="Sinaloa"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonSonora"
@@ -385,11 +485,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/son"
                 android:text="Sonora"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonTabasco"
@@ -399,11 +503,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/tab"
                 android:text="Tabasco"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonTamaulipas"
@@ -413,11 +521,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/tam"
                 android:text="Tamaulipas"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonTlaxcala"
@@ -427,11 +539,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/tla"
                 android:text="Tlaxcala"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonVeracruz"
@@ -441,11 +557,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/ver"
                 android:text="Veracruz"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonYucatan"
@@ -455,11 +575,15 @@
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/yuc"
                 android:text="Yucatan"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
             <Button
                 android:id="@+id/buttonZacatecas"
@@ -469,11 +593,15 @@
                 android:layout_column="1"
                 android:layout_gravity="right|top"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/pop"
+                android:background="@drawable/zac"
                 android:text="Zacatecas"
                 android:textColor="#fff"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10.0"/>
 
         </GridLayout>
     </ScrollView>
