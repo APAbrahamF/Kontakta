@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,10 +9,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="691dp"
+        android:layout_height="match_parent"
         android:gravity="clip_vertical|center_horizontal"
         android:orientation="vertical"
-        android:translationY="40dp">
+        android:translationY="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/nombrePper"
@@ -28,6 +30,7 @@
             android:id="@+id/imgPper"
             android:layout_width="wrap_content"
             android:layout_height="128dp" />
+
         <TextView
             android:id="@+id/promedioServ"
             android:layout_width="wrap_content"
@@ -44,167 +47,238 @@
             android:id="@+id/ratingServ"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:stepSize="0.1"
             android:isIndicator="true"
-            android:theme="@style/RatingBar"/>
+            android:stepSize="0.1"
+            android:theme="@style/RatingBar" />
 
         <Button
             android:id="@+id/buttonReview"
             android:layout_width="175dp"
             android:layout_height="35dp"
             android:background="@drawable/orange_background"
-            android:textColor="#ffff"
-            android:text="VER RESEÑAS" />
+            android:text="VER RESEÑAS"
+            android:textColor="#ffff" />
+
         <TextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Descripción"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.275"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.544"
-            android:layout_marginTop="10dp"/>
+            app:layout_constraintVertical_bias="0.544" />
+
         <TextView
             android:id="@+id/descPper"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textSize="20dp"
-            android:text="Descripción"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#000000"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_corner_view"
             android:drawableLeft="@drawable/info_icono"
             android:drawablePadding="8dp"
-            android:layout_marginBottom="10dp"/>
+            android:fontFamily="sans-serif"
+            android:text="Descripción"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
         <TextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:text="Género"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.275"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.544"
-            android:layout_margin="2dp"/>
+            app:layout_constraintVertical_bias="0.544" />
+
         <TextView
             android:id="@+id/generoPper"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textSize="20dp"
-            android:text="Género"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#000000"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_corner_view"
-
             android:drawableLeft="@drawable/musica_icono"
             android:drawablePadding="8dp"
-            android:layout_marginBottom="10dp"/>
+            android:fontFamily="sans-serif"
+            android:text="Género"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
         <TextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:text="Integrantes"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.275"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.544"
-            android:layout_margin="2dp"/>
+            app:layout_constraintVertical_bias="0.544" />
+
         <TextView
             android:id="@+id/intePper"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textSize="20dp"
-            android:text="Integrantes"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#000000"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_corner_view"
-
             android:drawableLeft="@drawable/grupo_icono"
             android:drawablePadding="8dp"
-            android:layout_marginBottom="10dp"/>
+            android:fontFamily="sans-serif"
+            android:text="Integrantes"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
         <TextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:text="Redes sociales"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.275"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.544"
-            android:layout_margin="2dp"/>
+            app:layout_constraintVertical_bias="0.544" />
+
         <TextView
             android:id="@+id/facePper"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textSize="20dp"
-            android:text="Facebook"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:background="@drawable/rounded_corner_view"
             android:drawableLeft="@drawable/facebook_icon"
             android:drawablePadding="8dp"
-            android:textColor="#000000" />
+            android:fontFamily="sans-serif"
+            android:text="Facebook"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/instaPper"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textSize="20dp"
-            android:text="Instagram"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:background="@drawable/rounded_corner_view"
             android:drawableLeft="@drawable/instagram_icon"
             android:drawablePadding="8dp"
-            android:textColor="#000000" />
+            android:fontFamily="sans-serif"
+            android:text="Instagram"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/youtPper"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textSize="20dp"
-            android:text="Youtube"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:background="@drawable/rounded_corner_view"
             android:drawableLeft="@drawable/youtube_icon"
             android:drawablePadding="8dp"
-            android:textColor="#000000" />
+            android:fontFamily="sans-serif"
+            android:text="Youtube"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/twitPper"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textSize="20dp"
-            android:text="Twitter"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:background="@drawable/rounded_corner_view"
             android:drawableLeft="@drawable/twitter_icon"
             android:drawablePadding="8dp"
-            android:textColor="#000000" />
+            android:fontFamily="sans-serif"
+            android:text="Twitter"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/buttonKontakta"
             android:layout_width="100dp"
             android:layout_height="45dp"
             android:layout_margin="10dp"
-            android:textColor="#ffff"
-            android:fontFamily="sans-serif-black"
             android:background="@drawable/orange_background"
-            android:text="kontakta" />
+            android:fontFamily="sans-serif-black"
+            android:text="kontakta"
+            android:textColor="#ffff" />
 
 
     </LinearLayout>
 
-</androidx.core.widget.NestedScrollView>
+    <View
+        android:id="@+id/view4"
+        android:layout_width="412dp"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:background="#6293de"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="207dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="362dp" />
+
+    <ImageButton
+        android:id="@+id/confRecomButt"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#6293de"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:src="@drawable/home_icono" />
+
+    <ImageButton
+        android:id="@+id/confInicioButt"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#6293de"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:src="@drawable/back_icono" />
+
+    <ImageButton
+        android:id="@+id/imageButton17"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#6293de"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:src="@drawable/settings_icono" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

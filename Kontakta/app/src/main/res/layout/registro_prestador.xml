@@ -34,6 +34,10 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:text="Selecciona tu imagen"
+                android:background="@drawable/orange_background"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
                 android:translationX="37dp" />
 
             <EditText
@@ -122,6 +126,10 @@
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Registrarme"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:background="@drawable/orange_background"
                 android:translationX="37dp" />
 
         </LinearLayout>
