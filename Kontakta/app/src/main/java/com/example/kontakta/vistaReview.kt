@@ -1,12 +1,10 @@
 package com.example.kontakta
 
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Base64
-import android.widget.ImageView
-import android.widget.RatingBar
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
@@ -31,6 +29,25 @@ class vistaReview : AppCompatActivity() {
         println("=================================================================CANTIDAD en vistaReview = $cantidad")
         println("=================================================================SUMATORIA en vistaReview = $sumatoria")
         getData(IDUserFK,comentario,valoracion,cantidad,sumatoria)
+
+        val buttonInicio: ImageButton = findViewById(R.id.confInicioButt) as ImageButton
+        buttonInicio.setOnClickListener{
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
+        val buttonRecomend: ImageButton = findViewById(R.id.confRecomButt) as ImageButton
+        buttonRecomend.setOnClickListener{
+            val intent = Intent(this, MenuPrincipal::class.java)
+            intent.putExtra("correo", correoGlobal);
+            startActivity(intent)
+        }
+        var buttConf: ImageButton = findViewById(R.id.imageButton17) as ImageButton
+        buttConf.setOnClickListener {
+            val intent1 = Intent(this, MenuConfiguracion::class.java)
+            intent1.putExtra("correo", correoGlobal);
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
     }
     private fun getData(IDUserFK: String,comentario: String,valoracion: String,cantidad: String,sumatoria: String) {
         val queue = Volley.newRequestQueue(this);

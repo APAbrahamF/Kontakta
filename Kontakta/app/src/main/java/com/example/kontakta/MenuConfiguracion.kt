@@ -28,13 +28,12 @@ class MenuConfiguracion : AppCompatActivity() {
 
         val buttonInicio: ImageButton = findViewById(R.id.confInicioButt) as ImageButton
         buttonInicio.setOnClickListener{
-            val intent = Intent(this,MenuPrincipal::class.java)
-            intent.putExtra("correo", correo);
+            val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
         val buttonRecomend: ImageButton = findViewById(R.id.confRecomButt) as ImageButton
         buttonRecomend.setOnClickListener{
-            val intent = Intent(this, MBusquedaRecomendada::class.java)
+            val intent = Intent(this, MenuPrincipal::class.java)
             intent.putExtra("correo", correo);
             startActivity(intent)
         }

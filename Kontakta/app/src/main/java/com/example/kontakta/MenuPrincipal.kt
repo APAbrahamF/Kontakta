@@ -19,6 +19,7 @@ import org.json.JSONException
 import org.json.JSONObject
 
 var idUsuarioGlobal: String = ""
+var correoGlobal: String = ""
 class MenuPrincipal: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +30,7 @@ class MenuPrincipal: AppCompatActivity() {
         var correo: String = intent.getStringExtra("correo").toString()
         var checkLogin: String = intent.getStringExtra("login").toString()
         //val entrada=editTextTextPersonName7?.text.toString()
-
+        correoGlobal=correo
         if (checkLogin == "si") {
             getIDUsuario(correo)
             IDUser = idUsuarioGlobal

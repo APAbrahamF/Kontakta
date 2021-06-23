@@ -1,8 +1,10 @@
 package com.example.kontakta
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
@@ -31,6 +33,7 @@ class cambiar_contra : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cambiar_contra)
+        var correo : String = intent.getStringExtra("correo").toString()
         getContraActual("abraham1902@hotmail.com")
         var BotonGuardar: FloatingActionButton = findViewById(R.id.FABGuardarContra) as FloatingActionButton;
         BotonGuardar.setOnClickListener {
@@ -55,6 +58,24 @@ class cambiar_contra : AppCompatActivity() {
                     Toast.makeText(applicationContext, "Las contraseñas no coinciden", Toast.LENGTH_LONG).show()
                 }
             }
+        }
+        val buttonInicio: ImageButton = findViewById(R.id.confInicioButt) as ImageButton
+        buttonInicio.setOnClickListener{
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
+        val buttonRecomend: ImageButton = findViewById(R.id.confRecomButt) as ImageButton
+        buttonRecomend.setOnClickListener{
+            val intent = Intent(this, MenuPrincipal::class.java)
+            intent.putExtra("correo", correo);
+            startActivity(intent)
+        }
+        var buttConf: ImageButton = findViewById(R.id.imageButton17) as ImageButton
+        buttConf.setOnClickListener {
+            val intent1 = Intent(this, MenuConfiguracion::class.java)
+            intent1.putExtra("correo", correo);
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
         }
     }
     private fun getContraActual(correo: String) {
