@@ -1687,6 +1687,7 @@ drawable que
 drawable qui
 drawable recent
 drawable recomendaciones
+drawable red_background
 drawable review_icono
 drawable rock
 drawable rounded_corner_view
