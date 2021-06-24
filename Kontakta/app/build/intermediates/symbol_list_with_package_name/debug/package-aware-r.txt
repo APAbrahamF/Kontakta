@@ -1679,6 +1679,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable oax
 drawable orange_background
+drawable password
 drawable password_icono
 drawable pop
 drawable pue
@@ -1696,6 +1697,7 @@ drawable sexo_icono
 drawable sin
 drawable slp
 drawable son
+drawable stars
 drawable tab
 drawable tam
 drawable test_custom_background
@@ -1843,7 +1845,6 @@ id buttonJalisco
 id buttonJazz
 id buttonKontakta
 id buttonMariachi
-id buttonMenu
 id buttonMetal
 id buttonMichoacan
 id buttonMorelos
@@ -1852,8 +1853,6 @@ id buttonNuevoLeon
 id buttonOaxaca
 id buttonPanel
 id buttonPop
-id buttonPruebas
-id buttonPruebas2
 id buttonPublicar
 id buttonPuebla
 id buttonQueretaro

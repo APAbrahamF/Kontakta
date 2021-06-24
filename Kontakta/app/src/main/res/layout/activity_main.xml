@@ -95,9 +95,13 @@
 
     <Button
         android:id="@+id/buttonRegistro"
-        android:layout_width="130dp"
-        android:layout_height="39dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:text="Registrate!"
+        android:background="@drawable/orange_background"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -105,39 +109,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95" />
 
-    <Button
-        android:id="@+id/buttonMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Menu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
-
-    <Button
-        android:id="@+id/buttonPruebas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Usuarios"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
-
-    <Button
-        android:id="@+id/buttonPruebas2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Prestadores"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonPruebas"
-        app:layout_constraintVertical_bias="0.045" />
 </androidx.constraintlayout.widget.ConstraintLayout>

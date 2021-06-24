@@ -48,7 +48,13 @@ class MenuPrincipal: AppCompatActivity() {
             intent1.putExtra("entrada", entrada);
             startActivity(intent1)
         }
-
+        var buttBack: ImageButton = findViewById(R.id.imageButton4) as ImageButton
+        buttBack.setOnClickListener {
+            val intent1 = Intent(this, MainActivity::class.java)
+            intent1.putExtra("correo", correo);
+            intent1.putExtra("IDUsuario", idUsuarioGlobal);
+            startActivity(intent1)
+        }
         var buttConf: ImageButton = findViewById(R.id.confButton) as ImageButton
         buttConf.setOnClickListener {
             val intent1 = Intent(this, MenuConfiguracion::class.java)

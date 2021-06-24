@@ -32,23 +32,6 @@ class MainActivity : AppCompatActivity() {
                 loginUser()
             }
         }
-        val botonMenu: Button = findViewById(R.id.buttonPruebas) as Button
-        botonMenu.setOnClickListener{
-            val intent = Intent(this,Pruebas::class.java)
-            intent.putExtra("review","Usuarios")
-            startActivity(intent)
-        }
-        val botonPruebas2: Button = findViewById(R.id.buttonPruebas2) as Button
-        botonPruebas2.setOnClickListener{
-            val intent = Intent(this,Pruebas2::class.java)
-            intent.putExtra("genero","Prestadores")
-            startActivity(intent)
-        }
-        val botonPruebas: Button = findViewById(R.id.buttonMenu) as Button
-        botonPruebas.setOnClickListener{
-            val intent = Intent(this,MenuPrincipal::class.java)
-            startActivity(intent)
-        }
         val BotonRegistro: Button = findViewById(R.id.buttonRegistro) as Button;
         BotonRegistro.setOnClickListener {
             val intent = Intent(this,RegistroUsuario::class.java)
