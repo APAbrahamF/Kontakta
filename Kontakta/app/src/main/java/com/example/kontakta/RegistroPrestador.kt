@@ -168,9 +168,9 @@ class RegistroPrestador:AppCompatActivity() {
 
         val imagen : String = encodedImage;
 
-        //val url = "http://192.168.1.45/kontakta/v1/insertM.php"
+        val url = "http://192.168.1.45/kontakta/v1/insertM.php"
         //val url = "http://192.168.1.109/kontakta/v1/insertM.php"
-        val url = "http://192.168.100.6/v1/insertM.php"
+        //val url = "http://192.168.100.6/v1/insertM.php"
 
 
         //creating volley string request

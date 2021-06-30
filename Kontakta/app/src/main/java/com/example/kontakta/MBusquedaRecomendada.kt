@@ -16,6 +16,8 @@ import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.concurrent.ThreadLocalRandom
+import kotlin.math.exp
+import kotlin.math.sqrt
 
 var idUsuarioRecomendadaGlobal: String = ""
 class MBusquedaRecomendada: AppCompatActivity() {
@@ -27,7 +29,8 @@ class MBusquedaRecomendada: AppCompatActivity() {
         val boton: Button = findViewById(R.id.buttonAccionar) as Button;
         boton.setOnClickListener {
             //El correo con el que se trabaja esta hardcodeado y se pone aqui
-            getData(correo)
+            //getData(correo)
+            getDataEM(correo)
         }
         /*val botMenu: ImageButton = findViewById(R.id.recMenuInButt) as ImageButton
         botMenu.setOnClickListener{
@@ -429,5 +432,290 @@ class MBusquedaRecomendada: AppCompatActivity() {
         }
         //adding request to queue
         queue.add(stringRequest);
+    }
+
+    //Todo el desvergue EM
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+    private fun getDataEM(correo: String) {
+        val arraytmp = DoubleArray(2)
+        var listview = findViewById<ListView>(R.id.listView)
+        var list = mutableListOf<Model4>()
+        val nClass: Int = -1
+        val queue = Volley.newRequestQueue(this)
+        //Acuerdense de camnbiar el IP
+        //val url = "http://192.168.1.109/kontakta/v1/historialGET.php"
+        val url = "http://192.168.1.45/kontakta/v1/historialGET.php"
+        val stringRequest = StringRequest(Request.Method.GET, url, { response ->
+            val jsonArray = JSONArray(response)
+            for (i in 0 until jsonArray.length()) {
+                val jsonObject = JSONObject(jsonArray.getString(i))
+                list.add(
+                    Model4(
+                        jsonObject.getInt("edadUser"),
+                        jsonObject.get("sexoUser").toString(),
+                        jsonObject.get("estadoUser").toString(),
+                        jsonObject.get("municipioUser").toString(),
+                        jsonObject.get("nombrePrestador").toString(),
+                        jsonObject.get("IDServicio_FK").toString(),
+                        jsonObject.get("imagenPrestador").toString(),
+                        arraytmp,
+                        nClass
+                    )
+                )
+            }
+            getUserEM(list, correo)
+        }, { error ->
+
+        })
+        queue.add(stringRequest)
+    }
+
+    private fun getUserEM(list: MutableList<Model4>, correo: String) {
+        //Aqui jalo los editText para poder poner ahi los datos que voy a jalar desde la base
+        val queue = Volley.newRequestQueue(this);
+        var instanceT = Model3("", "", "", 0);
+        //Aqui va la url de tu server, usa tu ip si vas a trabajar en tu celular
+        //IP abraham
+        //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
+        //IP Axel
+        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        //IP p8
+        //val url = "http://192.168.100.6/v1/getUser.php"
+        //creating volley string request
+        val stringRequest = @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+        object : StringRequest(
+            Request.Method.POST, url,
+            Response.Listener<String> { response ->
+                try {
+                    //Aqui es donde se jalan los datos desde la base en un jsonArray, puedes ver en el php como los traigo
+                    val jsonArray = JSONArray(response)
+                    //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
+                    val obj = JSONObject(jsonArray.getString(0))
+                    //A partir de aqui solo pongo los datos que jale en los espacios del edit text
+                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG)
+                        .show()
+                    obj.getString("nombre")
+                    instanceT = Model3(
+                        obj.getString("estado"),
+                        obj.getString("sexo"),
+                        obj.getString("municipio"),
+                        obj.getInt("edad")
+                    );
+                    Toast.makeText(applicationContext, instanceT.municipioUser, Toast.LENGTH_LONG)
+                        .show()
+                    Toast.makeText(applicationContext, "Antes del kmedoid", Toast.LENGTH_LONG)
+                        .show()
+                    //Aqui llamo a la funcion Kmedoid o Kmeans la cosa es que esta medio enredoso alv
+                    //kmedoid(list, instanceT);
+                    EM(list)
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                }
+            },
+            Response.ErrorListener { volleyError ->
+                Toast.makeText(
+                    applicationContext,
+                    volleyError.message,
+                    Toast.LENGTH_LONG
+                ).show()
+            }) {
+            @Throws(AuthFailureError::class)
+            override fun getParams(): Map<String, String> {
+                val params = HashMap<String, String>()
+                //Esta funcion es la que pone los parametros en el php, aqui le pasas lo que va a ocupar el php
+                params.put("correo", correo)
+                return params
+            }
+        }
+        //adding request to queue
+        queue.add(stringRequest);
+    }
+
+    //Tamaño de la muestra
+    var size_record: Int = 0
+    val sizeK: Int = 2
+    //Tamaño de columnas - el ID y clase
+    val sizeFeatures = 5
+    val maxLoop: Int = 100
+
+    //Se inicializa un par de arreglos y matrices necesarias xd
+    var pNumClass = IntArray(sizeK)
+    var pProbClass = DoubleArray(sizeK)
+    var pSumFeatClass = Array(sizeK){DoubleArray(sizeFeatures)}
+    var pSumVarClass = Array(sizeK){DoubleArray(sizeFeatures)}
+    var pMeanFeatClass = Array(sizeK){DoubleArray(sizeFeatures)}
+    var pVarFeatClass = Array(sizeK){DoubleArray(sizeFeatures)}
+
+    var pIsClassChange: Boolean = true
+
+    private fun getSizeR(list: MutableList<Model4>): Int {
+        return list.size
+    }
+
+    //TRAIN
+    private fun EM(list: MutableList<Model4>){
+        //lista de ayuda
+        var list1 = mutableListOf<Model4>()
+        //Obtener el tamaño de la muestra
+        size_record = getSizeR(list)
+        //Se inicializa el centroide
+        list1 = i_step(list);
+        //Se inicializan los arreglos y matrices en 0
+        for(i in 0 until sizeK){
+            pNumClass[i] = 0
+            pProbClass[i] = 0.0
+
+            for(j in 0 until sizeFeatures){
+                pSumFeatClass[i][j] = 0.0
+                pSumVarClass[i][j] = 0.0
+                pMeanFeatClass[i][j] = 0.0
+                pVarFeatClass[i][j] = 0.0
+            }
+        }
+
+        for(i in 0 until maxLoop){
+            //Dentro el i_step ya se ejecutó el e_step 1 vez por lo que ahora sigue el m_step
+            list1 = m_Step(list1)
+            if(!pIsClassChange)
+                break;
+            list1 = e_step(list1);
+        }
+        var listview = findViewById<ListView>(R.id.listViewBR)
+        var list = mutableListOf<Model>()
+        list.clear()
+        var listID= mutableListOf<String>()
+        for(cont in 0 until list1.size)
+        {
+            //Condición para que no se repitan los elementos de la lista y ademas solo se
+            // agregen aquellos donde su clase termino mas cercano a 0
+            if(!listID.contains(list1[cont].IDServicio_FK) && list1[cont].nClass < 0.1){
+                list.add(Model(list1[cont].nombrePrestador,list1[cont].IDServicio_FK,list1[cont].imagenPrestador))}
+            //println(list1[cont].estadoUser + "\n")
+            listID.add(list1[cont].IDServicio_FK)
+        }
+        listview.adapter = MyAdapterTest(this,R.layout.row,list)
+        listview.setOnItemClickListener { parent: AdapterView<*>, view: View, position:Int, id:Long ->
+            val intent1 = Intent(this, perfilServ::class.java)
+            intent1.putExtra("IDServicio", list[position].correo);
+            intent1.putExtra("IDUsuario", idUsuarioRecomendadaGlobal);
+            startActivity(intent1)
+        }
+    }
+
+    private fun i_step(list: MutableList<Model4>): MutableList<Model4> {
+        var list1 = mutableListOf<Model4>()
+        for(i in 0 until size_record){
+            list[i].nClass = i % sizeK
+        }
+        list1 = e_step(list)
+        return list1
+    }
+
+    private fun e_step(list: MutableList<Model4>): MutableList<Model4> {
+        //Reset Statics
+        for(i in 0 until sizeK){
+            pNumClass[i] = 0
+            for(j in 0 until sizeFeatures){
+                pSumFeatClass[i][j] = 0.0
+                pSumVarClass[i][j] = 0.0
+            }
+        }
+        //Count record & feature value
+        for(i in 0 until size_record){
+            var sexInt: Int = 0
+            pNumClass[list[i].nClass]++
+            if(list[i].sexUser == "H" || list[i].sexUser == "h"){
+                sexInt = 0
+            } else{
+                sexInt = 1
+            }
+            pSumFeatClass[list[i].nClass][0] += list[i].edadUser.toDouble()
+            pSumFeatClass[list[i].nClass][1] += sexInt.toDouble()
+            //Falta normalizar a numerico los estados
+            //pSumFeatClass[list[i].nClass][2] += list[i].estadoUser
+        }
+        //calc mean
+        for(i in 0 until sizeK){
+            pProbClass[i] = (pNumClass[i] / size_record).toDouble()
+            for(j in 0 until sizeFeatures-3){
+                pMeanFeatClass[i][j] = pSumFeatClass[i][j] / pNumClass[i]
+            }
+        }
+        //calc variance
+        for(i in 0 until size_record){
+            var sexInt: Int = 0
+            if(list[i].sexUser == "H" || list[i].sexUser == "h"){
+                sexInt = 0
+            } else{
+                sexInt = 1
+            }
+
+            pSumVarClass[list[i].nClass][0] = pSumVarClass[list[i].nClass][0] +
+                    (list[i].edadUser - pMeanFeatClass[list[i].nClass][0]) *
+                    (list[i].edadUser - pMeanFeatClass[list[i].nClass][0])
+
+            pSumVarClass[list[i].nClass][1] = pSumVarClass[list[i].nClass][1] +
+                    (sexInt - pMeanFeatClass[list[i].nClass][1]) *
+                    (sexInt - pMeanFeatClass[list[i].nClass][1])
+        }
+        //Calc variance Cont
+        for(i in 0 until sizeK){
+            for(j in 0 until sizeFeatures-3){
+                pVarFeatClass[i][j] = pSumVarClass[i][j] / (pNumClass[i] - 1).toDouble()
+            }
+        }
+        return list
+    }
+
+    private fun m_Step(list: MutableList<Model4>): MutableList<Model4> {
+        var pProbability = DoubleArray(sizeK)
+        var dGauss: Double = 1.0
+        var dProbSum: Double = 0.0
+        pIsClassChange = false
+        for(i in 0 until size_record){
+            var sexInt: Int = 0
+            if(list[i].sexUser == "H" || list[i].sexUser == "h"){
+                sexInt = 0
+            } else{
+                sexInt = 1
+            }
+            dProbSum = 0.0
+            for(j in 0 until sizeK){
+                pProbability[j] = 1.0
+
+                dGauss = 1.0
+                dGauss = getGauss(pMeanFeatClass[j][0], pVarFeatClass[j][0], list[i].edadUser.toDouble())
+                pProbability[j] *= dGauss
+
+                dGauss = 1.0
+                dGauss = getGauss(pMeanFeatClass[j][1], pVarFeatClass[j][1], sexInt.toDouble())
+                pProbability[j] *= dGauss
+
+                dProbSum += pProbability[j]
+            }
+            var dTemp: Double = 0.0
+            var nMaxId: Int = 0
+            for(j in 0 until sizeK){
+                list[i].pNormalProb[j] = pProbability[j] / dProbSum
+                var nCurClass: Int = list[i].nClass
+                if(dTemp < pProbability[j]){
+                    nMaxId = j
+                    dTemp = pProbability[j]
+                }
+            }
+            if(list[i].nClass != nMaxId){
+                pIsClassChange = true
+            }
+            list[i].nClass = nMaxId
+        }
+        return list
+    }
+    private fun getGauss(dMean: Double, dVar: Double, dValue: Double): Double {
+        var dGauss: Double = 1.0
+        val dPi: Double = 3.14159265358979323846
+
+        dGauss = (1 / sqrt(2 * dPi * dVar)) * (exp((-1 * (dValue - dMean) * (dValue - dMean)) / (2 * dVar)))
+
+        return dGauss
     }
 }

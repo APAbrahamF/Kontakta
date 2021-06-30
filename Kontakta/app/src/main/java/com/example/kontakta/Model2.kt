@@ -15,5 +15,15 @@ class Model3(
     var sexUser: String,
     var municipioUser: String,
     var edadUser: Int
-) {
-}
+)
+class Model4(
+    var edadUser: Int,
+    var sexUser: String,
+    var estadoUser: String,
+    var municipioUser: String,
+    var nombrePrestador: String,
+    var IDServicio_FK: String,
+    val imagenPrestador: String,
+    var pNormalProb: DoubleArray = DoubleArray(2),
+    var nClass: Int
+)

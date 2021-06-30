@@ -125,9 +125,9 @@ class CambioDatosUsuario : AppCompatActivity() {
         //IP abraham
         //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //IP Axel
-        //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
         //IP p8
-        val url = "http://192.168.100.6/v1/getUser.php"
+        //val url = "http://192.168.100.6/v1/getUser.php"
 
 
         //creating volley string request
