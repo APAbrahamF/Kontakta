@@ -42,7 +42,8 @@ class ActualizarPromedio : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         //val nombre = textNombre?.text.toString()
 
-        val url = "http://192.168.100.6/v1/actualizarPromedio.php"
+        //val url = "http://192.168.100.6/v1/actualizarPromedio.php"
+        val url = "http://192.168.1.45/v1/actualizarPromedio.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(

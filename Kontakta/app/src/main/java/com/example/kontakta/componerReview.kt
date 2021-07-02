@@ -81,9 +81,9 @@ class componerReview : AppCompatActivity() {
         println("=================================================================NEW-SUMATORIA en componerReview = $newSumatoria")
         println("=================================================================NEW-CANTIDAD en componerReview = $newCantidad")
         println("=================================================================NEW-PROMEDIO en componerReview = $newPromedio")
-        //val url = "http://192.168.1.45/kontakta/v1/index.php"
+        val url = "http://192.168.1.45/kontakta/v1/index.php"
         //val url = "http://192.168.1.109/kontakta/v1/index.php"
-        val url = "http://192.168.100.6/v1/insertReview.php"
+        //val url = "http://192.168.100.6/v1/insertReview.php"
 
 
         //creating volley string request

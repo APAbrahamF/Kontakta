@@ -72,12 +72,12 @@
         "source": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable-mdpi\\ubicacion_icono.png"
     },
     {
-        "merged": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
-    },
-    {
         "merged": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable_chia.png.flat",
         "source": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\src\\main\\res\\drawable\\chia.png"
+    },
+    {
+        "merged": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",

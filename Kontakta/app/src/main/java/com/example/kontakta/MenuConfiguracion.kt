@@ -102,9 +102,9 @@ class MenuConfiguracion : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         var listview = findViewById<ListView>(R.id.listViewHistorial)
         var list = mutableListOf<Model>()
-        //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        val url = "http://192.168.1.45/kontakta/v1/getServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
-        val url = "http://192.168.100.6/v1/nullSetUser.php"
+        //val url = "http://192.168.100.6/v1/nullSetUser.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(
@@ -136,9 +136,9 @@ class MenuConfiguracion : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         var listview = findViewById<ListView>(R.id.listViewHistorial)
         var list = mutableListOf<Model>()
-        //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        val url = "http://192.168.1.45/kontakta/v1/getServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
-        val url = "http://192.168.100.6/v1/borrarServ.php"
+        //val url = "http://192.168.100.6/v1/borrarServ.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(
@@ -175,9 +175,9 @@ class MenuConfiguracion : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         var listview = findViewById<ListView>(R.id.listViewHistorial)
         var list = mutableListOf<Model>()
-        //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        val url = "http://192.168.1.45/kontakta/v1/getServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
-        val url = "http://192.168.100.6/v1/borrarUser.php"
+        //val url = "http://192.168.100.6/v1/borrarUser.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(
@@ -215,9 +215,9 @@ class MenuConfiguracion : AppCompatActivity() {
         //IP abraham
         //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //IP Axel
-        //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
         //IP p8
-        val url = "http://192.168.100.6/v1/getUser.php"
+        //val url = "http://192.168.100.6/v1/getUser.php"
 
 
         //creating volley string request
@@ -258,9 +258,9 @@ class MenuConfiguracion : AppCompatActivity() {
     private fun getIDServicio(correo: String,IDUser: String) {
         val queue = Volley.newRequestQueue(this);
 
-        //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
         //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
-        val url = "http://192.168.100.6/v1/getUser.php"
+        //val url = "http://192.168.100.6/v1/getUser.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(

@@ -248,9 +248,9 @@ class MenuPrincipal: AppCompatActivity() {
     private fun getIDUsuario(correo: String) {
         val queue = Volley.newRequestQueue(this);
 
-        //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
         //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
-        val url = "http://192.168.100.6/v1/getUser.php"
+        //val url = "http://192.168.100.6/v1/getUser.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(

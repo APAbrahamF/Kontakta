@@ -83,8 +83,8 @@ class cambiar_contra : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         //Esto solo era para probar que estaba jalando correctamente la contraseña
         //var contra: EditText = findViewById(R.id.editTextContraAct) as EditText
-        val url = "http://192.168.100.6/v1/getUser.php"
-        //val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        //val url = "http://192.168.100.6/v1/getUser.php"
+        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
 
 
         //creating volley string request
@@ -124,8 +124,8 @@ class cambiar_contra : AppCompatActivity() {
         //Same shit, pero estas funciones lo que hacen es jalar solo el texto de los edittext y no el edittext completo
         val queue = Volley.newRequestQueue(this);
         //val nombre = textNombre?.text.toString()
-        val url = "http://192.168.100.6/v1/actualizarPass.php"
-        //val url = "http://192.168.1.45/kontakta/v1/actualizarPass.php"
+        //val url = "http://192.168.100.6/v1/actualizarPass.php"
+        val url = "http://192.168.1.45/kontakta/v1/actualizarPass.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(
