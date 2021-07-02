@@ -27,7 +27,7 @@ class listaReviewUser : AppCompatActivity(){
 
         val queue = Volley.newRequestQueue(this)
         //val url = "http://192.168.100.6/v1/getUserReviews.php"
-        val url = "http://192.168.1.45/kontakta/v1/usuariosGET.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getUserReviews.php"
         val stringRequest = object : StringRequest(
             Request.Method.POST, url,
             Response.Listener<String> { response ->

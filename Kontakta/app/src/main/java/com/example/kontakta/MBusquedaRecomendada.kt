@@ -29,8 +29,8 @@ class MBusquedaRecomendada: AppCompatActivity() {
         val boton: Button = findViewById(R.id.buttonAccionar) as Button;
         boton.setOnClickListener {
             //El correo con el que se trabaja esta hardcodeado y se pone aqui
-            //getData(correo)
-            getDataEM(correo)
+            getData(correo)
+            //getDataEM(correo)
         }
         /*val botMenu: ImageButton = findViewById(R.id.recMenuInButt) as ImageButton
         botMenu.setOnClickListener{
@@ -71,7 +71,7 @@ class MBusquedaRecomendada: AppCompatActivity() {
         val queue = Volley.newRequestQueue(this)
         //Acuerdense de camnbiar el IP
         //val url = "http://192.168.1.109/kontakta/v1/historialGET.php"
-        val url = "http://192.168.1.45/kontakta/v1/historialGET.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/historialGET.php"
         //val url = "http://192.168.100.6/v1/historialGET.php"
         val stringRequest = StringRequest(Request.Method.GET, url, { response ->
             val jsonArray = JSONArray(response)
@@ -100,7 +100,7 @@ class MBusquedaRecomendada: AppCompatActivity() {
     private fun kmedoid(list: MutableList<Model2>, instancia: Model3): MutableList<Model2> {
         //Aqui empiezo haciendo numeros random para crear una instancia al azar y la otra instancia son los datos del usuario
         var tamaño: Int = list.size;
-        Toast.makeText(applicationContext, tamaño.toString(), Toast.LENGTH_LONG).show()
+        //Toast.makeText(applicationContext, tamaño.toString(), Toast.LENGTH_LONG).show()
         var list1 = mutableListOf<Model2>()
         var list2 = mutableListOf<Model2>()
         val randomDouble1 = ThreadLocalRandom.current().nextInt(0, tamaño)
@@ -113,7 +113,7 @@ class MBusquedaRecomendada: AppCompatActivity() {
             list[randomDouble3].municipioUser,
             list[randomDouble4].edadUser
         );
-        Toast.makeText(applicationContext, "Dentro del Kmedoid ", Toast.LENGTH_LONG).show()
+        //Toast.makeText(applicationContext, "Dentro del Kmedoid ", Toast.LENGTH_LONG).show()
         var contador: Int;
         var contador2: Int = 0;
         var distancia1: Double;
@@ -143,18 +143,18 @@ class MBusquedaRecomendada: AppCompatActivity() {
             //deje estas cosas para que se vea qui si esta funcionando, esto muestra los tamaños de las listas y las vueltas que van
             val tamano1 = list1.size
             val tamano2 = list2.size
-            Toast.makeText(applicationContext, "tamano1 " + tamano1, Toast.LENGTH_LONG).show()
-            Toast.makeText(applicationContext, "tamano2 " + tamano2, Toast.LENGTH_LONG).show()
+            //Toast.makeText(applicationContext, "tamano1 " + tamano1, Toast.LENGTH_LONG).show()
+            //Toast.makeText(applicationContext, "tamano2 " + tamano2, Toast.LENGTH_LONG).show()
             //Esto lo tienen que cambiar para usar kmean o kmedoid
-            instancia2 = medoids(instancia2, list2);
-            //instancia2 = mean(instancia2, list2);
-            Toast.makeText(applicationContext, "Vuelta " + contador2, Toast.LENGTH_LONG).show()
+            //instancia2 = medoids(instancia2, list2);
+            instancia2 = mean(instancia2, list2);
+            //Toast.makeText(applicationContext, "Vuelta " + contador2, Toast.LENGTH_LONG).show()
             contador2++;
         }
         while(!list1Temp.equals(list1) && !list2Temp.equals(list2))
         //Aqui el silhouette, no esta regularizado por lo que te marca el valor total
         val silouette = silouette(list1, instancia, list2, instancia2)
-        Toast.makeText(applicationContext, "Silouette " + silouette, Toast.LENGTH_LONG).show()
+        //Toast.makeText(applicationContext, "Silouette " + silouette, Toast.LENGTH_LONG).show()
         //revisa el model2, tiene todo lo necesario para poder mostrar la lista de prestadores desde esta lista
         println("=======================TERMINADO")
         var listview = findViewById<ListView>(R.id.listViewBR)
@@ -232,27 +232,27 @@ class MBusquedaRecomendada: AppCompatActivity() {
         arrayList.add("Coahuila");
         arrayList.add("Colima");
         arrayList.add("Durango");
-        arrayList.add("Estado de Mexico");
+        arrayList.add("Estado de México");
         arrayList.add("Guanajuato");
         arrayList.add("Guerrero");
         arrayList.add("Hidalgo");
         arrayList.add("Jalisco");
-        arrayList.add("Michoacan");
+        arrayList.add("Michoacán");
         arrayList.add("Morelos");
         arrayList.add("Nayarit");
-        arrayList.add("Nuevo Leon");
+        arrayList.add("Nuevo León");
         arrayList.add("Oaxaca");
         arrayList.add("Puebla");
-        arrayList.add("Queretaro");
+        arrayList.add("Querétaro");
         arrayList.add("Quintana Roo");
-        arrayList.add("San Luis Potosi");
+        arrayList.add("San Luis Potosí");
         arrayList.add("Sinaloa");
         arrayList.add("Sonora");
         arrayList.add("Tabasco");
         arrayList.add("Tamaulipas");
         arrayList.add("Tlaxcala");
         arrayList.add("Veracruz");
-        arrayList.add("Yucatan");
+        arrayList.add("Yucatán");
         arrayList.add("Zacatecas");
         return arrayList
     }
@@ -344,10 +344,10 @@ class MBusquedaRecomendada: AppCompatActivity() {
     {
         //Aqui se calcula el valor de silhouette donde se saca la distancia del centro de la lista1
         //Que es la que nos interesa a la lista1 y luego a la lista 2 para ver la cohecion
-        var inst1 = medoids(instancia1, list1)
-        var inst2 = medoids(instancia2, list2)
-        //var inst1 = mean(instancia1, list1)
-        //var inst2 = mean(instancia2, list2)
+        //var inst1 = medoids(instancia1, list1)
+        //var inst2 = medoids(instancia2, list2)
+        var inst1 = mean(instancia1, list1)
+        var inst2 = mean(instancia2, list2)
         val tamaño1 = list1.size
         val tamaño2 = list2.size
         var distancia1 : Double = 0.0
@@ -381,7 +381,7 @@ class MBusquedaRecomendada: AppCompatActivity() {
         //IP abraham
         //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //IP Axel
-        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getUser.php"
         //IP p8
         //val url = "http://192.168.100.6/v1/getUser.php"
         //creating volley string request
@@ -395,8 +395,7 @@ class MBusquedaRecomendada: AppCompatActivity() {
                     //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
                     val obj = JSONObject(jsonArray.getString(0))
                     //A partir de aqui solo pongo los datos que jale en los espacios del edit text
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG)
-                        .show()
+                    //Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     idUsuarioRecomendadaGlobal=obj.getString("IDUsuario")
                     obj.getString("nombre")
                     instanceT = Model3(
@@ -405,10 +404,8 @@ class MBusquedaRecomendada: AppCompatActivity() {
                         obj.getString("municipio"),
                         obj.getInt("edad")
                     );
-                    Toast.makeText(applicationContext, instanceT.municipioUser, Toast.LENGTH_LONG)
-                        .show()
-                    Toast.makeText(applicationContext, "Antes del kmedoid", Toast.LENGTH_LONG)
-                        .show()
+                    //Toast.makeText(applicationContext, instanceT.municipioUser, Toast.LENGTH_LONG) .show()
+                    //Toast.makeText(applicationContext, "Antes del kmedoid", Toast.LENGTH_LONG).show()
                     //Aqui llamo a la funcion Kmedoid o Kmeans la cosa es que esta medio enredoso alv
                     kmedoid(list, instanceT);
                 } catch (e: JSONException) {

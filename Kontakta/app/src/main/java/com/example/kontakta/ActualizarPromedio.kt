@@ -24,7 +24,7 @@ class ActualizarPromedio : AppCompatActivity() {
         var IDServ : String = intent.getStringExtra("IDServicio").toString()
         var IDUser : String = intent.getStringExtra("IDUsuario").toString()
         var Promedio : String = intent.getStringExtra("Promedio").toString()
-        Toast.makeText(this, IDServ, Toast.LENGTH_LONG).show()
+        //Toast.makeText(this, IDServ, Toast.LENGTH_LONG).show()
         setPromedio(IDServ,Promedio)
 
         val btonConfirmacion: Button = findViewById(R.id.buttonConfirm) as Button
@@ -43,7 +43,7 @@ class ActualizarPromedio : AppCompatActivity() {
         //val nombre = textNombre?.text.toString()
 
         //val url = "http://192.168.100.6/v1/actualizarPromedio.php"
-        val url = "http://192.168.1.45/v1/actualizarPromedio.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/actualizarPromedio.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(
@@ -53,7 +53,7 @@ class ActualizarPromedio : AppCompatActivity() {
 
                     //El php de aqui actualiza los datos de la base por lo que solo le solicito el mensaje
                     val obj = JSONObject(response)
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    //Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     var bandera = obj.getString("error");
                     if(bandera == "false")
                     {
@@ -68,11 +68,11 @@ class ActualizarPromedio : AppCompatActivity() {
                 }
             },
             Response.ErrorListener { volleyError ->
-                Toast.makeText(
+                /*t.makeText(
                     applicationContext,
                     volleyError.message,
                     Toast.LENGTH_LONG
-                ).show()
+                ).show()*/
             }) {
             @Throws(AuthFailureError::class)
             override fun getParams(): Map<String, String> {

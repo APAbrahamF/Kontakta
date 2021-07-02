@@ -51,7 +51,7 @@ class vistaEstado: AppCompatActivity(){
         var list = mutableListOf<ModelGenero>()
         //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
-        val url = "http://192.168.100.6/v1/getEstados.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getEstados.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(

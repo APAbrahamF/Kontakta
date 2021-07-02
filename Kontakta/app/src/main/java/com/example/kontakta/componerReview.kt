@@ -32,7 +32,7 @@ class componerReview : AppCompatActivity() {
         var IDUser : String = intent.getStringExtra("IDUsuario").toString()
         var cantidad : String = intent.getStringExtra("cantidad").toString()
         var sumatoria : String = intent.getStringExtra("sumatoria").toString()
-        Toast.makeText(this, IDServ, Toast.LENGTH_LONG).show()
+        //Toast.makeText(this, IDServ, Toast.LENGTH_LONG).show()
         println("COMPONER========================================================IDUser: $IDUser")
         println("=================================================================CANTIDAD en componerReview = $cantidad")
         println("=================================================================SUMATORIA en componerReview = $sumatoria")
@@ -81,9 +81,9 @@ class componerReview : AppCompatActivity() {
         println("=================================================================NEW-SUMATORIA en componerReview = $newSumatoria")
         println("=================================================================NEW-CANTIDAD en componerReview = $newCantidad")
         println("=================================================================NEW-PROMEDIO en componerReview = $newPromedio")
-        val url = "http://192.168.1.45/kontakta/v1/index.php"
+        //val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/index.php"
         //val url = "http://192.168.1.109/kontakta/v1/index.php"
-        //val url = "http://192.168.100.6/v1/insertReview.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/insertReview.php"
 
 
         //creating volley string request
@@ -92,7 +92,7 @@ class componerReview : AppCompatActivity() {
             Response.Listener<String> { response ->
                 try {
                     val obj = JSONObject(response)
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    //Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     var bandera = obj.getString("error");
                     if(bandera == "false")
                     {

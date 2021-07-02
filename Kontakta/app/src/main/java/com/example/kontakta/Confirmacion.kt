@@ -52,7 +52,7 @@ class Confirmacion : AppCompatActivity() {
     private fun getIDUsuario(correo: String) {
         val queue = Volley.newRequestQueue(this);
 
-        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getUser.php"
         //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //val url = "http://192.168.100.6/v1/getUser.php"
 
@@ -66,7 +66,7 @@ class Confirmacion : AppCompatActivity() {
                     //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
                     val obj = JSONObject(jsonArray.getString(0))
                     //A partir de aqui solo pongo los datos que jale en los espacios del edit text
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    //Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     GlobalVariableConf.idUsuarioActual = obj.getString("IDUsuario")
                     println("FUNCION====================================================================IDUsuario: ${GlobalVariableConf.idUsuarioActual}")
                     if (GlobalVariableConf.tipo=="prestador")

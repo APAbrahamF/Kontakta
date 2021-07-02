@@ -56,9 +56,9 @@ class vistaHistorial : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         var listview = findViewById<ListView>(R.id.listViewHistorial)
         var list = mutableListOf<Model>()
-        val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
-        //val url = "http://192.168.100.6/v1/getHistorialUser.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getHistorialUser.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(
@@ -107,9 +107,9 @@ class vistaHistorial : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         var listview = findViewById<ListView>(R.id.listViewHistorial)
         var list = mutableListOf<Model>()
-        val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
-        //val url = "http://192.168.100.6/v1/borrarHistorial.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/borrarHistorial.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(

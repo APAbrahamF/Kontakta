@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\axel_\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
+            "outputFile": "C:\\Users\\Mi pc\\Documents\\GitHub\\Kontakta\\Kontakta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\axel_\\.gradle\\caches\\transforms-2\\files-2.1\\4102c377b7a8a929cfb8c6bcf858d486\\appcompat-1.2.0\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\Mi pc\\.gradle\\caches\\transforms-2\\files-2.1\\4102c377b7a8a929cfb8c6bcf858d486\\appcompat-1.2.0\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

@@ -102,7 +102,7 @@ class MenuConfiguracion : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         var listview = findViewById<ListView>(R.id.listViewHistorial)
         var list = mutableListOf<Model>()
-        val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/nullSetUser.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
         //val url = "http://192.168.100.6/v1/nullSetUser.php"
 
@@ -136,7 +136,7 @@ class MenuConfiguracion : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         var listview = findViewById<ListView>(R.id.listViewHistorial)
         var list = mutableListOf<Model>()
-        val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/borrarServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
         //val url = "http://192.168.100.6/v1/borrarServ.php"
 
@@ -175,7 +175,7 @@ class MenuConfiguracion : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         var listview = findViewById<ListView>(R.id.listViewHistorial)
         var list = mutableListOf<Model>()
-        val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/borrarUser.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
         //val url = "http://192.168.100.6/v1/borrarUser.php"
 
@@ -215,7 +215,7 @@ class MenuConfiguracion : AppCompatActivity() {
         //IP abraham
         //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //IP Axel
-        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getUser.php"
         //IP p8
         //val url = "http://192.168.100.6/v1/getUser.php"
 
@@ -230,7 +230,7 @@ class MenuConfiguracion : AppCompatActivity() {
                     //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
                     val obj = JSONObject(jsonArray.getString(0))
                     //A partir de aqui solo pongo los datos que jale en los espacios del edit text
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    //Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     println("IDSERVICIO ==============================================================================================" + obj.getString("IDServicio_FK"))
                     if(obj.getString("IDServicio_FK")=="" || obj.getString("IDServicio_FK").contains("0")){
                         deleteUser(IDUser)
@@ -258,7 +258,7 @@ class MenuConfiguracion : AppCompatActivity() {
     private fun getIDServicio(correo: String,IDUser: String) {
         val queue = Volley.newRequestQueue(this);
 
-        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getUser.php"
         //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //val url = "http://192.168.100.6/v1/getUser.php"
 
@@ -272,8 +272,9 @@ class MenuConfiguracion : AppCompatActivity() {
                     //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
                     val obj = JSONObject(jsonArray.getString(0))
                     //A partir de aqui solo pongo los datos que jale en los espacios del edit text
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    //Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     val IDServ = obj.getString("IDServicio_FK")
+
                     val intent1 = Intent(this, perfilServ::class.java)
                     intent1.putExtra("IDUsuario", IDUser);
                     intent1.putExtra("IDServicio", IDServ);

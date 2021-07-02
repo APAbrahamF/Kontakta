@@ -24,7 +24,7 @@ class vistaRecent : AppCompatActivity() {
         var list = mutableListOf<Model>()
 
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.100.6/v1/getRecent.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getRecent.php"
         //val url = "http://192.168.1.45/kontakta/v1/serviciosGET.php"
         val stringRequest = StringRequest(Request.Method.GET,url, { response ->
             val jsonArray= JSONArray(response)

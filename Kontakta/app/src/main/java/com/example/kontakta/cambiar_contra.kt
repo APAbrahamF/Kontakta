@@ -84,7 +84,7 @@ class cambiar_contra : AppCompatActivity() {
         //Esto solo era para probar que estaba jalando correctamente la contraseña
         //var contra: EditText = findViewById(R.id.editTextContraAct) as EditText
         //val url = "http://192.168.100.6/v1/getUser.php"
-        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getUser.php"
 
 
         //creating volley string request
@@ -97,7 +97,7 @@ class cambiar_contra : AppCompatActivity() {
                     //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
                     val obj = JSONObject(jsonArray.getString(0))
                     //A partir de aqui solo pongo los datos que jale en los espacios del edit text
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    //Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     //Guardo en una variable local la contraseña actual
                     contraActual = obj.getString("password")
                     //Aqui se seteaba en el edit text la contraseña actual para las pruebas
@@ -125,7 +125,7 @@ class cambiar_contra : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         //val nombre = textNombre?.text.toString()
         //val url = "http://192.168.100.6/v1/actualizarPass.php"
-        val url = "http://192.168.1.45/kontakta/v1/actualizarPass.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/actualizarPass.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(
@@ -134,7 +134,7 @@ class cambiar_contra : AppCompatActivity() {
                 try {
                     //El php de aqui actualiza los datos de la base por lo que solo le solicito el mensaje
                     val obj = JSONObject(response)
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    //Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                 } catch (e: JSONException) {
                     e.printStackTrace()
                 }

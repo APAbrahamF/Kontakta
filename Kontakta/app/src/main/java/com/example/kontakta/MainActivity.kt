@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         val correo = textCorreo?.text.toString()
         val password = textPassword?.text.toString()
-        val url = "http://192.168.1.45/kontakta/v1/login.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/login.php"
         //val url = "http://192.168.1.109/kontakta/v1/login.php"
         //val url = "http://192.168.100.6/v1/login.php"
 
@@ -56,10 +56,10 @@ class MainActivity : AppCompatActivity() {
             Response.Listener<String> { response ->
                 try {
                     val obj = JSONObject(response)
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     var bandera = obj.getString("error");
                     if(bandera == "true")
                     {
+                        Toast.makeText(applicationContext, "Bienvenido", Toast.LENGTH_LONG).show()
                         val intent1 = Intent(this, MenuPrincipal::class.java)
                         intent1.putExtra("correo", correo);
                         intent1.putExtra("login", "si");

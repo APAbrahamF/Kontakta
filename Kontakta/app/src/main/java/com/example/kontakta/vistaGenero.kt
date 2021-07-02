@@ -52,9 +52,9 @@ class vistaGenero : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this);
         var listview = findViewById<ListView>(R.id.listView2)
         var list = mutableListOf<ModelGenero>()
-        val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        //val url = "http://192.168.1.45/kontakta/v1/getServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
-        //val url = "http://192.168.100.6/v1/generosGET.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/generosGET.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(

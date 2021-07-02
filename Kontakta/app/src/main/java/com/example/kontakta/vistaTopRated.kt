@@ -24,7 +24,7 @@ class vistaTopRated  : AppCompatActivity() {
         var list = mutableListOf<ModelRating>()
 
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.100.6/v1/getTopRated.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getTopRated.php"
         //val url = "http://192.168.1.45/kontakta/v1/serviciosGET.php"
         val stringRequest = StringRequest(Request.Method.GET,url, { response ->
             val jsonArray= JSONArray(response)

@@ -12,7 +12,7 @@
    } else {
       if (isset($_POST['nombre']) && isset($_POST['edad']) && isset($_POST['sexo']) && isset($_POST['direccion']) && isset($_POST['municipio']) && isset($_POST['estado']) && isset($_POST['correo']) && isset($_POST['password']) && isset($_POST['imagen'])) {
          $db = new DbOperation(); 
-         if($db->insertUser($_POST['nombre'], $_POST['edad'],$_POST['sexo'],$_POST['direccion'],$_POST['municipio'],$_POST['estado'],$_POST['correo'],$_POST['password'], $_POST['imagen'])){
+         if($db->insertUser($_GET['nombre'], $_GET['edad'],$_GET['sexo'],$_GET['direccion'],$_GET['municipio'],$_GET['estado'],$_GET['correo'],$_GET['password'], $_GET['imagen'])){
             $response['error'] = false;
             $response['message'] = 'User added successfully';
          }else{

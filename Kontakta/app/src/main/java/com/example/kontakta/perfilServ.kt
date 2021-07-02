@@ -77,9 +77,9 @@ class perfilServ : AppCompatActivity() {
         var rating:RatingBar=findViewById(R.id.ratingServ) as RatingBar
         var promedio: TextView = findViewById(R.id.promedioServ) as TextView
         var imgCadena = "";
-        val url = "http://192.168.1.45/kontakta/v1/getServ.php"
+        //val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getServ.php"
         //val url = "http://192.168.1.109/kontakta/v1/getServ.php"
-        //val url = "http://192.168.100.6/v1/getServPK.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getServPK.php"
 
         //creating volley string request
         val stringRequest = object : StringRequest(
@@ -91,7 +91,7 @@ class perfilServ : AppCompatActivity() {
                     //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
                     val obj = JSONObject(jsonArray.getString(0))
                     //A partir de aqui solo pongo los datos que jale en los espacios del edit text
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    //Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     nombre.setText(obj.getString("nombreServicio"))
                     val desAux = obj.getString("descripcion")
                     descripcion.setText(desAux)
@@ -145,7 +145,7 @@ class perfilServ : AppCompatActivity() {
     private fun getDatosUsuario(nombrePrestador: String,imagenPrestador:String,IDServ: String,IDUser: String) {
         val queue = Volley.newRequestQueue(this);
 
-        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getUserPK.php"
         //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //val url = "http://192.168.100.6/v1/getUserPK.php"
 
@@ -159,7 +159,7 @@ class perfilServ : AppCompatActivity() {
                     //Aqui le digo que tome el raw 0 y que lo haga un jsonObject para poder usar los datos
                     val obj = JSONObject(jsonArray.getString(0))
                     //A partir de aqui solo pongo los datos que jale en los espacios del edit text
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    //Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     addHistorial(nombrePrestador,imagenPrestador,obj.getString("estado"),obj.getString("municipio"),obj.getString("sexo"), obj.getString("edad"),IDServ,IDUser)
 
                 } catch (e: JSONException) {
@@ -183,7 +183,7 @@ class perfilServ : AppCompatActivity() {
         //getting the record values
         val queue = Volley.newRequestQueue(this);
 
-        val url = "http://192.168.1.45/kontakta/v1/insertM.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/insertHistorial.php"
         //val url = "http://192.168.1.109/kontakta/v1/insertM.php"
         //val url = "http://192.168.100.6/v1/insertHistorial.php"
 
@@ -194,7 +194,7 @@ class perfilServ : AppCompatActivity() {
             Response.Listener<String> { response ->
                 try {
                     val obj = JSONObject(response)
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    //Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     println("=================================================================estadoUser = $estadoUser")
                     println("=================================================================municipioUser = $municipioUser")
                     println("=================================================================sexoUser = $sexoUser")

@@ -35,7 +35,7 @@ class Confirmacion2: AppCompatActivity() {
     private fun getIDServicio(IDUser: String,correo: String) {
         val queue = Volley.newRequestQueue(this);
 
-        val url = "http://192.168.1.45/kontakta/v1/getUser.php"
+        val url = "https://kontatkadb.000webhostapp.com/kontakta/v1/getServ2.php"
         //val url = "http://192.168.1.109/kontakta/v1/getUser.php"
         //val url = "http://192.168.100.6/v1/getServ2.php"
 
@@ -50,7 +50,7 @@ class Confirmacion2: AppCompatActivity() {
                     val obj = JSONObject(jsonArray.getString(0))
                     //println("FUNCION====================================================================IDUsuario: $idUsuarioActual")
                     //A partir de aqui solo pongo los datos que jale en los espacios del edit text
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                    //Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
                     idServicioActual = obj.getString("IDServicio")
                     println("FUNCION====================================================================IDServicio: $idServicioActual")
                     val intent1 = Intent(this, MenuPrincipal::class.java)
